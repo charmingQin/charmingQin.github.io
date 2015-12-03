@@ -3,34 +3,43 @@
 <head>
   <meta charset="utf-8">
   
-  <title>秦晓强的博客</title>
+  <title>Xcode注释标识符 | 秦晓强的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，
 无非单行注释// ，多行注释用/**/,或者使用插件例如VVDocument等
 等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识
 符能够被Xcode识别，起到类似于＃pragma mark的作用。
-   // TODO: 0000 (我们将要做的事情)
-   // MARK: 1111 (我们标记了某行代">
+// TODO: 0000 (我们将要做的事情)
+
+// MARK: 1111 (我们标记了某行代码)
+
+/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="秦晓强的博客">
+<meta property="og:title" content="Xcode注释标识符">
 <meta property="og:url" content="http://yoursite.com/2015/12/03/Xcode注释标识符/index.html">
 <meta property="og:site_name" content="秦晓强的博客">
 <meta property="og:description" content="前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，
 无非单行注释// ，多行注释用/**/,或者使用插件例如VVDocument等
 等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识
 符能够被Xcode识别，起到类似于＃pragma mark的作用。
-   // TODO: 0000 (我们将要做的事情)
-   // MARK: 1111 (我们标记了某行代">
+// TODO: 0000 (我们将要做的事情)
+
+// MARK: 1111 (我们标记了某行代码)
+
+/">
 <meta property="og:image" content="http://ww4.sinaimg.cn/large/6ae34799gw1eym9mdpr0pj20az0bqtah.jpg">
-<meta property="og:updated_time" content="2015-12-03T02:43:38.000Z">
+<meta property="og:updated_time" content="2015-12-03T02:49:04.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="秦晓强的博客">
+<meta name="twitter:title" content="Xcode注释标识符">
 <meta name="twitter:description" content="前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，
 无非单行注释// ，多行注释用/**/,或者使用插件例如VVDocument等
 等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识
 符能够被Xcode识别，起到类似于＃pragma mark的作用。
-   // TODO: 0000 (我们将要做的事情)
-   // MARK: 1111 (我们标记了某行代">
+// TODO: 0000 (我们将要做的事情)
+
+// MARK: 1111 (我们标记了某行代码)
+
+/">
   
     <link rel="alternative" href="/atom.xml" title="秦晓强的博客" type="application/atom+xml">
   
@@ -193,7 +202,7 @@
   
     <div class="article-meta">
       <a href="/2015/12/03/Xcode注释标识符/" class="article-date">
-  	<time datetime="2015-12-03T02:43:38.000Z" itemprop="datePublished">2015-12-03</time>
+  	<time datetime="2015-12-03T02:49:04.000Z" itemprop="datePublished">2015-12-03</time>
 </a>
     </div>
   
@@ -202,18 +211,44 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Xcode注释标识符
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［Xcode］/">［Xcode］</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
         <p>前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，</p>
 <p>无非单行注释// ，多行注释用/<em>**</em>/,或者使用插件例如VVDocument等</p>
 <p>等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识</p>
 <p>符能够被Xcode识别，起到类似于＃pragma mark的作用。</p>
-<p>   // TODO: 0000 (我们将要做的事情)</p>
-<p>   // MARK: 1111 (我们标记了某行代码)</p>
-<p>   // FIXME: 2222 (我们要修改的代码) </p>
-<p>   // ???: 3333 (可能有疑问的代码)</p>
-<p>   // !!!: 4444 (可能要注意的代码)</p>
-<p>  大家使用的时候要注意一下，必须严格按照上面的格式,冒号后面一定要有内容,</p>
+<pre><code><span class="comment">// <span class="doctag">TODO:</span> 0000 (我们将要做的事情)</span>
+
+<span class="comment">// MARK: 1111 (我们标记了某行代码)</span>
+
+<span class="comment">// <span class="doctag">FIXME:</span> 2222 (我们要修改的代码) </span>
+
+<span class="comment">// ???: 3333 (可能有疑问的代码)</span>
+
+<span class="comment">// !!!: 4444 (可能要注意的代码)</span>
+</code></pre><p>  大家使用的时候要注意一下，必须严格按照上面的格式,冒号后面一定要有内容,</p>
 <p>  我个人一般就用这些标识符来标记自己的注释。完成之后如下图:</p>
 <p>  <img src="http://ww4.sinaimg.cn/large/6ae34799gw1eym9mdpr0pj20az0bqtah.jpg">        </p>
 
@@ -256,7 +291,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Xcode注释标识符" data-title="" data-url="http://yoursite.com/2015/12/03/Xcode注释标识符/"></div>
+	<div class="ds-thread" data-thread-key="Xcode注释标识符" data-title="Xcode注释标识符" data-url="http://yoursite.com/2015/12/03/Xcode注释标识符/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

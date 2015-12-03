@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>史上最全的第三方 （三） | 秦晓强的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="网络基础
+ AFNetworking    很棒的HTTP网络通信库    
+ asi-http-request    一个HTTP库 同样很知名 性能好,稳定 但已不再维护    
+ MKNetworkKit    一个HTTP库 支持Mac 同样也不错    
+ STHTTPRequest    一个非常简单的http库,包装了NSURLConnection    
+ RestKit    一">
+<meta property="og:type" content="article">
+<meta property="og:title" content="史上最全的第三方 （三）">
+<meta property="og:url" content="http://yoursite.com/2015/11/24/史上最全第三方3/index.html">
+<meta property="og:site_name" content="秦晓强的博客">
+<meta property="og:description" content="网络基础
+ AFNetworking    很棒的HTTP网络通信库    
+ asi-http-request    一个HTTP库 同样很知名 性能好,稳定 但已不再维护    
+ MKNetworkKit    一个HTTP库 支持Mac 同样也不错    
+ STHTTPRequest    一个非常简单的http库,包装了NSURLConnection    
+ RestKit    一">
+<meta property="og:updated_time" content="2015-11-24T03:54:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="史上最全的第三方 （三）">
+<meta name="twitter:description" content="网络基础
+ AFNetworking    很棒的HTTP网络通信库    
+ asi-http-request    一个HTTP库 同样很知名 性能好,稳定 但已不再维护    
+ MKNetworkKit    一个HTTP库 支持Mac 同样也不错    
+ STHTTPRequest    一个非常简单的http库,包装了NSURLConnection    
+ RestKit    一">
+  
+    <link rel="alternative" href="/atom.xml" title="秦晓强的博客" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://ww4.sinaimg.cn/large/6ae34799gw1ey7e6whvgmj20j60j60u3.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">CharmingQin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/charmingQin" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1793279897" title="weibo">weibo</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.coderqi.com">齐路军的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.lidaze.com">李大泽的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">charmingQin（中文名：秦晓强）,iOS developer，just a quiet coding man。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">CharmingQin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://ww4.sinaimg.cn/large/6ae34799gw1ey7e6whvgmj20j60j60u3.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">CharmingQin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/charmingQin" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1793279897" title="weibo">weibo</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+      <div class="body-wrap"><article id="post-史上最全第三方3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/史上最全第三方3/" class="article-date">
+  	<time datetime="2015-11-24T03:54:03.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      史上最全的第三方 （三）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>网络基础</p>
+<p> AFNetworking    很棒的HTTP网络通信库    </p>
+<p> asi-http-request    一个HTTP库 同样很知名 性能好,稳定 但已不再维护    </p>
+<p> MKNetworkKit    一个HTTP库 支持Mac 同样也不错    </p>
+<p> STHTTPRequest    一个非常简单的http库,包装了NSURLConnection    </p>
+<p> RestKit    一个HTTP库 用来与RESTful的服务进行交互    </p>
+<p> AFIncrementalStore    用CoreData和AFNetworking 将HTTP数据持久化    </p>
+<p> CocoaAsyncSocket    TCP/UDP包装库 支持Mac 很棒    </p>
+<p> Reachability    判断设备网络情况 和苹果的很像 用ARC、GCD    </p>
+<p> SDReachability    判断设备网络情况 和苹果的很像，更友好？    </p>
+<p> socket.IO-objc    支持HTTP 长轮询 socket.io    </p>
+<p> DTBonjour    Bonjour和Wifi    </p>
+<p> XMPPFramework    XMPP客户端的库～ 支持Mac    </p>
+<p> CocoaHTTPServer    一个轻量的HTTP Server 支持Mac    </p>
+<p> SocketRocket    WebSocket客户端～    </p>
+<p> MailCore    IMAP SMTP邮件协议    </p>
+<p>JSON</p>
+<p> JSONKit    性能非常好 (只比Apple原生的差一点)    </p>
+<p> json-framework    SBJson 曾经用得很广泛的JSON 性能差    </p>
+<p> TouchJSON    又一个JSON库    </p>
+<p> yajl-objc    一个JSON库 可以支持流解析 支持Mac    </p>
+<p> JSONModel    一个构建JSON Model的工具和库    </p>
+<p>XML/Html</p>
+<p> MWFeedParser    Feed/Atom解析    </p>
+<p> RSSKit    RSS Atom解析    </p>
+<p> ElementParser    提供Html和XML的解析    </p>
+<p> hpple    提供Html/XML解析    </p>
+<p> Objective-C-HMTL-Parser    一个很简单的HTML解析 包装了下libxml    </p>
+<p> RaptureXML    一个简单的XML解析器 包装了libxml    </p>
+<p> KissXML    解析XML的库 包装了libxml    </p>
+<p> TBXML    快速解析xml的库    </p>
+<p> xmldocument    又一个解析XML的库    </p>
+<p> XMLDictionary    蛮好用的一个XML转NSDictionary的类~    </p>
+<p> XML-to-NSDictionary    XML转NSDictionary    </p>
+<p> MMMarkdown    一个渲染Markdown到HTML的小引擎    </p>
+<p> Ashton    在NSAttrbuteString和Html之间转换    </p>
+<p> XMLParser    XML解析成json～    </p>
+<p>功能性</p>
+<p> EGOImageLoading    下载使用网络图片的库    </p>
+<p> SDWebImage    异步加载网络图片 (UIImage Category)    </p>
+<p> TCBlobDownload    下载大文件/ 断点续传    </p>
+<p> GroundControl    一个通过远程plist改变配置的库    </p>
+<p> appirater    提醒用户稍后到AppStore给你评分的功能    </p>
+<p> iRate    类似appirater 提醒用户稍后到AppStore评分 支持Mac    </p>
+<p> ShareKit    分享到国外的一些社交网站 的功能 用的的人挺多    </p>
+<p> Harpy    新版本更新提醒    </p>
+<p> iVersion    新版本更新提醒 功能提示    </p>
+<p> DataKit    以类似CoreData的Model 来获取网络资源    </p>
+<p> SDURLCache    URL缓存    </p>
+<p> objective-git    libgit的包装 挺庞大    </p>
+<p> nsrails    RoR风格的网络交互API    </p>
+<p>SDK</p>
+<p> facebook-ios-sdk    Facebook的SDK    </p>
+<p> MGTwitterEngine    一套Twtter库    </p>
+<p> Twitter-OAuth-iPhone    Twitter的OAuth功能    </p>
+<p> Foursquare-API-v2    Foursquare的库    </p>
+<p> objectiveflickr    Flicker API    </p>
+<p> octokit.objc    Github的API    </p>
+<p> ParcelKit    Dropbox封装CoreData    </p>
+<p> cocoalibspotify    spotify官方SDK    </p>
+<p> GDFileManagerKit    访问 dropbox GDrive之类的云存储    </p>
+<p>音频</p>
+<p> iOSSystemSoundsLibrary    列出和播放iOS系统声音~    </p>
+<p> novocaine    一个声音库 录音放音 页面上有CoreAudio的教程链接    </p>
+<p> TheAmazingAudioEngine    一个声音库 包装了CoreAudio    </p>
+<p> AudioStreamer    音频流播放库 支持Mac    </p>
+<p> SimpleAudioEngine    一个简单的播放声音的库    </p>
+<p> DOUAudioStreamer    豆瓣的音频流播放    </p>
+<p> audiograph    一个AU的教程 &amp; 示例工程~    </p>
+<p> NVDSP    一个iOS上的DSP处理    </p>
+<p> Blip-Synth    一个Blip声音合成器    </p>
+<p> PGMidi    一个Midi库    </p>
+<p> sc_listener    检测系统声音等级的库    </p>
+<p> ObjectAL-for-iPhone    一个OpenAL的包装库 比较好用    </p>
+<p> SoundBankPlayer    一个仿SoundFout的库 但更简单    </p>
+<p> Finch    对底层的OpenAL包装    </p>
+<p> SoundManager    很简单的Sound播放管理    </p>
+<p> OrigamiEngine    音乐播放引擎 支持 flac, cue, mp3, m4a, m3u    </p>
+<p> libpd    一个用PD来创造音乐的库？纯C    </p>
+<p> pd-for-ios    同libpd    </p>
+<p> RCTMidiLib    一个Pad连接Midi设备通信的包装    </p>
+<p> octave    一个免费的音效库 包括48个UI音效    </p>
+<p> RBDMuteSwitch    在iOS5上检测是否静音    </p>
+<p> sfArkLib    转换sfArk和sf2的库 很简单    </p>
+<p> sfArkXTm    简单解压sfArk的一个cpp    </p>
+<p> unsfark    和上面sfArkXTm一样，是老一点的纯C版本    </p>
+<p> MuseScore    一个跨平台的音乐软件～ not iOS    </p>
+<p> OpenSFZ    一个SF2的处理库(Github上有详细说明) An Open SFZ player &amp; SF2 based on SFZero    </p>
+<p> alsaplayer    一个Linux下PCM库 有sf2 midi等处理过程    </p>
+<p>游戏</p>
+<p> cocos2d-iphone    2D游戏引擎 (SpriteKit后来居上了..)    </p>
+<p> cocos2d-iphone-extensions    cocos2d的扩展    </p>
+<p> smooth-drawing    cocos2d中画出平滑的曲线    </p>
+<p> tiny-wings    仿TinyWings的Demo 用Cocos2D    </p>
+<p> Tiny-Wings-Remake-on-Android    如题.    </p>
+<p> tweejump    是小鸟就跳100层 Game    </p>
+<p> wizardwar    一个很完整的2D小游戏,支持对战,已在AppStore上架    </p>
+<p> Sparrow-Framework    开源游戏引擎 2D 1.0版    </p>
+<p> Sparrow-Framework    开源游戏引擎 2D 2.0版    </p>
+<p>图像</p>
+<p>GPU OpenGL</p>
+<p> GPUImage    基于GPU的实时图像视频处理    </p>
+<p> XBImageFilters    一个GPU实时处理的库 类似GPUImage    </p>
+<p> CeedGL    一个OpenGL的包装 用起来更方便    </p>
+<p> rend-ios    一个OpenGL的轻量包装 接近UIKit    </p>
+<p> GLView    在UIView的包装 方便使用OpenGL    </p>
+<p> sift-gpu-iphone    一个包装GL用的,不知道干毛的    </p>
+<p> ShaderManager    如题 一个Manager 管理创建Shader    </p>
+<p> GLImageProcessing    演示如何用GPU处理图片    </p>
+<p> FRD3DBarChart    用OpenGL绘制的3D柱形图    </p>
+<p> EarthView    显示3D地形图 用OpenGL    </p>
+<p> CoreAR    一个挺有意思的AR    </p>
+<p> VRToolKit    一个虚拟现实的库    </p>
+<p>图像处理</p>
+<p> NYXImagesKit    一套图像处理的库 加在UIImage上    </p>
+<p> ios-image-filters    UIImage扩展 类似PS的功能 用CoreImage    </p>
+<p> vImageCategory    UIImage扩展 简单的一些处理    </p>
+<p> MGImageUtilities    几个简单的图片处理 UIImage    </p>
+<p> UIImageAdjust    一些UIImage的扩展 如亮度 模糊等    </p>
+<p> CKImageAdditions    一些UIImage的不错功能～    </p>
+<p> UIImage-BlurredFrame    仅模糊图片中的一块区域～    </p>
+<p> LBBlurredImage    UIImage扩展 可以模糊 不知道性能如何    </p>
+<p> FilterKit    为拍照添加滤镜 基于GPUImage    </p>
+<p> TCam    用CIFIlter实现的类似Instagram的类    </p>
+<p> CLImageEditor    一个功能齐全的图像处理(滤镜/曲线/裁减/旋转/等等~)    </p>
+<p> PKCoreTechniques    CA和CG的特性演示    </p>
+<p> UIImage-Categories    UIImage的一些扩展    </p>
+<p> uiimage-dsp    UIImage模糊的一些方法    </p>
+<p> UIImage-Sprite-Additions    UIImage取Sprite~    </p>
+<p> iOS-Scratch-n-See    类似结冰玻璃用手画开的效果~    </p>
+<p> OBGradientView    一个渐变色的CALayer 比系统的好用些    </p>
+<p> ANImageBitmapRep    一些Bitmap处理的方法    </p>
+<p> KGNoise    产生带噪音的Image 支持Mac    </p>
+<p> KGNoiseColorTester    上面KGNoise的演示    </p>
+<p> SQRiskCursor    一个用CA和UIControl自定义控件的例子    </p>
+<p> AmazeKit    据说是为PNG加速 或自己画 主要为控件提升性能的    </p>
+<p> UIImage-PDF    如题 UIImage来显示PDF    </p>
+<p> JMNoise    给UIView添加Noise噪音的    </p>
+<p> SWSnapshotStackView    图片加上Stack外框    </p>
+<p> RMShapedImageView    一个UIImageView的子类 能忽略透明地方的点击    </p>
+<p> MOOMaskedIconView    一个通过Mask显示Icon的库 只要一个Mask 可以生成很多风格的Icon 类似Tabbar    </p>
+<p> FTAssetRenderer    运行时的图像Mask生成?    </p>
+<p> wolfpack    图像处理库CI CG    </p>
+<p> DSGraphicsKit    支持图片常见处理 视图控制3D等    </p>
+<p> uiimage-from-animated-gif    显示gif    </p>
+<p> cam    一个AVFoundation的封装、照相等功能    </p>
+<p> Filtrr    几个Filter 速度也不行    </p>
+<p> ZXingObjC    ZXing 二维码/条形码处理    </p>
+<p>颜色</p>
+<p> uicolor-utilities    UIColor扩展和色板    </p>
+<p> color    一系列UIColor扩展    </p>
+<p> ColorUtils    一个UIColor扩展    </p>
+<p> ColorConverter    RGB和HSL转换    </p>
+<p> InfColorPicker    一个色彩选择器    </p>
+<p> RSColorPicker    一个不错的色彩选择器 有放大镜    </p>
+<p> colorpicker    一个很强大的ColorPicker 包装了挺多东西    </p>
+<p> ColorPicker    功能很棒的一个取色    </p>
+<p> ILColorPicker    一个还算标准的ColorPicker    </p>
+<p> NPColorPicker    一个HSV三角取色器    </p>
+<p> KZColorPicker    又一个HSV圆盘取色器    </p>
+<p> Color-Picker-for-iOS    一个简单的单色Picker 有一个滑块    </p>
+<p> LEColorPicker    一个ColorPicker可以取到图片的主色调等    </p>
+<p> UIColor-converter    一些UIColor的工具～～    </p>
+<p> SUColor    提供2K多的日本色    </p>
+<p> Colours-for-iOS    提供不少常用色 和几个方法    </p>
+<p> ColorArt    类似iTunes的 取一幅图画的主要背景颜色等 (这是个Mac功能)    </p>
+<p> iOS7Colors    iOS7的几种常用颜色    </p>
+<p>绘图库</p>
+<p> iOSPlot    画饼图/折线图的库 用CA    </p>
+<p> PNChart    扁平风格的折线图/柱形图    </p>
+<p> TEAChart    扁平风格的饼图/柱形图    </p>
+<p> ios-linechart    简单好用的饼图/折线图    </p>
+<p> JYRadarChart    雷达图(螂蛛网图), 风格多样    </p>
+<p> Core-Animation-Pie-Chart    用CA画饼图 示例    </p>
+<p> MSSimpleGauge    扇形仪表盘    </p>
+<p> FBDigitalFont    LED液晶效果荧光字体，用CG实现    </p>
+<p> FBGlowLabel    LED液晶效果荧光字体，UILabel    </p>
+<p> ADGraphView    一个CG绘画库 股票曲线演示    </p>
+<p> SVGKit    一个用CA来呈现SVG图片的库    </p>
+<p> Smooth-Line-View    用QuartZ画出平滑的曲线    </p>
+<p> Smooth-Line-View    用上面的库搭建的比较完整的画板功能 有取色器等    </p>
+<p> SignatureDemo    一个QuartZ 触摸画平滑曲线的Demo～～～    </p>
+<p> DynamicGraphView    动态折线图    </p>
+<p> XYPieChart    饼图~有动画    </p>
+<p> Animated-Paths    动画画出文字和图形的轮廓~    </p>
+<p>动画/效果</p>
+<p> CA</p>
+<p> CA360    一套完整的CA动画Demo    </p>
+<p> Core-Animation-Fun-House    一套CA动画展示Demo    </p>
+<p> Core-Animation-Demos    一套CA动画Demo    </p>
+<p> EnterTheMatrix    CA动画演示Demo    </p>
+<p> ftutils    一套CA的Util库 有一些常用动画    </p>
+<p> Dazzle    用CA实现的各种有趣的粒子效果    </p>
+<p> AGGeometryKit    CA和3D效果等    </p>
+<p> RBBAnimation    基于block的CA动画    </p>
+<p>动画曲线</p>
+<p> NSBKeyframeAnimation    那些jQuery带的动画速率曲线    </p>
+<p> CAAnimation-EasingEquations    一些CA没有的动画曲线    </p>
+<p> UIView-EasingFunctions    UIView的动画曲线~~    </p>
+<p> PhysicsAnimation    物理动画,用Chipmunk实现的重力效果等    </p>
+<p> DPMeterView    有重力感应的2D图形动画(例如瓶子的水) 貌似挺有意思～～    </p>
+<p> Parallax    iOS7的景深背景动画效果 一般..    </p>
+<p> MTAnimation    25种动画曲线~~~    </p>
+<p> SKBounceAnimation    弹跳的动画曲线    </p>
+<p>常见动画</p>
+<p> BCGenieEffect    果冻吸入的效果 和Mac里最小化的效果一样～～很棒~    </p>
+<p> iCarousel    一套类似CoverFlow的空间,非常棒,可选多样式,可用于Mac    </p>
+<p> OpenFlow    类似CoverFlow的效果 挺老的工程 支持Mac    </p>
+<p> PaperFold-for-iOS    一套类似报纸展开的仿3D效果 用CA实现    </p>
+<p> MPFoldTransition    那个能左右上下Cube/Paper翻页的效果 挺棒    </p>
+<p> iOS-Flip-Transform    一个Flip翻页效果 支持上下左右翻页 会变暗    </p>
+<p> AFKPageFlipper    一个Flip翻页效果 可能性能不够好 也不会变暗    </p>
+<p> DoorwayTransition    一个OpenDoor的动画    </p>
+<p> Flipboard-3D-Transform-Effect-Example    如题Flip效果 没测试    </p>
+<p> PaperFoldMenuController    一个Map折纸动画效果 一般    </p>
+<p> XYOrigami    Map折纸动画~    </p>
+<p> PaperStack    用OpenGL实现的类似iBook的效果 但是一般    </p>
+<p> GCRetractableSectionController    让TableView能按Group展开合起    </p>
+<p> HMGLTransitions    一个OpenGL的视图切换 跑不起来? 很久没更新    </p>
+<p> EPGLTransitionView    一个OpenGL的视图 包括iBook效果 折纸翻页效果 散落效果    </p>
+<p> leaves    一套有些类似iBook的效果但只有横向翻页 被用在看书的地方    </p>
+<p> GC3DFlipTransitionStyleSegue    用GL实现的iBook 一般    </p>
+<p> KNSemiModalViewController    一个推出ModalView的动画 后面的会缩小上移    </p>
+<p> letterpressexplosion    UIView的撕碎爆炸效果 (CA实现)    </p>
+<p> FancySegue    几个GL实现的动画 虽然不怎么好    </p>
+<p> CoreImageTransition    用CI实现的一些动画过渡 过雾～    </p>
+<p> LTransitionImageView    一个Image的过渡效果    </p>
+<p> STScratchView    刮奖的效果    </p>
+<p> XBPageCurl    GL实现的翻页效果～    </p>
+<p> ADTransitionController    很多有趣的导航视图切换动画    </p>
+<p> VCTransitionsLibrary    iOS7下，一些自定义转场动画~ 挺棒    </p>
+<p> JazzHands    IFTTT简介的动画框架，是个关键帧动画框架哟~ </p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/24/史上最全第三方4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          史上最全的第三方 （四）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/24/史上最全第三方2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">史上最全的第三方 （二）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="史上最全第三方3" data-title="史上最全的第三方 （三）" data-url="http://yoursite.com/2015/11/24/史上最全第三方3/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2015 CharmingQin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>

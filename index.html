@@ -184,6 +184,83 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-哈希表(散列表)2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/05/哈希表(散列表)2/" class="article-date">
+  	<time datetime="2015-12-05T06:33:08.000Z" itemprop="datePublished">2015-12-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/05/哈希表(散列表)2/">哈希表(HashTable)攻略(2)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>接上一篇博客~</p>
+<p>   一 哈希函数的构造方法</p>
+<p>   哈希哈数主要有这么几种构造方法,直接定址法、数字分析法、平方取中法、除留取余法、 折叠法等……(这里我们先主要说一下直接定址法和除留取余法).</p>
+<p>   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.</p>
+<p>   直接定址法:</p>
+<p>   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;</p>
+<pre><code>/Users/qinxiaoqiang/Desktop/屏幕快照 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">05</span> 上午<span class="number">10.06</span><span class="number">.09</span>.png
+</code></pre><p>   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.</p>
+<p>   如果我们现在要统计的是80后出生年份的人口数, 那么我们对出生年份这个关键字可以用年份减去1980来作为地址. 此时f (key) = key-1980.<br>   假如今年是2000年，那么1980年出生的人就是20岁了, 此时 f(2000) = 2000 - 1980, 可以找得到地址20, 地址20里保存了数据”人数1500万”.   </p>
+<pre><code>/Users/qinxiaoqiang/Desktop/屏幕快照 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">05</span> 上午<span class="number">10.16</span><span class="number">.43</span>.png
+</code></pre><p>   也就是说, 我们可以取关键字的某个线性函数值为哈希地址, 即: f(key) = a * key + b, 这样的哈希函数优点就是简单, 均匀, 也不会产生冲突, 但问题是这需要事先知道关键字的分布情况, 适合査找表较小且连续的情况.</p>
+<p>   除留取余法:</p>
+<p>   除留取余法是最常用的哈希函数构造方法. 对于哈希表长为m的哈希函数公式为:f(key) = key mod p (p ≤ m). 事实上, 这个方法不仅可以对关键字直接取</p>
+<p>模, 也可在通过折叠法, 平方取中法之后再取模(mod).</p>
+<p>   除留取余法关键就在于选择合适的p, p如果选得不好，就可能会容易产生哈希碰撞(同义词)。</p>
+<p>   假设有一张表，它有9条记录，现在我们要针对它设计一个哈希表。如果采用除留余数法，那么可以先尝试将哈希函数设计为f(key) = key mod 9的方法。比如</p>
+<p>29 mod 9 = 2，所以它存储在下标为2的位置。</p>
+<pre><code>/Users/qinxiaoqiang/Desktop/屏幕快照 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">05</span> 上午<span class="number">10.24</span><span class="number">.26</span>.png
+</code></pre><p>   如果还是有9条记录，关键字如下:      </p>
+<pre><code>/Users/qinxiaoqiang/Desktop/屏幕快照 <span class="number">2015</span>-<span class="number">12</span>-<span class="number">05</span> 上午<span class="number">11.05</span><span class="number">.15</span>.png
+</code></pre><p>   那这样 18、27、36、63等mod 9 都等于0, 这样取余数并不好, 碰撞比较多, 我们可以选择mod 7 来进行除留取余法. 所以对于除留取余法这个哈希函数,</p>
+<p>   f( key ) = key mod p ( p ≤ m ), p取值越接近m越好, 且最好是一个质数.</p>
+<p>   接下来,我们就研究以下哈希函数和解决冲突的方法,<a href="">传送门</a>. </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-哈希表(散列表)1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">

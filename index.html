@@ -184,11 +184,81 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-哈希表(散列表)3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/07/哈希表(散列表)3/" class="article-date">
+  	<time datetime="2015-12-07T08:57:29.000Z" itemprop="datePublished">2015-12-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/07/哈希表(散列表)3/">哈希表(HashTable)攻略(3)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>接上一篇博客~</p>
+<p>  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.</p>
+<p>  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDictionary就是哈希函数实现的).</p>
+<p>  首先，引入相关函数库：</p>
+<pre><code><span class="id">#include</span> &lt;stdio.h&gt;  <span class="comment">// 标准输入输出函数</span>
+
+<span class="id">#include</span> &lt;stdlib.h&gt; <span class="comment">// stdlib.h里面定义了五种类型、一些宏和通用工具函数。 </span>
+类型例如size_t、wchar_t、div_t、ldiv_t和lldiv_t； 
+宏例如EXIT_FAILURE、EXIT_SUCCESS、RAND_MAX和MB_CUR_MAX等等；
+常用的函数如<span class="function"><span class="title">malloc</span><span class="params">()</span></span>、<span class="function"><span class="title">calloc</span><span class="params">()</span></span>、<span class="function"><span class="title">realloc</span><span class="params">()</span></span>、<span class="function"><span class="title">free</span><span class="params">()</span></span>、<span class="function"><span class="title">system</span><span class="params">()</span></span>、等等。
+
+<span class="id">#include</span> &lt;string.h&gt; <span class="comment">// 字符串处理</span>
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/哈希表(散列表)3/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-哈希表(散列表)2" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2015/12/07/哈希表(散列表)2/" class="article-date">
-  	<time datetime="2015-12-07T08:51:43.000Z" itemprop="datePublished">2015-12-07</time>
+  	<time datetime="2015-12-07T08:56:56.000Z" itemprop="datePublished">2015-12-07</time>
 </a>
     </div>
   
@@ -216,7 +286,7 @@
 <p>   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.</p>
 <p>   直接定址法:</p>
 <p>   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;</p>
-<p>  <img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
 <p>   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.</p>
       
     </div>
@@ -233,73 +303,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/12/07/哈希表(散列表)2/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-哈希表(散列表)3" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/12/06/哈希表(散列表)3/" class="article-date">
-  	<time datetime="2015-12-06T09:05:13.000Z" itemprop="datePublished">2015-12-06</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/12/06/哈希表(散列表)3/">哈希表(HashTable)攻略(3)</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>接上一篇博客~</p>
-<p>  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.</p>
-<p>  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDictionary就是哈希函数实现的).</p>
-<p>  首先，引入相关函数库：</p>
-<pre><code><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  // 标准输入输出函数</span>
-
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span> // stdlib.h里面定义了五种类型、一些宏和通用工具函数。 类型例如size_t、wchar_t、div_t、ldiv_t和lldiv_t； 宏例如EXIT_FAILURE、EXIT_SUCCESS、RAND_MAX和MB_CUR_MAX等等； 常用的函数如malloc()、calloc()、realloc()、free()、system()、等等。</span>
-
-<span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;string.h&gt;</span> // 字符串处理</span>
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/12/06/哈希表(散列表)3/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

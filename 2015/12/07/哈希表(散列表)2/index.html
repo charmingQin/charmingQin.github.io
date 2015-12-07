@@ -26,9 +26,9 @@
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/6ae34799gw1eyoslftiohj20hx02igln.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/6ae34799gw1eyoslu4pkvj20j8023gln.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/6ae34799gw1eypy9u6s7dj20je02j74c.jpg">
-<meta property="og:image" content=" http://ww2.sinaimg.cn/large/6ae34799gw1eypycwb501j20jc02qq31.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/6ae34799gw1eypycwb501j20jc02qq31.jpg">
 <meta property="og:image" content="http://ww3.sinaimg.cn/large/6ae34799gw1eypygrwpp9j20kh05n74m.jpg">
-<meta property="og:updated_time" content="2015-12-07T08:51:43.000Z">
+<meta property="og:updated_time" content="2015-12-07T08:56:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="哈希表(HashTable)攻略(2)">
 <meta name="twitter:description" content="接上一篇博客~
@@ -209,7 +209,7 @@
   
     <div class="article-meta">
       <a href="/2015/12/07/哈希表(散列表)2/" class="article-date">
-  	<time datetime="2015-12-07T08:51:43.000Z" itemprop="datePublished">2015-12-07</time>
+  	<time datetime="2015-12-07T08:56:56.000Z" itemprop="datePublished">2015-12-07</time>
 </a>
     </div>
   
@@ -248,11 +248,11 @@
 <p>   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.</p>
 <p>   直接定址法:</p>
 <p>   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;</p>
-<p>  <img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
 <p>   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.</p>
    <a id="more"></a>
 <p>   如果我们现在要统计的是80后出生年份的人口数, 那么我们对出生年份这个关键字可以用年份减去1980来作为地址. 此时f (key) = key-1980.<br>   假如今年是2000年，那么1980年出生的人就是20岁了, 此时 f(2000) = 2000 - 1980, 可以找得到地址20, 地址20里保存了数据”人数1500万”.   </p>
-<p>  <img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyosl34zv0j20dr0503yo.jpg"></p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyosl34zv0j20dr0503yo.jpg"></p>
 <p>   也就是说, 我们可以取关键字的某个线性函数值为哈希地址, 即: f(key) = a * key + b, 这样的哈希函数优点就是简单, 均匀, 也不会产生冲突, 但问题是这需要事先知道关键字的分布情况, 适合査找表较小且连续的情况.</p>
 <p>   除留取余法:</p>
 <p>   除留取余法是最常用的哈希函数构造方法. 对于哈希表长为m的哈希函数公式为:f(key) = key mod p (p ≤ m). 事实上, 这个方法不仅可以对关键字直接取</p>
@@ -260,23 +260,23 @@
 <p>   除留取余法关键就在于选择合适的p, p如果选得不好，就可能会容易产生哈希碰撞(同义词)。</p>
 <p>   假设有一张表，它有9条记录，现在我们要针对它设计一个哈希表。如果采用除留余数法，那么可以先尝试将哈希函数设计为f(key) = key mod 9的方法。比如</p>
 <p>29 mod 9 = 2，所以它存储在下标为2的位置。</p>
-<p>  <img src="http://ww2.sinaimg.cn/large/6ae34799gw1eyoslftiohj20hx02igln.jpg"></p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eyoslftiohj20hx02igln.jpg"></p>
 <p>   如果还是有9条记录，关键字如下:      </p>
-<p>  <img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyoslu4pkvj20j8023gln.jpg"></p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyoslu4pkvj20j8023gln.jpg"></p>
 <p>   那这样 18、27、36、63等mod 9 都等于0, 这样取余数并不好, 碰撞比较多, 我们可以选择mod 7 来进行除留取余法. 所以对于除留取余法这个哈希函数,</p>
 <p>   f( key ) = key mod p ( p ≤ m ), p取值越接近m越好, 且最好是一个质数.</p>
 <p>   二: 解决哈希碰撞问题</p>
 <p>   从前面设计哈希函数的方法可以看出, 难免会出现哈希碰撞的问题, 我们主要有以下几种方法去处理: 开放地址法、再哈希法、链地址法、建立公共溢出区法等, 在这里我们主要研究开放地址法和链地址法.</p>
 <p>   开放地址法: </p>
 <p>   开放定址法就是一旦发生了碰撞, 就去寻找下一个空的哈希地址, 只要哈希表足够大, 空的哈希地址总能找到, 并将记录存入.<br>公式为:f(key) = (f(key)+d) MOD m (d=1,2,3,……,m-1)<br>比如说, 我们的关键字集合为{12,67,56,16,25,37,22,29,15,47,48,34},表长为12. 我们用哈希函数f(key) = key mod l2.<br>   当计算前S个数{12,67,56,16,25}时, 都是没有冲突的哈希地址, 直接存入：</p>
-<p>  <img src="http://ww2.sinaimg.cn/large/6ae34799gw1eypy9u6s7dj20je02j74c.jpg">   </p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eypy9u6s7dj20je02j74c.jpg">   </p>
 <p>   当key ＝ 37 时, f(37) = 1, 就与25所在位置产生碰撞, 于是我们带入公式: f(key) = (f(key)+d) MOD m (d=1,2,3,……,m-1), f(37) = (f(37)+1) mod 12 = 2, 这时候, 我们就把37存在2的位置. </p>
 <p>接下来22,29,15,47都没有冲突, 正常的存入, 到了 key=48, f(48) = 0, 与12所在的0位置碰撞, 带入公式f(48) = (f(48)+1) mod 12 = 1, 此时又与25所在的位置碰撞. 一直到 f(48) = (f(48)+6) mod 12 = 6时, 才能存入哈希表.</p>
-<p>   <img src=" http://ww2.sinaimg.cn/large/6ae34799gw1eypycwb501j20jc02qq31.jpg"></p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eypycwb501j20jc02qq31.jpg"></p>
 <p>   链地址法: </p>
 <p>   将所有关键字为同义词的记录存储在一个单链表中，我们称这种表为同义词子表，在哈希表中只存储所有同义词子表的头指针。</p>
 <p>   对于关键字集合{12,67,56,16,25,37, 22,29,15,47,48,34}，我们用前面同样的12为除数，进行除留余数法：</p>
-<p>  <img src="http://ww3.sinaimg.cn/large/6ae34799gw1eypygrwpp9j20kh05n74m.jpg"></p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eypygrwpp9j20kh05n74m.jpg"></p>
 <p>   链地址法(拉链法)解决碰撞的做法是: 将所有关键字为同义词的结点链接在同一个单链表中. 若选定的散列表长度为m, 则可将散列表定义为一个由m个头指针组成的指针数组T[0..m-1].</p>
 <p>   凡是散列地址为i的结点, 均插入到以T[i]为头指针的单链表中. T中各分量的初值均应为空指针. 在拉链法中, 装填因子α可以大于 1, 但一般均取α≤1. </p>
 <p>   接下来我们就用C语言, 使用除留取余法, 和链地址法实现一个哈希表, <a href="http://www.charmingqin.com/2015/12/06/哈希表(散列表)3/#more" target="_blank" rel="external">传送门</a>. </p>
@@ -289,9 +289,18 @@
     
 <nav id="article-nav">
   
+    <a href="/2015/12/07/哈希表(散列表)3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          哈希表(HashTable)攻略(3)
+        
+      </div>
+    </a>
   
-    <a href="/2015/12/06/哈希表(散列表)3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">哈希表(HashTable)攻略(3)</div>
+  
+    <a href="/2015/12/05/哈希表(散列表)1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">哈希表(HashTable)攻略(1)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   

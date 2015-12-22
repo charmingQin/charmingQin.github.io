@@ -184,6 +184,154 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-二叉树2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/22/二叉树2/" class="article-date">
+  	<time datetime="2015-12-22T02:55:59.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/22/二叉树2/">二叉树(2)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先序遍历:</p>
+<pre><code><span class="comment">// 首先访问根，再先序遍历左（右）子树，最后先序遍历右（左）子树</span>
+<span class="literal">void</span> preOrderTree(BinaryTree *tree)
+{
+<span class="keyword">if</span>(tree == <span class="built_in">NULL</span>) <span class="keyword">return</span>;
+<span class="keyword">else</span>
+{
+    printf(<span class="string">"%3d"</span>,tree <span class="subst">-&gt; </span>root);
+    preOrderTree(tree <span class="subst">-&gt; </span>leftTree);
+    preOrderTree(tree <span class="subst">-&gt; </span>rightTree);
+}
+}
+</code></pre><p>中序遍历:</p>
+<pre><code><span class="comment">//首先中序遍历左（右）子树，再访问根，最后中序遍历右（左）子树</span>
+<span class="literal">void</span> middleOrderTree(BinaryTree *tree)
+{
+<span class="keyword">if</span>(tree == <span class="built_in">NULL</span>) <span class="keyword">return</span>;
+<span class="keyword">else</span>
+{
+    middleOrderTree(tree <span class="subst">-&gt; </span>leftTree);
+    printf(<span class="string">"%3d"</span>,tree <span class="subst">-&gt; </span>root);
+    middleOrderTree(tree <span class="subst">-&gt; </span>rightTree);
+}
+}
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/22/二叉树2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-二叉树1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/22/二叉树1/" class="article-date">
+  	<time datetime="2015-12-22T01:29:49.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/22/二叉树1/">二叉树(1)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一: 二叉树的概念</p>
+<p>二叉树,是一种特殊的树形结构,而树这种数据结构是按照节点去存储数据元素的(在这里,我们就不对树进行单独介绍来了,我们只研究二叉树).</p>
+<p>每个节点最多只能有两个子节点的树,我们成为二叉树.</p>
+<p>二: 二叉树的分类</p>
+<p>按照二叉树的概念,我们可以看出,逻辑上二叉树应该有以下几类:</p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85tfp3dnj20fp08eglp.jpg"></p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85vu1b5mj20if0973yr.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799jw1ez85x20vhoj20iz0abt9m.jpg"></p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85y9rywmj20l70afgmo.jpg"></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/22/二叉树1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-哈希表(散列表)3" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -1598,240 +1746,10 @@
 
 
   
-    <article id="post-史上最全第三方2" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2015/11/24/史上最全第三方2/" class="article-date">
-  	<time datetime="2015-11-24T03:49:47.000Z" itemprop="datePublished">2015-11-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/24/史上最全第三方2/">史上最全的第三方 （二）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>系统基础库</p>
-<p>sstoolkit  一套Category类型的库,附带很多自定义控件，功能不错～         </p>
-<p>BlocksKit  将Block风格带入UIKit和Founcation    </p>
-<p>cocoa-helpers  一些Cocoa的扩展 2年前的工程    </p>
-<p>CoconutKit  一系列扩展和一些自定组件    </p>
-<p>STUtils  一系列扩展包    </p>
-<p>PSFoundation  一系列扩展 和功能增强    </p>
-<p>ConciseKit  一系列宏定义 挺有意思    </p>
-<p>DTFoundation  又一系列扩展    </p>
-<p>BBBootstrap  一些常见功能的扩展库    </p>
-<p>cooliris-toolkit  cooliris出品的基础工具库,从GoogleCode clone过来    </p>
-<p>BaseKit  一套基础工具库    </p>
-<p>NSObject-Utility-Categories  如题    </p>
-<p>NSArray-Utilities  如题    </p>
-<p>aqtoolkit  一些常用的东西    </p>
-<p>DLIntrospection  一些NSObject的扩展    </p>
-<p>NSDate-Extensions  如题日期    </p>
-<p>ALActionBlocks  在UIControl上添加的Block事件    </p>
-<p>jrswizzle  主要是swizzling    </p>
-<p>moriarty  一些还算有用的功能    </p>
-<p>QSUtilities  一些基础库 (Instagram有用到)    </p>
-<p>libextobjc  一堆oc的扩展    </p>
-<p>PrettyTimestamp  友好时间的扩展    </p>
-<p>ios-jail-break-detector  检测是否越狱 有上线    </p>
-<p>crackify  检测App是否被破解    </p>
-<p>NSBundle-OBCodeSigningInfo  检查当前签名、Sandbox状态 </p>
-<p>MacOSX    </p>
-<p>UIView-AnimatedProperty  为UIView添加动画效果的property,有用到swizzle    </p>
-<p>Block-KVO  Block风格的KVO~    </p>
-<p>MTDates  一些Data的category    </p>
-<p>CocoaSecurity  常见的哈希、加密解密算法    </p>
-<p>sskeychain  访问keychain 支持iOS Mac    </p>
-<p>ABContactHelper访问联系人    </p>
-<p>UISS  用JSON的风格设置UIKit样式    </p>
-<p>Underscore.m  仿JS的underscore.js来写的,用于访问和处理数据    </p>
-<p>TICoreDataSync  在不同设备间对CoreData进行同步 (iPhone iPad Mac)    </p>
-<p>SoloComponents-iOS  几个轻量的组件,没什么用,2年没更新    </p>
-<p>MAObjCRuntime  将运行时包装成ObjC    </p>
-<p>Objective-C-Generics  通过宏定义勉强实现的范型    </p>
-<p>TBMacros  一些常用的宏定义    </p>
-<p>NSString-Ruby  为Ruby程序员带来的字符串相关功能    </p>
-<p>ObjectiveRecord  CoreData包装的活动记录 有RoR风格的API    </p>
-<p>FastImageCache  滑动时快速显示图片的库，Path开发    </p>
-<p>基础功能</p>
-<p>mediaextract  纯C的一些常用媒体文件的解析读取    </p>
-<p>objection  一个估计是java ee写多了的人搞的,注解依赖注入xx工厂之类的    </p>
-<p>Typhoon  IoC容器啊～～    </p>
-<p>HTKit  一票乱七八糟的东西    </p>
-<p>StringScore  模糊匹配字符串 查找某两个字符串的相似程度    </p>
-<p>RegexKitLite  正则表达式库 (从SF.net mirror过来)    </p>
-<p>FormatterKit  一个NSString的格式化工具    </p>
-<p>TMCache  一个内存Cache    </p>
-<p>EGOCache EGOImage里面的 Cache功能    </p>
-<p>HJCache  一个缓存网络内容等的Cache    </p>
-<p>RNCryptor  加密解密相关 貌似更上流, note:去看一下他博客    </p>
-<p>ssziparchive  zip压缩 zip解压~    </p>
-<p>ZipKit    一个ZipKit 从bitbucket Mirror过来    </p>
-<p>ZipKit    如同ZipKit 改为ARC了    </p>
-<p>zipzap    Zip文件处理 底层为libz    </p>
-<p>MTMigration    版本升时执行一次    </p>
-<p>MTControl    jQuery风格touch事件绑定    </p>
-<p>storage    快速、线程安全的I/O存储操作    </p>
-<p>CHCSVParser    CVS文件解析    </p>
-<p>YLMoment    日期的解析，格式化等，支持多语言    </p>
-<p>CMUnistrokeGestureRecognizer    各种奇怪的手势检测    </p>
-<p>EKAlgorithms.git    常见算法的ObjC实现，包括排序、查找、数组、字符串、常用数据结构..    </p>
-<p>框架/封装</p>
-<p>three20    一个曾经用得广泛的庞大的iOS开发框架 已不再维护    </p>
-<p>nimbus    three20替代品 又一个庞大的框架    </p>
-<p>BeeFramework    一个基于MVC的框架, 比较大..    </p>
-<p>OmniGroup    一套很庞大的库(OmniGroup) 支持Mac和iOS 更新迅速    </p>
-<p>ReactiveCocoa    一套响应式编程的框架(Functional Reactive Programming) 支持Mac    </p>
-<p>WebViewJavascriptBridge    WebView和Cocoa之间的事件传递    </p>
-<p>OCUDL    自定义literals 有点意思～～    </p>
-<p>Kiwi    一个Behavior驱动编程框架? (BDD)?    </p>
-<p>Mantle    一个Model层, 替代CoreData 可以生成Model对象~ Github官方出品..    </p>
-<p>MagicalRecord    CoreData的包装 简化代码    </p>
-<p>fmdb    SQLite的封装    </p>
-<p>KZPropertyMapper    一个Model的封装,类JSON    </p>
-<p>BlockInjection    为某个方法注入一个Block 类似AOP    </p>
-<p>NSObject-ObjectMap    JSON和XML包装到Object    </p>
-<p>Ejecta    通过OpenGL OpenAL来实现 WebCanvas JS等,很庞大~    </p>
-<p>FCModel    为SQL程序员包装一下CoreData    </p>
-<p>功能/封装</p>
-<p>iOS-System-Services    获取各种设备信息 包括硬件、网络、内存、进程等等    </p>
-<p>MKStoreKit    iAP用的库    </p>
-<p>CargoBay    一个包装iAP StoreKit的库    </p>
-<p>RMStore    很轻量的iAP包装    </p>
-<p>QuincyKit    处理crach信息的库 只有上架应用才能用 支持Mac    </p>
-<p>OpenUDID    系统UDID替代方案    </p>
-<p>UIDevice-with-UniqueIdentifier-for-iOS-5    另一个UUID解决方案 但iOS7不能用了    </p>
-<p>uidevice-extension    一系列UIDevice的扩展 有PrivateAPI 最新的工程在cookbook-code里    </p>
-<p>InAppSettingsKit    包装了设置、URLScheme、Mail、Icon等东西    </p>
-<p>DTWebArchive    允许访问剪贴板中的WebArchive格式富文本    </p>
-<p>routable-ios    inApp的URL定义 在App内打开自定义URL (解耦)    </p>
-<p>JLRoutes    复杂的URL Scheme解析和路由    </p>
-<p>Emoji    访问Emoji图片的功能    </p>
-<p>PDKeychainBindingsController    以类似UserDefault的方式访问Keychain    </p>
-<p>CoreTextWrapper    一个CoreText库的包装    </p>
-<p>Slash    对AttributeString的封装    </p>
-<p>iHasApp    检测某个App是否安装，集成了常见的URL Scheme  </p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
-    <article id="post-史上最全第三方" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/24/史上最全第三方/" class="article-date">
-  	<time datetime="2015-11-24T03:35:27.000Z" itemprop="datePublished">2015-11-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/24/史上最全第三方/">史上最全的第三方 （一）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  这是我的第一篇Hexo博客，以前的好多博客网站布局很难看，广告众多，还是自己搭建比较好，所以选择了hexo，另外笔者也会在简书里更新博客，方便大家查阅。<br>  之前某位博主整理的第三方，比较全面，转载到我的Hexo博客里，作为一个测试。<br>  以后我会定期更新我的博客，主要是iOS开发的知识点，希望大家喜欢，我是charmingQin，just a quiet coding man。</p>
-<p>===========================分割线=========================</p>
-<p>   下面就是一些比较流行的第三方类库：</p>
-<p>HTTP<br>    相比较之下,AFNetworking是目前最优秀的一个了：轻量、易用、使用者多、开发者有在积极维护。在AFN出现之前，这个角色是由ASIHTTPRequest扮演的，只是到现在年久失修了。关于AFN和ASI的对比，这里有一篇不错的文章<a href="http://www.infoq.com/cn/articles/afn_vs_asi" target="_blank" rel="external">http://www.infoq.com/cn/articles/afn_vs_asi</a> 。<br>    除此之外，MKNetworkKit和RestKit也有一定的使用者。</p>
-<p>Socket<br>    CocoaAsyncSocket无疑是目前封装得最完善的Socket库了：支持异步TCP/UDP，支持GCD，Objective-C接口封装。。目前没有发现可以与之相比的同类产品。。</p>
-<p>JSON<br>    JSONKit算是第三方中最优秀的一个了：性能很高，文件少。在JSONKit之前，SBJson非常非常流行，但是SBJson性能够差，只是由于历史原因仍然存在在某些工程里面。如果工程只需要支持iOS5以上的系统，那就可以放弃那些第三方Json库了，直接用系统提供的NSJSONSerialization，性能比第三方的好，又是官方API。</p>
-<p>XMPP<br>    现在做个实时聊天，XMPP协议算是很成熟的方案了。XMPPFramework一个很不错的选择，可以直接和OpenFire服务器打交道。项目不大人手不多的话，可以看看这个。</p>
-<p>基础工具类<br>    SSToolkit算是一个不错的工具包，提供各种比如编码、加密、字符串处理等等东西，还提供了一些不错的自定义控件，并且文档非常齐全。</p>
-<p>框架<br>   过去有很多人再用three20，这个东西太大太重，文档又少，到头来连Facebook都停止维护了。作为替代品nimbus现在流行了开来，关键在于它文档齐全。国内有个MVC框架叫BeeFramework，号称是顶级框架并且功能超过nimbus，有兴趣的可以看一下。 ReactiveCocoa把响应式编程这种上流的东西带了过来，值得试一试。。</p>
-<p>数据存储<br>   还是挺多人(比如我)喜欢直接跟SQLite打交道的，这方面fmdb封装的很不错。如果用CoreData来做存储的，可以用一下MagicalRecord。</p>
-<p>图像处理<br>   GPUImage无疑是这方面的集大成者了。用OpenGL ES2.0来实时处理图片和视频流，性能和功能都是顶尖的。</p>
-<p>开发和调试工具<br>   PonyDebugger看上去是一个不错的调试工具，可以在电脑浏览器上远程调试iOS程序、查看试图层次、网络等等。CocoaLumberjack是个Log工具，号称是可以提供企业级Log，使用者也挺多。</p>
-<p>为了了解一下目前第三方库的普及程度，下面列举一些知名App对第三方库的依赖。</p>
-<p>网易新闻<br>AppleReachability<br>ASIHTTPRequest<br>EGOTableViewPullRefresh<br>GTMNSString+HTML<br>MGTemplateEngine<br>MPOAuth<br>RegexKitLite<br>SDWebImage<br>SSZipArchive<br>wax</p>
-<p>Garageband<br>MurmurHash<br>libpng<br>zlib<br>SBJson (json-framework)</p>
-<p>iWork三套件<br>MOKit<br>Boost C++ Library<br>protobuf<br>OpenGL Mathematics<br>SQLite<br>cephes math library</p>
-<p>Pinterest<br>AFNetworking<br>AFHttpClientLogger<br>Facebook SDK<br>iRate<br>MAKVONotificationCenter<br>SDWebImage<br>SFHFKeychainUtils<br>SSPullToRefresh<br>SVProgressHUD<br>TTTAttributedLabel<br>TTTLocalizedPluralString<br>UIAlertView-Blocks</p>
-<p>多看阅读<br>fmdb<br>ASIHTTPRequest<br>FreeType<br>JSONKit<br>Objective-Zip<br>Skia (Google)<br>MBProgressHUD</p>
-<p>淘宝<br>MAZeroingWeakRef<br>MBProgressHUD<br>ABContactHelper<br>ASIHTTPRequest<br>CocoaLumberjack<br>EGOTableViewPullRefresh<br>fmdb<br>GTMBase64<br>JSONKit<br>SBJson (json-framework)<br>RTLabel<br>SDWebImage<br>SVPullToRefresh<br>three20<br>ziparchive</p>
-<p>微信<br>cocos2d<br>EGOTableViewPullRefresh<br>Facebook iOS SDK<br>JSONKit<br>SBJson<br>ziparchive</p>
-<p>QQ<br>ASIHTTPRequest<br>FMDB<br>CocoaAsyncSocket<br>JSONKit<br>MBProgressHUD<br>OpenUDID<br>SBJson<br>SVPullToRefresh</p>
-<p>百度地图<br>AFNetworking<br>GTMBase64<br>JSONKit<br>MBProgressHUD<br>RNCachingURLProtocol<br>SDWebImage</p>
-<p>微博<br>ABContactHelper<br>AFNetworking<br>ASIHTTPRequest<br>DACircularProgressView<br>DDProgressView<br>DTFoundation<br>fmdb<br>JSONKit<br>SBJson<br>MBProgressHUD<br>MTStatusBarOverlay<br>OpenUDID<br>SFHFKeychainUtils</p>
-<p>人人<br>cocoaasyncsocket<br>ZipArchive<br>MBProgressHUD<br>JSONKit<br>GTMBase64<br>MKNetworkKit<br>HPGrowingTextView<br>zxing</p>
-<p>可以看到，这些大型的App的依赖都很混乱，所以稍微解释一下。这些大公司都有一个iOS团队来协同开发，团队成员的水平也参差不齐。有时由于历史原因，例如某个App的某个组件依赖了ASIHttpRequest，但之后的新人改用了AFNetworking，就造成上面这种比较混乱的库依赖关系。这就造成难以维护、代码冗余等问题了。所以，引入一个第三方库一定要慎重考虑，如果可能，尽量自己开发和实现相应的功能，第三方库尽量只作为参考。 小团队或者个人开发者可以不必过多考虑，开发速度优先。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">

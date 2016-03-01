@@ -1,356 +1,1613 @@
-
- <!DOCTYPE HTML>
-<html >
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   
-    <title>秦晓强的博客</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
-    
-    <meta name="author" content="CharmingQin">
-    
-    <meta name="description" content="charmingQin（中文名：秦晓强),iOS developer,just a quiet coding man。">
-    
-    
-    
-    
-    
-    <link rel="icon" href="/img/favicon.ico">
-    
-    
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
-    
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <title>秦晓强的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="charmingQin（中文名：秦晓强),iOS developer,just a quiet coding man。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="秦晓强的博客">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="秦晓强的博客">
+<meta property="og:description" content="charmingQin（中文名：秦晓强),iOS developer,just a quiet coding man。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="秦晓强的博客">
+<meta name="twitter:description" content="charmingQin（中文名：秦晓强),iOS developer,just a quiet coding man。">
+  
+    <link rel="alternative" href="/atom.xml" title="秦晓强的博客" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
-
-  <body>
-    <header>
-      <div>
-		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="秦晓强的博客" title="秦晓强的博客"/></a>
-			</div>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
 			
-			<div id="textlogo">
-				<h1 class="site-name"><a href="/" title="秦晓强的博客">秦晓强的博客</a></h1>
-				<h2 class="blog-motto"></h2>
+			<img lazy-src="http://ww4.sinaimg.cn/large/6ae34799gw1ey7e6whvgmj20j60j60u3.jpg" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">CharmingQin</a></h1>
+		</hgroup>
+
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
-			</a></div>
-			<nav class="animated">
-				<ul>
-					
-						<li><a href="/">Home</a></li>
-					
-						<li><a href="/archives">Archives</a></li>
-					
-					<li>
-					
-					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
-						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
-						<input type="hidden" name="q" value="site:yoursite.com">
-					</form>
-					
-					</li>
-				</ul>
-			</nav>			
-</div>
-
-    </header>
-    <div id="container">
-      <div id="main">
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2016/03/01/LeetCode1/" title="LeetCode第一题:twoSum问题" itemprop="url">
-  
-    <h1 itemprop="name">LeetCode第一题:twoSum问题</h1>
-    
-     
-           <p itemprop="description" >去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
-  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
-Given an array of integers, return indic</p>
-        
-    
-    <time datetime="2016-03-01T07:49:34.000Z" itemprop="datePublished">2016-03-01</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/22/二叉树2/" title="二叉树(2)" itemprop="url">
-  
-    <h1 itemprop="name">二叉树(2)</h1>
-    
-     
-       <p itemprop="description" >先序遍历:
-// 首先访问根，再先序遍历左（右）子树，最后先序遍历右（左）子树
-void preOrderTree(BinaryTree *tree)
-{
-if(tree == NULL) return;
-else
-{
-    printf(&quot;%3d&quot;,tree -&amp;gt; ro</p>
-      
-    
-    <time datetime="2015-12-22T02:55:59.000Z" itemprop="datePublished">2015-12-22</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/22/二叉树1/" title="二叉树(1)" itemprop="url">
-  
-    <h1 itemprop="name">二叉树(1)</h1>
-    
-     
-       <p itemprop="description" >一: 二叉树的概念
-二叉树,是一种特殊的树形结构,而树这种数据结构是按照节点去存储数据元素的(在这里,我们就不对树进行单独介绍来了,我们只研究二叉树).
-每个节点最多只能有两个子节点的树,我们成为二叉树.
-二: 二叉树的分类
-按照二叉树的概念,我们可以看出,逻辑上二叉树应该有以下</p>
-      
-    
-    <time datetime="2015-12-22T01:29:49.000Z" itemprop="datePublished">2015-12-22</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/07/哈希表(散列表)3/" title="哈希表(HashTable)攻略(3)" itemprop="url">
-  
-    <h1 itemprop="name">哈希表(HashTable)攻略(3)</h1>
-    
-     
-       <p itemprop="description" >接上一篇博客~
-  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.
-  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDicti</p>
-      
-    
-    <time datetime="2015-12-07T09:20:19.000Z" itemprop="datePublished">2015-12-07</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/07/哈希表(散列表)2/" title="哈希表(HashTable)攻略(2)" itemprop="url">
-  
-    <h1 itemprop="name">哈希表(HashTable)攻略(2)</h1>
-    
-     
-       <p itemprop="description" >接上一篇博客~
-   一 哈希函数的构造方法
-   哈希哈数主要有这么几种构造方法,直接定址法、数字分析法、平方取中法、除留取余法、 折叠法等……(这里我们先主要说一下直接定址法和除留取余法).
-   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分</p>
-      
-    
-    <time datetime="2015-12-07T09:04:20.000Z" itemprop="datePublished">2015-12-07</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/05/哈希表(散列表)1/" title="哈希表(HashTable)攻略(1)" itemprop="url">
-  
-    <h1 itemprop="name">哈希表(HashTable)攻略(1)</h1>
-    
-     
-       <p itemprop="description" >一:什么是哈希表(HashTable)
-   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.
-二:哈希表的构建思路
-   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:
-int arr[3] = {0,1,2};
-数组每个</p>
-      
-    
-    <time datetime="2015-12-05T07:00:21.000Z" itemprop="datePublished">2015-12-05</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/12/03/Xcode注释标识符/" title="Xcode注释标识符" itemprop="url">
-  
-    <h1 itemprop="name">Xcode注释标识符</h1>
-    
-     
-           <p itemprop="description" >前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，
-无非单行注释// ，多行注释用/**/,或者使用插件例如VVDocument等
-等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识
-符能够被Xcode识别，起到类似于＃pragma mar</p>
-        
-    
-    <time datetime="2015-12-03T02:49:04.000Z" itemprop="datePublished">2015-12-03</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/11/24/史上最全第三方6/" title="史上最全的第三方 （六）" itemprop="url">
-  
-    <h1 itemprop="name">史上最全的第三方 （六）</h1>
-    
-     
-           <p itemprop="description" >Mac Only
- gitx    一个git的图形客户端    
- Chameleon    把UIKit克隆到Mac里    
- Induction    一个Mac上的数据库客户端 支持Mysql Postgre Nosql Redis等    
- twui    一个Ma</p>
-        
-    
-    <time datetime="2015-11-24T07:09:31.000Z" itemprop="datePublished">2015-11-24</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/11/24/史上最全第三方5/" title="史上最全的第三方 （五）" itemprop="url">
-  
-    <h1 itemprop="name">史上最全的第三方 （五）</h1>
-    
-     
-           <p itemprop="description" >知名效果Demo
- KLNoteViewController    一个类似Evernote旧版的Stack界面 绿色的    
- REComposeViewController    一个类似系统Twitter分享界面~    
- DETweetComposeViewContr</p>
-        
-    
-    <time datetime="2015-11-24T04:02:38.000Z" itemprop="datePublished">2015-11-24</time>
-  </a>
-</section>
-
-  <section class="post" itemscope itemprop="blogPost">
-  
-    <a href="/2015/11/24/史上最全第三方4/" title="史上最全的第三方 （四）" itemprop="url">
-  
-    <h1 itemprop="name">史上最全的第三方 （四）</h1>
-    
-     
-           <p itemprop="description" >控件
-HUD
- MBProgressHUD    一个HUD 用得很广泛 无阴影 全屏模态    
- MBProgressHUD    和MBHUD一样 但有更新 添加了BLock iOS6    
- ATMHud    很棒的HUD 有阴影和动画~    
- SVProgres</p>
-        
-    
-    <time datetime="2015-11-24T03:59:01.000Z" itemprop="datePublished">2015-11-24</time>
-  </a>
-</section>
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-  </nav>
-
-</div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
-
-<div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
-<aside class="clearfix">
-
-  
-<div class="categorieslist">
-	<p class="asidetitle">分類</p>
-		<ul>
 		
-			<li><a href="/categories/第三方类库/" title="第三方类库">第三方类库<sup>6</sup></a></li>
-		
-			<li><a href="/categories/［Xcode］/" title="［Xcode］">［Xcode］<sup>1</sup></a></li>
-		
-			<li><a href="/categories/［数据结构］/" title="［数据结构］">［数据结构］<sup>5</sup></a></li>
-		
-			<li><a href="/categories/［算法］/" title="［算法］">［算法］<sup>1</sup></a></li>
-		
-		</ul>
-</div>
 
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+							<li><a href="http://www.zhihu.com/people/qin-charming">随笔</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/charmingQin" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/u/1793279897" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="http://www.jianshu.com/users/2b665305f6bb/timeline" title="rss">rss</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.coderqi.com">齐路军的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.lidaze.com">李大泽的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.wuocean.com">吴海洋的博客</a>
+			        
+			        </div>
+				</section>
+				
 
-  
-
-  <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
-</div>
-
-</aside>
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">charmingQin（中文名：秦晓强）,iOS developer，just a quiet coding man。</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
 </div>
     </div>
-    <footer><div id="footer" >
-	
-	<div class="line">
-		<span></span>
-		<div class="author"></div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">CharmingQin</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://ww4.sinaimg.cn/large/6ae34799gw1ey7e6whvgmj20j60j60u3.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">CharmingQin</h1>
+			</hgroup>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+					<li><a href="http://www.zhihu.com/people/qin-charming">随笔</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/charmingQin" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/u/1793279897" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="http://www.jianshu.com/users/2b665305f6bb/timeline" title="rss">rss</a>
+			        
+				</div>
+			</nav>
+		</header>				
 	</div>
-	
-	
-	<div class="social-font clearfix">
-		
-		
-		
-		
-		
-	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
-		
-		<a href="http://yoursite.com" target="_blank" title="CharmingQin">CharmingQin</a>
-		
-		</p>
-</div>
-</footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){ 
-  $('.navbar').click(function(){
-    $('header nav').toggleClass('shownav');
-  });
-  var myWidth = 0;
-  function getSize(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-  };
-  var m = $('#main'),
-      a = $('#asidepart'),
-      c = $('.closeaside'),
-      o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-LeetCode1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/01/LeetCode1/" class="article-date">
+  	<time datetime="2016-03-01T07:49:34.000Z" itemprop="datePublished">2016-03-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
         
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/01/LeetCode1/">LeetCode第一题:twoSum问题</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.</p>
+<p>  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)</p>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution.   </p>
+<p>  Example:</p>
+<pre><code>Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,
+
+Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,
+
+<span class="keyword">return</span> [<span class="number">0</span>, <span class="number">1</span>].  
+</code></pre><p> 翻译过来,给定一个整型数组, 返回两个下标, 这两个下标对应的数组值相加能够得到taget.</p>
+<p>  先用最简单,最暴力的方法,直接遍历相加,等于taget就获取到index值.</p>
+<pre><code> <span class="comment">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+*/</span>
+<span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>{
+ <span class="keyword">int</span> *tempArr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="keyword">sizeof</span> (<span class="keyword">int</span>));
+  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numsSize-<span class="number">1</span>; i++) {
+      <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;numsSize; j++){
+          <span class="keyword">if</span>(nums[i] + nums[j] == target){
+              tempArr[<span class="number">0</span>] = i;
+              tempArr[<span class="number">1</span>] = j;
+          <span class="keyword">return</span> tempArr;
+       }
+     }
+   }
+  <span class="built_in">free</span>(tempArr);
+  <span class="keyword">return</span> <span class="literal">NULL</span>;
+}       
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［算法］/">［算法］</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-二叉树2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/22/二叉树2/" class="article-date">
+  	<time datetime="2015-12-22T02:55:59.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/22/二叉树2/">二叉树(2)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先序遍历:</p>
+<pre><code><span class="comment">// 首先访问根，再先序遍历左（右）子树，最后先序遍历右（左）子树</span>
+<span class="literal">void</span> preOrderTree(BinaryTree *tree)
+{
+<span class="keyword">if</span>(tree == <span class="built_in">NULL</span>) <span class="keyword">return</span>;
+<span class="keyword">else</span>
+{
+    printf(<span class="string">"%3d"</span>,tree <span class="subst">-&gt; </span>root);
+    preOrderTree(tree <span class="subst">-&gt; </span>leftTree);
+    preOrderTree(tree <span class="subst">-&gt; </span>rightTree);
+}
+}
+</code></pre><p>中序遍历:</p>
+<pre><code><span class="comment">//首先中序遍历左（右）子树，再访问根，最后中序遍历右（左）子树</span>
+<span class="literal">void</span> middleOrderTree(BinaryTree *tree)
+{
+<span class="keyword">if</span>(tree == <span class="built_in">NULL</span>) <span class="keyword">return</span>;
+<span class="keyword">else</span>
+{
+    middleOrderTree(tree <span class="subst">-&gt; </span>leftTree);
+    printf(<span class="string">"%3d"</span>,tree <span class="subst">-&gt; </span>root);
+    middleOrderTree(tree <span class="subst">-&gt; </span>rightTree);
+}
+}
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/22/二叉树2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-二叉树1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/22/二叉树1/" class="article-date">
+  	<time datetime="2015-12-22T01:29:49.000Z" itemprop="datePublished">2015-12-22</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/22/二叉树1/">二叉树(1)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一: 二叉树的概念</p>
+<p>二叉树,是一种特殊的树形结构,而树这种数据结构是按照节点去存储数据元素的(在这里,我们就不对树进行单独介绍来了,我们只研究二叉树).</p>
+<p>每个节点最多只能有两个子节点的树,我们成为二叉树.</p>
+<p>二: 二叉树的分类</p>
+<p>按照二叉树的概念,我们可以看出,逻辑上二叉树应该有以下几类:</p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85tfp3dnj20fp08eglp.jpg"></p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85vu1b5mj20if0973yr.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799jw1ez85x20vhoj20iz0abt9m.jpg"></p>
+<p><img src="http://ww4.sinaimg.cn/large/6ae34799jw1ez85y9rywmj20l70afgmo.jpg"></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/22/二叉树1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-哈希表(散列表)3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/07/哈希表(散列表)3/" class="article-date">
+  	<time datetime="2015-12-07T09:20:19.000Z" itemprop="datePublished">2015-12-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/07/哈希表(散列表)3/">哈希表(HashTable)攻略(3)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>接上一篇博客~</p>
+<p>  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.</p>
+<p>  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDictionary就是哈希函数实现的).</p>
+<p>  首先，引入相关函数库：</p>
+<pre><code><span class="id">#include</span> &lt;stdio.h&gt;  <span class="comment">// 标准输入输出函数</span>
+
+<span class="id">#include</span> &lt;stdlib.h&gt; <span class="comment">// stdlib.h里面定义了五种类型、一些宏和通用工具函数。 </span>
+类型例如size_t、wchar_t、div_t、ldiv_t和lldiv_t； 
+宏例如EXIT_FAILURE、EXIT_SUCCESS、RAND_MAX和MB_CUR_MAX等等；
+常用的函数如<span class="function"><span class="title">malloc</span><span class="params">()</span></span>、<span class="function"><span class="title">calloc</span><span class="params">()</span></span>、<span class="function"><span class="title">realloc</span><span class="params">()</span></span>、<span class="function"><span class="title">free</span><span class="params">()</span></span>、<span class="function"><span class="title">system</span><span class="params">()</span></span>、等等。
+
+<span class="id">#include</span> &lt;string.h&gt; <span class="comment">// 字符串处理</span>
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/哈希表(散列表)3/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-哈希表(散列表)2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/07/哈希表(散列表)2/" class="article-date">
+  	<time datetime="2015-12-07T09:04:20.000Z" itemprop="datePublished">2015-12-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/07/哈希表(散列表)2/">哈希表(HashTable)攻略(2)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>接上一篇博客~</p>
+<p>   一 哈希函数的构造方法</p>
+<p>   哈希哈数主要有这么几种构造方法,直接定址法、数字分析法、平方取中法、除留取余法、 折叠法等……(这里我们先主要说一下直接定址法和除留取余法).</p>
+<p>   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.</p>
+<p>   直接定址法:</p>
+<p>   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;</p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
+<p>   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/07/哈希表(散列表)2/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-哈希表(散列表)1" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/05/哈希表(散列表)1/" class="article-date">
+  	<time datetime="2015-12-05T07:00:21.000Z" itemprop="datePublished">2015-12-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/05/哈希表(散列表)1/">哈希表(HashTable)攻略(1)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>一:什么是哈希表(HashTable)</p>
+<p>   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.</p>
+<p>二:哈希表的构建思路</p>
+<p>   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:</p>
+<pre><code><span class="keyword">int</span> arr[<span class="number">3</span>] = {<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>};
+</code></pre><p>数组每个元素的下标是0,1,2(也就是key值);对应的值是0,1,2(也就是value值);这个时候我们可以认为数组</p>
+<p>下标和数组元素的值,有对应关系,也就是说,数组就是一种特殊的,简单的哈希表.</p>
+<p>但是此时,key值是整数,value是有序的,如果key值是字符串,value是无序的,那我们就要使用哈希表这种数据</p>
+<p>结构了.  </p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/12/05/哈希表(散列表)1/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-Xcode注释标识符" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/03/Xcode注释标识符/" class="article-date">
+  	<time datetime="2015-12-03T02:49:04.000Z" itemprop="datePublished">2015-12-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/12/03/Xcode注释标识符/">Xcode注释标识符</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>前几天总结了一下Xcode注释的问题，因为大家给自己代码加注释的时候，</p>
+<p>无非单行注释// ，多行注释用/<em>**</em>/,或者使用插件例如VVDocument等</p>
+<p>等。实际上，给代码加注释的时候,我们可以给注释加上一些标识符，这些标识</p>
+<p>符能够被Xcode识别，起到类似于＃pragma mark的作用。</p>
+<pre><code><span class="comment">// <span class="doctag">TODO:</span> 0000 (我们将要做的事情)</span>
+
+<span class="comment">// MARK: 1111 (我们标记了某行代码)</span>
+
+<span class="comment">// <span class="doctag">FIXME:</span> 2222 (我们要修改的代码) </span>
+
+<span class="comment">// ???: 3333 (可能有疑问的代码)</span>
+
+<span class="comment">// !!!: 4444 (可能要注意的代码)</span>
+</code></pre><p>  大家使用的时候要注意一下，必须严格按照上面的格式,冒号后面一定要有内容,</p>
+<p>  我个人一般就用这些标识符来标记自己的注释。完成之后如下图:</p>
+<p>  <img src="http://ww4.sinaimg.cn/large/6ae34799gw1eym9mdpr0pj20az0bqtah.jpg">        </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/［Xcode］/">［Xcode］</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-史上最全第三方6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/史上最全第三方6/" class="article-date">
+  	<time datetime="2015-11-24T07:09:31.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/24/史上最全第三方6/">史上最全的第三方 （六）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Mac Only</p>
+<p> gitx    一个git的图形客户端    </p>
+<p> Chameleon    把UIKit克隆到Mac里    </p>
+<p> Induction    一个Mac上的数据库客户端 支持Mysql Postgre Nosql Redis等    </p>
+<p> twui    一个Mac的自定义控件库,有类似iOS的Table和Tab,CA实现    </p>
+<p> CocoaPods    一个Ruby程序,用来管理Cocoa库依赖    </p>
+<p> kod    Mac上的代码编辑,Chrome风格,小巧快速    </p>
+<p> slate    Mac上窗口管理    </p>
+<p> nu    一个包装,用nu语言来写东西？    </p>
+<p> appledoc    用来生成Apple格式的文档和网页    </p>
+<p> macgap    包装以可以用类似js的写法来调用函数    </p>
+<p> Quicksilver    这个..Mac上知名的快速启动    </p>
+<p> mogenerator    生成CoreData的Code    </p>
+<p> nv    Note程序    </p>
+<p> iTerm2    知名终端～    </p>
+<p> Sparkle    一个软件升级用的Framework    </p>
+<p> PostgresApp    PostgresSQL客户端    </p>
+<p> terminal-notifier    通过终端发送Notification    </p>
+<p> ShiftIt    管理桌面窗口 状态栏插件    </p>
+<p> textmate    这个不用说了。。～～～    </p>
+<p> textmate-missingdrawer    Textmate插件 一个侧边栏    </p>
+<p> AckMate    Textmate插件 运行ack？    </p>
+<p> clicktoflash    Webkit插件 屏蔽Flash    </p>
+<p> MongoHub-Mac    MongoDB的客户端    </p>
+<p> CocosBuilder    用于cocos2d的JS绑定 GUI设计    </p>
+<p> Rebel    一些AppKit的扩展    </p>
+<p> Textual    轻量的IRC客户端    </p>
+<p> vico    一个开发用文本编辑器    </p>
+<p> pomodoro    一个时间管理的App    </p>
+<p> visor    Terminal的插件    </p>
+<p> GoAgentX    这个不用说了….    </p>
+<p> Pixen    像素画 的工具    </p>
+<p> DataKit    不知道什么好想是与数据和网络连接的？    </p>
+<p> Color-Picker-Pro    取色器 状态栏插件    </p>
+<p> SNRHUDKit    Mac版的HUD    </p>
+<p> ConnectionKit    FTP和WebDAV    </p>
+<p> OpenEmu    各种游戏机模拟器    </p>
+<p> Hacky    一个完整的Hacker News客户端～～    </p>
+<p> WWDCDownloader    下载WWDC用，Xcode5 only    </p>
+<p> XVim    Xcode的插件 支持绑定VIM快捷键    </p>
+<p> QuickCast    一个录屏分享的App    </p>
+<p> zephyros    窗口管理 for hackers    </p>
+<p> shuttle    SSH快捷方式 菜单栏插件    </p>
+<p> qlstephen    系统QuickLook的插件,查看无扩展名的文本文件    </p>
+<p> INAppStoreWindow    Mac AppStore风格的NSWindow    </p>
+<p> spectacle    窗口管理 不用鼠标    </p>
+<p> limechat    IRC客户端    </p>
+<p> LiveReload    Web开发    </p>
+<p> selfcontrol    自控。。禁止上网一段时间    </p>
+<p> Popup    在状态栏弹出的Popup    </p>
+<p> MPlayerX    一个MPlayerX的测试分支    </p>
+<p> QuickCursor    快速启动编辑    </p>
+<p> Sonora    一个小巧的 挺棒的音乐播放器    </p>
+<p> SafariOmnibar    一个Sarari插件    </p>
+<p> HexFiend    16进制编辑器    </p>
+<p> Xcode5-Plugin-Template    Xcode5插件的开发模板    </p>
+<p> cocoapods-xcode-plugin    cocoapod 插件    </p>
+<p> KFCocoaPodsPlugin    cocoapod 插件, 方便编辑Podfile，显示构建日志    </p>
+<p> VVDocumenter-Xcode    Xcode的插件 写注释时自动提醒JavaDoc风格    </p>
+<p> ColorSense-for-Xcode    Xcode的插件 支持动态调整UIColor    </p>
+<p> KSImageNamed-Xcode    Xcode的插件 支持显示工程里的UIImage    </p>
+<p> Lin    Xcode的插件 显示NSLocalizedString的对应字符串    </p>
+<p> nib2objc    把xib和nib翻译成m 包括命令、GUI、Service    </p>
+<p> iOS-Framework    编译iOS的Framework的通用模板    </p>
+<p> Alcatraz    管理和发现插件～～    </p>
+<p> UIEffectDesignerView    原生iOS/Mac粒子效果设计    </p>
+<p> SCStringsUtility    开发工具 制作多语言    </p>
+<p> APNS-Pusher    通过APNS发推送～    </p>
+<p>非Github</p>
+<p> cooliris-toolkit    Cooliris出品基础工具包,Github有Clone    </p>
+<p> core-plot    强大的2D数据绘图库    </p>
+<p> j2objc    神奇的东西,将Java翻译成ObjC～ Google出品    </p>
+<p> theunarchiver    解压,支持Zip, Tar, Gzip, Bzip2, 7-Zip, Rar, LhA, StuffIt等    </p>
+<p> macfuse    创建OSX的文件系统～    </p>
+<p> google-toolbox-for-mac    著名的Google工具箱    </p>
+<p> leveldb    Google大神开发的KV存储,高性能,低内存    </p>
+<p> RegexKitLite    著名的ObjC 正则表达式    </p>
+<p> zipachive    用得很广泛的ObjC zip文件压缩解压 (github上有几个mirror)</p>
+<p>youtube下载神器：<a href="https://github.com/rg3/youtube-dl" target="_blank" rel="external">https://github.com/rg3/youtube-dl</a></p>
+<p>vim插件：<a href="https://github.com/Valloric/YouCompleteMe" target="_blank" rel="external">https://github.com/Valloric/YouCompleteMe</a></p>
+<p>vim插件配置：<a href="https://github.com/spf13/spf13-vim" target="_blank" rel="external">https://github.com/spf13/spf13-vim</a></p>
+<p>—————-Mac完整项目———-</p>
+<p>电台：<a href="https://github.com/myoula/sostart" target="_blank" rel="external">https://github.com/myoula/sostart</a></p>
+<p>—————-iOS完整项目—————-</p>
+<p>1，豆瓣相册 <a href="https://github.com/TonnyTao/DoubanAlbum" target="_blank" rel="external">https://github.com/TonnyTao/DoubanAlbum</a></p>
+<p>2，voa在线英语 <a href="https://github.com/cubewang/NewsReader" target="_blank" rel="external">https://github.com/cubewang/NewsReader</a></p>
+<p>3，电竞第一视角 <a href="https://github.com/cubewang/GameDaily" target="_blank" rel="external">https://github.com/cubewang/GameDaily</a></p>
+<p>4，开源中国的iOS客户端 <a href="https://github.com/oschina/iphone-app" target="_blank" rel="external">https://github.com/oschina/iphone-app</a></p>
+<p>5，很优雅的一些组件 <a href="https://github.com/sobri909/MGBox2" target="_blank" rel="external">https://github.com/sobri909/MGBox2</a></p>
+<p>6，ios控件学习：<a href="https://github.com/iimgal/StudyiOS?source=c" target="_blank" rel="external">https://github.com/iimgal/StudyiOS?source=c</a></p>
+<p>7，reader ：<a href="https://github.com/vfr/Reader" target="_blank" rel="external">https://github.com/vfr/Reader</a></p>
+<p>8，git客户端： <a href="https://github.com/dennisreimann/ioctocat" target="_blank" rel="external">https://github.com/dennisreimann/ioctocat</a></p>
+<p>9，speakEnglish：<a href="https://github.com/cubewang/" target="_blank" rel="external">https://github.com/cubewang/</a><br>SpeakEnglish ????????克伟</p>
+<p>10，新闻阅读 ：<a href="https://github.com/samuelclay/NewsBlur" target="_blank" rel="external">https://github.com/samuelclay/NewsBlur</a></p>
+<p>11，last.fm：<a href="https://github.com/c99koder/lastfm-iphone" target="_blank" rel="external">https://github.com/c99koder/lastfm-iphone</a></p>
+<p>12，LBS游戏：<a href="https://github.com/Kjuly/iPokeMon" target="_blank" rel="external">https://github.com/Kjuly/iPokeMon</a></p>
+<p>13，ThatInbox 是iOS平台上一个免费开源的Email 客户端：<a href="https://github.com/Ink/ThatInbox" target="_blank" rel="external">https://github.com/Ink/ThatInbox</a></p>
+<p>14，ThatCloud是一个免费开源的iOS app，允许你访问、查看以及使用你在网上存储的内容，可以很好地帮你完成工作：<a href="https://github.com/Ink/ThatCloud" target="_blank" rel="external">https://github.com/Ink/ThatCloud</a></p>
+<p>15，ThatPhoto是使用了Ink Mobile Framework框架来连接到其他iOS 应用程序，你可以用它来编辑和管理照片：<a href="https://github.com/Ink/ThatPhoto" target="_blank" rel="external">https://github.com/Ink/ThatPhoto</a></p>
+<p>16，ThatPDF一个开源的，用来阅读、签名和注解PDF 文档的工具：<a href="https://github.com/Ink/ThatPDF" target="_blank" rel="external">https://github.com/Ink/ThatPDF</a></p>
+<p>17，xmpp聊天系统：<a href="https://github.com/chrisballinger/Off-the-Record-iOS" target="_blank" rel="external">https://github.com/chrisballinger/Off-the-Record-iOS</a></p>
+<p>18，对口袋NCE有用的app：<a href="https://github.com/imtiger/HappyEnglish" target="_blank" rel="external">https://github.com/imtiger/HappyEnglish</a> ???????</p>
+<p>19，一个像Instagram那样的图片分享社区App：<a href="https://github.com/ParsePlatform/Anypic" target="_blank" rel="external">https://github.com/ParsePlatform/Anypic</a></p>
+<p>20，黑客阅读:<a href="https://github.com/mmackh/Hacker-News-for-iOS" target="_blank" rel="external">https://github.com/mmackh/Hacker-News-for-iOS</a></p>
+<p>21，画图软件：<a href="https://github.com/sprang/Brushes" target="_blank" rel="external">https://github.com/sprang/Brushes</a> ??????</p>
+<p>22，APN软件：<a href="https://github.com/lexrus/APN.iOS" target="_blank" rel="external">https://github.com/lexrus/APN.iOS</a></p>
+<p>23，Sol的天气app：<a href="https://github.com/comyarzaheri/Sol" target="_blank" rel="external">https://github.com/comyarzaheri/Sol</a></p>
+<p>24，货币转换：<a href="https://github.com/nicklockwood/Concurrency" target="_blank" rel="external">https://github.com/nicklockwood/Concurrency</a></p>
+<p>25，来电归属地查询的软件（不能上架）：<a href="https://github.com/Quotation/WhoCall" target="_blank" rel="external">https://github.com/Quotation/WhoCall</a></p>
+<p>26，Mogo iOS 客户端：<a href="https://github.com/jurre/Mogo-iOS" target="_blank" rel="external">https://github.com/jurre/Mogo-iOS</a></p>
+<p>27，<a href="https://github.com/AshFurrow/C-41" target="_blank" rel="external">https://github.com/AshFurrow/C-41</a></p>
+<p>28，使用XMPP协议的IM开源软件：<a href="https://github.com/chrisballinger/ChatSecure-iOS" target="_blank" rel="external">https://github.com/chrisballinger/ChatSecure-iOS</a></p>
+<p>29，WWDC：<a href="https://github.com/indragiek/WWDC-2014" target="_blank" rel="external">https://github.com/indragiek/WWDC-2014</a></p>
+<p>30，移动支付公司 Square 将去年收购的照片应用 Viewfinder 开源了，包含服务端、iOS 和 Android 应用代码：<a href="https://github.com/viewfinderco/viewfinder" target="_blank" rel="external">https://github.com/viewfinderco/viewfinder</a></p>
+<p>31，圣经小助手 ：<a href="https://github.com/nixzhu/Bible-Assistant" target="_blank" rel="external">https://github.com/nixzhu/Bible-Assistant</a></p>
+<p>32，已阅 ：<a href="https://github.com/ming1016/RSSRead" target="_blank" rel="external">https://github.com/ming1016/RSSRead</a></p>
+<p>33，美国白宫APP：<a href="https://github.com/WhiteHouse/wh-app-ios" target="_blank" rel="external">https://github.com/WhiteHouse/wh-app-ios</a></p>
+<p>34，Ruby for China： <a href="https://github.com/ruby-china/ruby-china-for-ios" target="_blank" rel="external">https://github.com/ruby-china/ruby-china-for-ios</a></p>
+<p>35，breadwallet iOS bitcoin wallet ：<a href="https://github.com/voisine/breadwallet" target="_blank" rel="external">https://github.com/voisine/breadwallet</a></p>
+<p>36，品趣：<a href="https://github.com/novel-design/novel-design" target="_blank" rel="external">https://github.com/novel-design/novel-design</a></p>
+<p>37，懒人笔记：<a href="https://github.com/liaojinxing/Voice2Note" target="_blank" rel="external">https://github.com/liaojinxing/Voice2Note</a></p>
+<p>38, Doppio :<a href="https://github.com/chroman/Doppio" target="_blank" rel="external">https://github.com/chroman/Doppio</a></p>
+<p>—————-开源项目的协议————–</p>
+<p>网易新闻的开源协议： <a href="http://m.163.com/special/newsclient/ios_libraries.html" target="_blank" rel="external">http://m.163.com/special/newsclient/ios_libraries.html</a></p>
+<p>—————-组件—————-</p>
+<p>自定义tabbar（1）的： <a href="https://github.com/i300/TweetBotTabBar" target="_blank" rel="external">https://github.com/i300/TweetBotTabBar</a></p>
+<p>自定义tabbar（2）和上拉刷新：<a href="http://www.cocoachina.com/bbs/read.php?tid=62061&amp;keyword=tabbar" target="_blank" rel="external">http://www.cocoachina.com/bbs/read.php?tid=62061&amp;keyword=tabbar</a></p>
+<p>自定义tabbar（3）：<a href="https://github.com/jinthagerman/JBTabBarController" target="_blank" rel="external">https://github.com/jinthagerman/JBTabBarController</a></p>
+<p>类似instagram的tabbar：<a href="https://github.com/boctor/idev-recipes/tree/master/CustomTabBarNotification" target="_blank" rel="external">https://github.com/boctor/idev-recipes/tree/master/CustomTabBarNotification</a></p>
+<p>coretext：<a href="https://github.com/Cocoanetics/DTCoreText" target="_blank" rel="external">https://github.com/Cocoanetics/DTCoreText</a></p>
+<p>图片延时加载：<a href="http://developer.apple.com/library/ios/#samplecode/LazyTableImages" target="_blank" rel="external">http://developer.apple.com/library/ios/#samplecode/LazyTableImages</a></p>
+<p>网络请求：<a href="https://github.com/pokeb/asi-http-request" target="_blank" rel="external">https://github.com/pokeb/asi-http-request</a><br><a href="https://github.com/AFNetworking/AFNetworking" target="_blank" rel="external">https://github.com/AFNetworking/AFNetworking</a></p>
+<p>Json解析:<a href="https://github.com/johnezang/JSONKit" target="_blank" rel="external">https://github.com/johnezang/JSONKit</a></p>
+<p>图片异步加载：<a href="https://github.com/rs/SDWebImage?source=c" target="_blank" rel="external">https://github.com/rs/SDWebImage?source=c</a></p>
+<p>瀑布流1）：<a href="https://github.com/aceisScope/WaterflowView" target="_blank" rel="external">https://github.com/aceisScope/WaterflowView</a></p>
+<p>瀑布流2）<a href="http://code4app.com/ios/%E7%80%91%E5%B8%83%E6%95%88%E6%9E%9C-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/4fdfecd96803fa117f000000" target="_blank" rel="external">http://code4app.com/ios/%E7%80%91%E5%B8%83%E6%95%88%E6%9E%9C-%E4%B8%8D%E5%90%8C%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F/4fdfecd96803fa117f000000</a></p>
+<p>瀑布流3）：<a href="https://github.com/chiahsien/CHTCollectionViewWaterfallLayout" target="_blank" rel="external">https://github.com/chiahsien/CHTCollectionViewWaterfallLayout</a> ???????</p>
+<p>瀑布流4）：<a href="http://www.cocoachina.com/bbs/read.php?tid=94851&amp;keyword=%C6%D9%B2%BC%C1%F7" target="_blank" rel="external">http://www.cocoachina.com/bbs/read.php?tid=94851&amp;keyword=%C6%D9%B2%BC%C1%F7</a></p>
+<p>瀑布流5）：<a href="https://github.com/ptshih/PSCollectionView" target="_blank" rel="external">https://github.com/ptshih/PSCollectionView</a> ??????????</p>
+<p>瀑布流6）：<a href="http://www.cocoachina.com/bbs/search.php?ss=index#submit" target="_blank" rel="external">http://www.cocoachina.com/bbs/search.php?ss=index#submit</a> 搜索：瀑布流</p>
+<p>瀑布流7）：<a href="https://github.com/steipete/PSTCollectionView" target="_blank" rel="external">https://github.com/steipete/PSTCollectionView</a></p>
+<p>做图书的一个框架：<a href="https://github.com/Simbul/baker" target="_blank" rel="external">https://github.com/Simbul/baker</a></p>
+<p>项目内文档：<a href="https://github.com/tomaz/appledoc?source=c" target="_blank" rel="external">https://github.com/tomaz/appledoc?source=c</a></p>
+<p>抽屉导航：<a href="https://github.com/Inferis/ViewDeck" target="_blank" rel="external">https://github.com/Inferis/ViewDeck</a></p>
+<p>iOS的url router :<a href="https://github.com/gaosboy/urlmanager" target="_blank" rel="external">https://github.com/gaosboy/urlmanager</a></p>
+<p><a href="https://github.com/usepropeller/routable-ios" target="_blank" rel="external">https://github.com/usepropeller/routable-ios</a></p>
+<p><a href="https://github.com/jverkoey/sockit" target="_blank" rel="external">https://github.com/jverkoey/sockit</a></p>
+<p>照片墙：<a href="https://github.com/gmoledina/GMGridView" target="_blank" rel="external">https://github.com/gmoledina/GMGridView</a><br>collectionview:<a href="https://github.com/steipete/PSTCollectionView" target="_blank" rel="external">https://github.com/steipete/PSTCollectionView</a></p>
+<p>自动更新类：<a href="https://github.com/lexrus/LTUpdate" target="_blank" rel="external">https://github.com/lexrus/LTUpdate</a></p>
+<p>官网蝴蝶的OpenGL应用：<a href="https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UITabBar_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40007521-CH3-SW4" target="_blank" rel="external">https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UITabBar_Class/Reference/Reference.html#//apple_ref/doc/uid/TP40007521-CH3-SW4</a></p>
+<p>开机密码锁：<a href="https://github.com/aporat/KKPasscodeLock" target="_blank" rel="external">https://github.com/aporat/KKPasscodeLock</a></p>
+<p>视频播放器：<a href="https://github.com/blizzard-op/VideoPlayerKit" target="_blank" rel="external">https://github.com/blizzard-op/VideoPlayerKit</a></p>
+<p>音频播放完整客户端：<a href="https://github.com/kstenerud/ObjectAL-for-iPhone" target="_blank" rel="external">https://github.com/kstenerud/ObjectAL-for-iPhone</a></p>
+<p>豆瓣音频播放：<a href="https://github.com/douban/DOUAudioStreamer" target="_blank" rel="external">https://github.com/douban/DOUAudioStreamer</a> ?????</p>
+<p>掉渣天的音频播放流：<a href="https://github.com/alexbw/novocaine" target="_blank" rel="external">https://github.com/alexbw/novocaine</a><br>AudioEngine：<a href="https://github.com/TheAmazingAudioEngine/TheAmazingAudioEngine" target="_blank" rel="external">https://github.com/TheAmazingAudioEngine/TheAmazingAudioEngine</a> 1000+?</p>
+<p>滑动的自定义的SegmentedControl控件：<a href="https://github.com/samvermette/SVSegmentedControl" target="_blank" rel="external">https://github.com/samvermette/SVSegmentedControl</a></p>
+<p>自定义的segmented：<a href="https://github.com/HeshamMegid/HMSegmentedControl" target="_blank" rel="external">https://github.com/HeshamMegid/HMSegmentedControl</a></p>
+<p>类似swipelist的左右滑动的cell：<a href="https://github.com/alikaragoz/MCSwipeTableViewCell" target="_blank" rel="external">https://github.com/alikaragoz/MCSwipeTableViewCell</a> ?????</p>
+<p>扩展1：<a href="https://github.com/soffes/sstoolkit" target="_blank" rel="external">https://github.com/soffes/sstoolkit</a> ????</p>
+<p>扩展2：（存用户密码）：<a href="https://github.com/soffes/sskeychain" target="_blank" rel="external">https://github.com/soffes/sskeychain</a> ????</p>
+<p>scrollview自动滚动：<a href="https://github.com/shanegao/SGFocusImageFrame" target="_blank" rel="external">https://github.com/shanegao/SGFocusImageFrame</a></p>
+<p>scrollview左右滑动，渐隐渐出：<a href="https://github.com/park0ur/Path-Intro-iPhone" target="_blank" rel="external">https://github.com/park0ur/Path-Intro-iPhone</a></p>
+<p>scrollview滑动条变细：<a href="https://github.com/r-plus/ScrollThindicator" target="_blank" rel="external">https://github.com/r-plus/ScrollThindicator</a></p>
+<p>弹窗层：<a href="https://github.com/martinjuhasz/MJPopupViewController" target="_blank" rel="external">https://github.com/martinjuhasz/MJPopupViewController</a> ?????</p>
+<p>tableview下拉图片放大：<a href="https://github.com/hunk/TwProfile" target="_blank" rel="external">https://github.com/hunk/TwProfile</a></p>
+<p>选取iPod库播放音乐：<a href="https://github.com/gangverk/GVMusicPlayerController" target="_blank" rel="external">https://github.com/gangverk/GVMusicPlayerController</a></p>
+<p>UIView动画：<a href="https://github.com/neror/ftutils" target="_blank" rel="external">https://github.com/neror/ftutils</a></p>
+<p>类似clear的超强动画cell：<a href="https://github.com/mystcolor/JTGestureBasedTableViewDemo" target="_blank" rel="external">https://github.com/mystcolor/JTGestureBasedTableViewDemo</a></p>
+<p>网易新闻背景图浮动：<a href="https://github.com/kenshin03/Home-For-iOS" target="_blank" rel="external">https://github.com/kenshin03/Home-For-iOS</a></p>
+<p>仿网易，新浪的push效果，带有阴影：1）<a href="http://code4app.com/ios/%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2%E5%A4%A7%E5%B0%8F%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/5124399a6803fae82c000000" target="_blank" rel="external">http://code4app.com/ios/%E8%A7%86%E5%9B%BE%E5%88%87%E6%8D%A2%E5%A4%A7%E5%B0%8F%E6%B8%90%E5%8F%98%E6%95%88%E6%9E%9C/5124399a6803fae82c000000</a></p>
+<p>2）<a href="https://github.com/vinqon/MultiLayerNavigation" target="_blank" rel="external">https://github.com/vinqon/MultiLayerNavigation</a></p>
+<p>3）<a href="https://github.com/chisj/EuPopDemo" target="_blank" rel="external">https://github.com/chisj/EuPopDemo</a><br>?????实现原理：<a href="http://mobile1.riaos.com/?p=2025414?????" target="_blank" rel="external">http://mobile1.riaos.com/?p=2025414?????</a></p>
+<p>新浪微博和朋友圈的图片浏览方式：</p>
+<p>1）<a href="https://github.com/Seitk/FB-Gallery" target="_blank" rel="external">https://github.com/Seitk/FB-Gallery</a></p>
+<p>2）<a href="https://github.com/jimneylee/SinaMBlogNimbus" target="_blank" rel="external">https://github.com/jimneylee/SinaMBlogNimbus</a></p>
+<p>coretext 运用：<a href="https://github.com/akosma/CoreTextWrapper" target="_blank" rel="external">https://github.com/akosma/CoreTextWrapper</a></p>
+<p>N多自定义组件：<a href="https://github.com/boctor/idev-recipes" target="_blank" rel="external">https://github.com/boctor/idev-recipes</a> ??????</p>
+<p>可以换图片的pageControl：<a href="https://github.com/Spaceman-Labs/SMPageControl" target="_blank" rel="external">https://github.com/Spaceman-Labs/SMPageControl</a></p>
+<p>瀑布流：<a href="https://github.com/ptshih/PSCollectionView" target="_blank" rel="external">https://github.com/ptshih/PSCollectionView</a></p>
+<p>iOS7的扁平UI：<a href="https://github.com/Grouper/FlatUIKit" target="_blank" rel="external">https://github.com/Grouper/FlatUIKit</a></p>
+<p>产品引导view：<a href="https://github.com/123nobody/WZGuideViewController" target="_blank" rel="external">https://github.com/123nobody/WZGuideViewController</a></p>
+<p>类似safari的页面浏览：<a href="https://github.com/100grams/HGPageScrollView" target="_blank" rel="external">https://github.com/100grams/HGPageScrollView</a> ??????</p>
+<p>正则匹配UIView ：<a href="https://github.com/KayK/RegexHighlightView" target="_blank" rel="external">https://github.com/KayK/RegexHighlightView</a> ????????????</p>
+<p>加密措施：<a href="https://github.com/dev5tec/FBEncryptor" target="_blank" rel="external">https://github.com/dev5tec/FBEncryptor</a><br><a href="https://github.com/mayurbirari/AES256AndBase64" target="_blank" rel="external">https://github.com/mayurbirari/AES256AndBase64</a></p>
+<p>自增长的键盘：<a href="https://github.com/HansPinckaers/GrowingTextView" target="_blank" rel="external">https://github.com/HansPinckaers/GrowingTextView</a></p>
+<p>自定义的map Annotation :<a href="https://github.com/grgcombs/MultiRowCalloutAnnotationView" target="_blank" rel="external">https://github.com/grgcombs/MultiRowCalloutAnnotationView</a></p>
+<p>超屌的3d画面：<a href="https://github.com/nicklockwood/iCarousel" target="_blank" rel="external">https://github.com/nicklockwood/iCarousel</a> ????????????</p>
+<p>上拉刷新 ： <a href="https://github.com/dbsGen/SlimeRefresh" target="_blank" rel="external">https://github.com/dbsGen/SlimeRefresh</a></p>
+<p>翻页效果：<a href="https://github.com/brow/leaves" target="_blank" rel="external">https://github.com/brow/leaves</a></p>
+<p>类似maps的半截翻页：<a href="https://github.com/FairfaxMobile/FDCurlViewControl" target="_blank" rel="external">https://github.com/FairfaxMobile/FDCurlViewControl</a></p>
+<p>弹窗：<a href="https://github.com/martinjuhasz/MJPopupViewController" target="_blank" rel="external">https://github.com/martinjuhasz/MJPopupViewController</a></p>
+<p>对话框：<a href="https://github.com/jessesquires/MessagesTableViewController" target="_blank" rel="external">https://github.com/jessesquires/MessagesTableViewController</a></p>
+<p>pagecurl的翻页效果：<a href="http://www.cocoachina.com/bbs/read.php?tid=11856&amp;keyword=%B5%D8%CD%BC" target="_blank" rel="external">http://www.cocoachina.com/bbs/read.php?tid=11856&amp;keyword=%B5%D8%CD%BC</a></p>
+<p>二维码：<a href="http://www.cocoachina.com/applenews/devnews/2013/0104/5462.html" target="_blank" rel="external">http://www.cocoachina.com/applenews/devnews/2013/0104/5462.html</a></p>
+<p>自定义的annotation（1）:<a href="https://github.com/applidium/ADClusterMapView" target="_blank" rel="external">https://github.com/applidium/ADClusterMapView</a></p>
+<p>自定义的annotation（2）:<a href="http://code4app.com/ios/Customized-Complex-Map-Annotation/4f67f4f86803fa843f000002#osc" target="_blank" rel="external">http://code4app.com/ios/Customized-Complex-Map-Annotation/4f67f4f86803fa843f000002#osc</a></p>
+<p>类似国家地理的翻页：<a href="https://github.com/michaelhenry/MHNatGeoViewControllerTransition" target="_blank" rel="external">https://github.com/michaelhenry/MHNatGeoViewControllerTransition</a></p>
+<p>iOS开发私有库：<a href="https://github.com/kennytm/iphone-private-frameworks" target="_blank" rel="external">https://github.com/kennytm/iphone-private-frameworks</a></p>
+<p>viewController的切换（从右边进来）：<a href="https://github.com/steipete/PSStackedView" target="_blank" rel="external">https://github.com/steipete/PSStackedView</a> ????????????</p>
+<p>安全存储用户名，密码等：<a href="https://github.com/granoff/Lockbox" target="_blank" rel="external">https://github.com/granoff/Lockbox</a></p>
+<p>FormSheet的神器：<a href="https://github.com/m1entus/MZFormSheetController" target="_blank" rel="external">https://github.com/m1entus/MZFormSheetController</a></p>
+<p>iOS中model类的写法：<a href="https://github.com/github/Mantle" target="_blank" rel="external">https://github.com/github/Mantle</a></p>
+<p>相关介绍：<a href="https://github.com/blog/1299-mantle-a-model-framework-for-objective-c" target="_blank" rel="external">https://github.com/blog/1299-mantle-a-model-framework-for-objective-c</a></p>
+<p>model类解析：<a href="https://github.com/nicklockwood/BaseModel" target="_blank" rel="external">https://github.com/nicklockwood/BaseModel</a></p>
+<p>basemodel解析：<a href="https://github.com/andrep/RMModelObject" target="_blank" rel="external">https://github.com/andrep/RMModelObject</a></p>
+<p>蓝牙：<a href="https://github.com/xuanhuangyiqi/Anti-Lost" target="_blank" rel="external">https://github.com/xuanhuangyiqi/Anti-Lost</a></p>
+<p>model类比较好的库1）：<a href="https://github.com/icanzilb/JSONModel" target="_blank" rel="external">https://github.com/icanzilb/JSONModel</a></p>
+<p>model类比较好的库2）：<a href="https://github.com/github/Mantle" target="_blank" rel="external">https://github.com/github/Mantle</a></p>
+<p>原生App的远程调试工具包：<a href="https://github.com/square/PonyDebugger#remote-logging" target="_blank" rel="external">https://github.com/square/PonyDebugger#remote-logging</a></p>
+<p>将缓存存在磁盘：<a href="https://github.com/rs/SDURLCache" target="_blank" rel="external">https://github.com/rs/SDURLCache</a></p>
+<p>path的欢迎页实现方式：<a href="https://github.com/icepat/ICETutorial" target="_blank" rel="external">https://github.com/icepat/ICETutorial</a> ?????????</p>
+<p>path的左下角菜单栏的同类实现方法：<a href="https://github.com/mattgemmell/MGTileMenu" target="_blank" rel="external">https://github.com/mattgemmell/MGTileMenu</a></p>
+<p>coredata的封装库：<a href="https://github.com/magicalpanda/MagicalRecord" target="_blank" rel="external">https://github.com/magicalpanda/MagicalRecord</a> ??????</p>
+<p>coredata的 sql使用方式：<a href="https://github.com/marcoarment/FCModel" target="_blank" rel="external">https://github.com/marcoarment/FCModel</a></p>
+<p>zip文件解压缩：<a href="https://github.com/soffes/ssziparchive" target="_blank" rel="external">https://github.com/soffes/ssziparchive</a></p>
+<p>完美的图片category：<a href="https://github.com/Nyx0uf/NYXImagesKit" target="_blank" rel="external">https://github.com/Nyx0uf/NYXImagesKit</a></p>
+<p>纵向的scrollview循环利用：<a href="https://github.com/andreyvit/SoloComponents-iOS" target="_blank" rel="external">https://github.com/andreyvit/SoloComponents-iOS</a></p>
+<p>UINavigationController的push可能导致错误的效果的补充：<a href="https://github.com/Plasma/BufferedNavigationController" target="_blank" rel="external">https://github.com/Plasma/BufferedNavigationController</a></p>
+<p>UIKit的分类：<a href="https://github.com/enormego/cocoa-helpers" target="_blank" rel="external">https://github.com/enormego/cocoa-helpers</a> ????? ?????</p>
+<p>左右滚动的scrollview（类似网易读图）：<a href="https://github.com/kejinlu/PagedFlowView" target="_blank" rel="external">https://github.com/kejinlu/PagedFlowView</a></p>
+<p>webview控制器：<a href="https://github.com/samvermette/SVWebViewController" target="_blank" rel="external">https://github.com/samvermette/SVWebViewController</a></p>
+<p>滑动帧动画：<a href="https://github.com/IFTTT/JazzHands" target="_blank" rel="external">https://github.com/IFTTT/JazzHands</a> ?????</p>
+<p>iOS6的水滴下拉刷新：<a href="https://github.com/Sephiroth87/ODRefreshControl" target="_blank" rel="external">https://github.com/Sephiroth87/ODRefreshControl</a></p>
+<p>微信下拉显示logo：<a href="https://github.com/gluttony/RevealLogo" target="_blank" rel="external">https://github.com/gluttony/RevealLogo</a></p>
+<p>支付宝的锁屏界面：<a href="https://github.com/kejinlu/KKGestureLockView" target="_blank" rel="external">https://github.com/kejinlu/KKGestureLockView</a></p>
+<p>status bar的离线loading效果：<a href="http://www.cocoachina.com/bbs/read.php?tid=99947&amp;keyword=%CD%F8%D2%D7" target="_blank" rel="external">http://www.cocoachina.com/bbs/read.php?tid=99947&amp;keyword=%CD%F8%D2%D7</a></p>
+<p>模仿百度地图向下推的层：<a href="https://github.com/mariohahn/MHDismissModalView" target="_blank" rel="external">https://github.com/mariohahn/MHDismissModalView</a></p>
+<p>FileManager:<a href="https://github.com/nicklockwood/StandardPaths" target="_blank" rel="external">https://github.com/nicklockwood/StandardPaths</a></p>
+<p>下拉头图放大：<a href="https://github.com/cyndibaby905/TwitterCover" target="_blank" rel="external">https://github.com/cyndibaby905/TwitterCover</a></p>
+<p>（1）访网易的左右滑动的view：<a href="http://code4app.com/ios/%E4%BB%BF%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB%E7%9A%84%E6%BB%91%E5%8A%A8%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80/5255fbd96803fa8660000000" target="_blank" rel="external">http://code4app.com/ios/%E4%BB%BF%E7%BD%91%E6%98%93%E6%96%B0%E9%97%BB%E7%9A%84%E6%BB%91%E5%8A%A8%E8%A7%86%E5%9B%BE%E5%B8%83%E5%B1%80/5255fbd96803fa8660000000</a></p>
+<p>（2）左右横向滑动：<a href="https://github.com/MugunthKumar/MKHorizMenuDemo" target="_blank" rel="external">https://github.com/MugunthKumar/MKHorizMenuDemo</a></p>
+<p>tableview模仿path的时间表：<a href="https://github.com/kentnguyen/KNPathTableViewController" target="_blank" rel="external">https://github.com/kentnguyen/KNPathTableViewController</a></p>
+<p>弹出层：<a href="https://github.com/50pixels/FPPopover" target="_blank" rel="external">https://github.com/50pixels/FPPopover</a></p>
+<p>二维码登录：<a href="https://tiqr.org/" target="_blank" rel="external">https://tiqr.org/</a></p>
+<p>弹出层：<a href="https://github.com/UrbanApps/UAModalPanel" target="_blank" rel="external">https://github.com/UrbanApps/UAModalPanel</a></p>
+<p>Facebook paper中的图片左右移动实现：<a href="https://github.com/chroman/CRMotionView" target="_blank" rel="external">https://github.com/chroman/CRMotionView</a></p>
+<p>横向滚动的tab1）：<a href="https://github.com/pppoe/LightMenuBar" target="_blank" rel="external">https://github.com/pppoe/LightMenuBar</a></p>
+<p>横向滚动的tab2）：<a href="https://github.com/MugunthKumar/MKHorizMenuDemo" target="_blank" rel="external">https://github.com/MugunthKumar/MKHorizMenuDemo</a></p>
+<p>左右滑动的cell，有删除等功能：<a href="https://github.com/CEWendel／SWTableViewCell/" target="_blank" rel="external">https://github.com/CEWendel／SWTableViewCell/</a></p>
+<p>不同速度的scrollview，用于做启动介绍页：<a href="https://github.com/5sw／SWParallaxScrollView" target="_blank" rel="external">https://github.com/5sw／SWParallaxScrollView</a></p>
+<p>mattt写的解析html和xml的：<a href="https://github.com/mattt/Ono" target="_blank" rel="external">https://github.com/mattt/Ono</a></p>
+<p>通过服务器动态修改客户端逻辑：<a href="https://github.com/mmin18/WaxPatch" target="_blank" rel="external">https://github.com/mmin18/WaxPatch</a><br>routes，可以让按钮直接向点html的链接一样：<a href="https://github.com/joeldev/JLRoutes" target="_blank" rel="external">https://github.com/joeldev/JLRoutes</a></p>
+<p>像新浪微博一样的图片浏览viewcontroller：<a href="https://github.com/jaredsinclair/JTSImageViewController" target="_blank" rel="external">https://github.com/jaredsinclair/JTSImageViewController</a></p>
+<p>像微信一样的search bar ：<a href="https://github.com/fabiankr／TableViewSearchBar" target="_blank" rel="external">https://github.com/fabiankr／TableViewSearchBar</a></p>
+<p>图片浏览：<a href="https://github.com/EddyBorja/EBPhotoPages" target="_blank" rel="external">https://github.com/EddyBorja/EBPhotoPages</a></p>
+<p>左滑动或右滑动cell：<a href="https://github.com/modocache/" target="_blank" rel="external">https://github.com/modocache/</a><br>MDCSwipeToChoose</p>
+<p>类似iOS相册删除照片的动画效果：<a href="https://github.com/Ciechan/BCGenieEffect" target="_blank" rel="external">https://github.com/Ciechan/BCGenieEffect</a></p>
+<p>扁平化的uibutton：<a href="https://github.com/barbosa/GBFlatButton" target="_blank" rel="external">https://github.com/barbosa/GBFlatButton</a></p>
+<p>给app评分的组件1：<a href="https://github.com/nicklockwood/iRate" target="_blank" rel="external">https://github.com/nicklockwood/iRate</a></p>
+<p>给app评分的组件2：<a href="https://github.com/arashpayan/appirater" target="_blank" rel="external">https://github.com/arashpayan/appirater</a></p>
+<p>NSFileManager的封装：<a href="https://github.com/fabiocaccamo/FCFileManager" target="_blank" rel="external">https://github.com/fabiocaccamo/FCFileManager</a></p>
+<p>paper的点击展开效果：<a href="https://github.com/hebertialmeida／HAPaperViewController" target="_blank" rel="external">https://github.com/hebertialmeida／HAPaperViewController</a></p>
+<p>柱状图：<a href="https://github.com/honcheng/iOSPlot" target="_blank" rel="external">https://github.com/honcheng/iOSPlot</a></p>
+<p>点击titleview弹出下拉的menu：<a href="https://github.com/romaonthego/REMenu" target="_blank" rel="external">https://github.com/romaonthego/REMenu</a></p>
+<p>自定义开场图：<a href="https://github.com/ealeksandrov/EAIntroView" target="_blank" rel="external">https://github.com/ealeksandrov/EAIntroView</a></p>
+<p>让navbar跟着scrollview一起滚动：<a href="https://github.com/andreamazz/AMScrollingNavbar" target="_blank" rel="external">https://github.com/andreamazz/AMScrollingNavbar</a></p>
+<p>跟相册相关的：<a href="https://github.com/B-Sides/ELCImagePickerController" target="_blank" rel="external">https://github.com/B-Sides/ELCImagePickerController</a></p>
+<p>更高效的显示地图上的大头针：<a href="https://github.com/choefele/CCHMapClusterController" target="_blank" rel="external">https://github.com/choefele/CCHMapClusterController</a></p>
+<p>streaming的音频播放：<a href="https://github.com/douban/DOUAudioStreamer" target="_blank" rel="external">https://github.com/douban/DOUAudioStreamer</a></p>
+<p>XMPP的使用：<a href="https://github.com/adow/Dollarss" target="_blank" rel="external">https://github.com/adow/Dollarss</a></p>
+<p>iOS7 mailbox的statusbar运用：<a href="https://github.com/simonholroyd/StatusBarTest" target="_blank" rel="external">https://github.com/simonholroyd/StatusBarTest</a></p>
+<p>国家地理的页面切换动画：<a href="https://github.com/michaelhenry/MHNatGeoViewControllerTransition" target="_blank" rel="external">https://github.com/michaelhenry/MHNatGeoViewControllerTransition</a></p>
+<p>引导页1：<a href="https://github.com/MatthewYork/MYBlurIntroductionView" target="_blank" rel="external">https://github.com/MatthewYork/MYBlurIntroductionView</a></p>
+<p>引导页2：<a href="https://github.com/MatthewYork/iPhone-IntroductionTutorial" target="_blank" rel="external">https://github.com/MatthewYork/iPhone-IntroductionTutorial</a></p>
+<p>引导页3：<a href="https://github.com/ealeksandrov/EAIntroView" target="_blank" rel="external">https://github.com/ealeksandrov/EAIntroView</a></p>
+<p>iOS7的电话button: <a href="https://github.com/mrcrow/MRoundedButton" target="_blank" rel="external">https://github.com/mrcrow/MRoundedButton</a></p>
+<p>类似paper的导航抖动：<a href="https://github.com/andreamazz/AMWaveTransition" target="_blank" rel="external">https://github.com/andreamazz/AMWaveTransition</a></p>
+<p>下拉填充满字体：<a href="https://github.com/d-ronnqvist/blogpost-codesample-PullToRefresh：" target="_blank" rel="external">https://github.com/d-ronnqvist/blogpost-codesample-PullToRefresh：</a></p>
+<p>gif播放 ：<a href="https://github.com/Flipboard/FLAnimatedImage" target="_blank" rel="external">https://github.com/Flipboard/FLAnimatedImage</a></p>
+<p>视图切换：<a href="https://github.com/zoonooz/ZFDragableModalTransition" target="_blank" rel="external">https://github.com/zoonooz/ZFDragableModalTransition</a></p>
+<p>类似游戏的菜单按钮，点击伸缩：<a href="https://github.com/sendoa/QBKOverlayMenuView" target="_blank" rel="external">https://github.com/sendoa/QBKOverlayMenuView</a></p>
+<p>模仿twitter的首页左右切换：<a href="https://github.com/duowan/TwitterPaggingViewer" target="_blank" rel="external">https://github.com/duowan/TwitterPaggingViewer</a></p>
+<p>下载器：<a href="https://github.com/thibaultCha/TCBlobDownload" target="_blank" rel="external">https://github.com/thibaultCha/TCBlobDownload</a></p>
+<p>网易新闻的离线下载bar:<a href="https://github.com/jaydee3/JDStatusBarNotification" target="_blank" rel="external">https://github.com/jaydee3/JDStatusBarNotification</a></p>
+<p>图片剪切和拆剪：<a href="https://github.com/kishikawakatsumi/PEPhotoCropEditor" target="_blank" rel="external">https://github.com/kishikawakatsumi/PEPhotoCropEditor</a></p>
+<p>过度效果的status bar :<a href="https://github.com/nrj/AlphaGradientStatusBar" target="_blank" rel="external">https://github.com/nrj/AlphaGradientStatusBar</a><br>Facebook’s paper的弹出层：<a href="https://github.com/UrbanApps/UAModalPanel" target="_blank" rel="external">https://github.com/UrbanApps/UAModalPanel</a></p>
+<p>Objective-C 和JavaScript 交互：<a href="https://github.com/marcuswestin/WebViewJavascriptBridge" target="_blank" rel="external">https://github.com/marcuswestin/WebViewJavascriptBridge</a></p>
+<p>CollectionView in UITableViewCell：<a href="https://github.com/AshFurrow/AFTabledCollectionView" target="_blank" rel="external">https://github.com/AshFurrow/AFTabledCollectionView</a></p>
+<p>popview（1）：<a href="https://github.com/jmascia/KLCPopup" target="_blank" rel="external">https://github.com/jmascia/KLCPopup</a></p>
+<p>popview（2）<a href="https://github.com/andreamazz/AMPopTip" target="_blank" rel="external">https://github.com/andreamazz/AMPopTip</a></p>
+<p>UICollectionView replacement of UITableView （添加上section）：<a href="https://github.com/jamztang/CSStickyHeaderFlowLayout" target="_blank" rel="external">https://github.com/jamztang/CSStickyHeaderFlowLayout</a></p>
+<p>storekit： <a href="https://github.com/mattt/CargoBay" target="_blank" rel="external">https://github.com/mattt/CargoBay</a></p>
+<p>========================== UICollectionView相关===============</p>
+<p><a href="https://github.com/bryceredd/RFQuiltLayout" target="_blank" rel="external">https://github.com/bryceredd/RFQuiltLayout</a></p>
+<p>==========================helper相关===============</p>
+<p><a href="https://github.com/andrewroycarter/UIView-Helpers" target="_blank" rel="external">https://github.com/andrewroycarter/UIView-Helpers</a></p>
+<p>==========================auto layout相关=======</p>
+<p><a href="https://github.com/cloudkite/Masonry" target="_blank" rel="external">https://github.com/cloudkite/Masonry</a></p>
+<p><a href="https://github.com/smileyborg/UIView-AutoLayout" target="_blank" rel="external">https://github.com/smileyborg/UIView-AutoLayout</a></p>
+<p><a href="https://github.com/iMartinKiss/KeepLayout" target="_blank" rel="external">https://github.com/iMartinKiss/KeepLayout</a></p>
+<p>pinterst的下拉刷新填充满的效果：<a href="https://github.com/uzysjung/UzysCircularProgressPullToRefresh" target="_blank" rel="external">https://github.com/uzysjung/UzysCircularProgressPullToRefresh</a></p>
+<p>==========================block相关======================</p>
+<p><a href="https://github.com/jivadevoe/UIAlertView-Blocks" target="_blank" rel="external">https://github.com/jivadevoe/UIAlertView-Blocks</a></p>
+<p><a href="https://github.com/pandamonia/BlocksKit" target="_blank" rel="external">https://github.com/pandamonia/BlocksKit</a> ?????</p>
+<p>==========================iOS7相关========================</p>
+<p>iOS7颜色类：<a href="https://github.com/claaslange/iOS7Colors" target="_blank" rel="external">https://github.com/claaslange/iOS7Colors</a></p>
+<p>iOS7：动态毛玻璃效果：<a href="https://github.com/alexdrone/ios-realtimeblur" target="_blank" rel="external">https://github.com/alexdrone/ios-realtimeblur</a></p>
+<p>iOS7 blur侧边栏：<a href="https://github.com/rnystrom/RNFrostedSidebar" target="_blank" rel="external">https://github.com/rnystrom/RNFrostedSidebar</a></p>
+<p>iOS7 blur image：<a href="https://github.com/lukabernardi/LBBlurredImage" target="_blank" rel="external">https://github.com/lukabernardi/LBBlurredImage</a></p>
+<p>iOS7 blur 效果：<a href="https://github.com/nicklockwood/FXBlurView" target="_blank" rel="external">https://github.com/nicklockwood/FXBlurView</a></p>
+<p>iOS7的uialertview:<a href="https://github.com/alexanderjarvis/PXAlertView" target="_blank" rel="external">https://github.com/alexanderjarvis/PXAlertView</a></p>
+<p>边打字边出现标题：<a href="https://github.com/jverdi/JVFloatLabeledTextField" target="_blank" rel="external">https://github.com/jverdi/JVFloatLabeledTextField</a></p>
+<p>扁平化的segment：<a href="https://github.com/pepibumur／PPiFlatSegmentedControl" target="_blank" rel="external">https://github.com/pepibumur／PPiFlatSegmentedControl</a></p>
+<p>iOS7视图切换炫酷效果：<a href="https://github.com/ColinEberhardt/VCTransitionsLibrary" target="_blank" rel="external">https://github.com/ColinEberhardt/VCTransitionsLibrary</a></p>
+<p>iOS7教学代码：<a href="https://github.com/ShinobiControls/iOS7-day-by-day" target="_blank" rel="external">https://github.com/ShinobiControls/iOS7-day-by-day</a></p>
+<p>iOS7风格的抽屉导航：<a href="https://github.com/monospacecollective/MSDynamicsDrawerViewController" target="_blank" rel="external">https://github.com/monospacecollective/MSDynamicsDrawerViewController</a></p>
+<p>颜色渐变的加载：<a href="https://github.com/nrj/GradientProgressView" target="_blank" rel="external">https://github.com/nrj/GradientProgressView</a></p>
+<p>iOS7demo：<a href="https://github.com/shu223/iOS7-Sampler" target="_blank" rel="external">https://github.com/shu223/iOS7-Sampler</a></p>
+<p>iOS正则分类：<a href="https://github.com/bendytree/Objective-C-RegEx-Categories" target="_blank" rel="external">https://github.com/bendytree/Objective-C-RegEx-Categories</a></p>
+<p>iOS7侧边栏：<a href="https://github.com/romaonthego/RESideMenu" target="_blank" rel="external">https://github.com/romaonthego/RESideMenu</a></p>
+<p>iOS7侧边栏（覆在view上）<a href="https://github.com/romaonthego/REFrostedViewController" target="_blank" rel="external">https://github.com/romaonthego/REFrostedViewController</a></p>
+<p>iOS7库：<a href="https://github.com/youknowone/UI7Kit（可以让iOS5也有iOS7的样子）" target="_blank" rel="external">https://github.com/youknowone/UI7Kit（可以让iOS5也有iOS7的样子）</a><br>===========================测试框架========================</p>
+<p><a href="http://www.cocoachina.com/applenews/devnews/2013/1025/7242.html" target="_blank" rel="external">http://www.cocoachina.com/applenews/devnews/2013/1025/7242.html</a></p>
+<p><a href="https://github.com/kif-framework/KIF" target="_blank" rel="external">https://github.com/kif-framework/KIF</a></p>
+<p>mattt大神的发布程序：<a href="https://github.com/nomad/shenzhen" target="_blank" rel="external">https://github.com/nomad/shenzhen</a></p>
+<p>原来博主的链接，我附上<a href="http://blog.csdn.net/sky_2016/article/details/45502921" target="_blank" rel="external">传送门</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-史上最全第三方5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/史上最全第三方5/" class="article-date">
+  	<time datetime="2015-11-24T04:02:38.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/24/史上最全第三方5/">史上最全的第三方 （五）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>知名效果Demo</p>
+<p> KLNoteViewController    一个类似Evernote旧版的Stack界面 绿色的    </p>
+<p> REComposeViewController    一个类似系统Twitter分享界面~    </p>
+<p> DETweetComposeViewController    一个iOS4实现的 类似iOS5的twitter分享    </p>
+<p> JTGestureBasedTableViewDemo    一个类似Clear的Demo    </p>
+<p> Opaque    一个Clear的Demo    </p>
+<p> MCSwipeTableViewCell    类似Mailbox的控件 和Clear差不多    </p>
+<p> CHTCollectionViewWaterfallLayout    瀑布流控件    </p>
+<p> PSCollectionView    类似瀑布流式的控件    </p>
+<p> IIIThumbFlow    瀑布流控件    </p>
+<p> WaterflowView    瀑布流的View 看样子Star挺多    </p>
+<p> KNPathTableViewController    在Table右侧显示类似Path的时间 很简单~    </p>
+<p> GSBookShelf    一个类似iBook书柜的实现    </p>
+<p> M6ParallaxController    类似Path封面的效果    </p>
+<p> ZGParallelView    类似Path的封面效果 貌似不错    </p>
+<p> TimeScroller    类似Path右侧的时间小滑块    </p>
+<p> chatheads    Facebook 一个一直最上方的头像 点击可以显示Table    </p>
+<p> MBSliderView    滑动解锁    </p>
+<p> DKLiveBlur    雅虎天气风格的动态模糊    </p>
+<p> ios-realtimeblur    iOS7 模糊效果    </p>
+<p> GHSidebarNav    新版Facebook 侧滑等UI    </p>
+<p>LXReorderableCollectionViewFlowLayout    iBook中 拖动图书的功能    </p>
+<p> MDCParallaxView    景深效果 就像Path的封面那样    </p>
+<p>其他</p>
+<p> SMPageControl    一个仿UIPageControl的API类 可以自定义小点点～    </p>
+<p> REActivityViewController    开的ActivityView实现    </p>
+<p> DCControls    不错的扇形滑动控件 平面风格    </p>
+<p> BSKeyboardControls    与键盘相关的控制 控制 上一项下一项    </p>
+<p> OCMapView    一个MapKit标注聚合用的东西～    </p>
+<p> NJKWebViewProgress    显示WebView加载进度    </p>
+<p> REMenu    一个导航栏下拉菜单 不错～    </p>
+<p> action-sheet-blocks    为ActionSSheet提供block方法    </p>
+<p> ADClusterMapView    Map的地标Cluster 应该不错～    </p>
+<p> TPKeyboardAvoiding    一个UIView的 在有键盘时上移    </p>
+<p> calloutview    实现了私有的UICalloutView 类似地图中的弹出控件    </p>
+<p> SVPulsingAnnotationView    一个自定义MapLocator 动画控件    </p>
+<p> OWActivityViewController    一个类似系统的分享控件    </p>
+<p> SYEmojiPopover    显示一个Emoji选择de PopOVer    </p>
+<p> fingertips    在屏幕上显示触摸点 只支持iPad2和iPhone4s以上    </p>
+<p> ASTouchVisualizer    为屏幕触摸添加指示 可用于屏幕录制    </p>
+<p> openspringboard    仿SpringBoard的东西    </p>
+<p> HMLauncherView    仿SpringBoard的东西    </p>
+<p> CQMFloatingController    一个浮动的VC 类似Popover(没有箭头) 可以用在横屏iPhone等    </p>
+<p> WSCoachMarksView    为某个控件加上蒙板 类似Spotlight    </p>
+<p> KLHorizontalSelect    横向扫动选择    </p>
+<p> iOS-StyledPageControl    自定义PageControl,多种样式    </p>
+<p> iOS-blur    iOS7的模糊效果 iOS7Only    </p>
+<p> FXBlurView    iOS7的模糊效果 可以用在iOS5以上    </p>
+<p> MYBlurIntroductionView    带有模糊背景效果的 Intro    </p>
+<p> Masonry    AutoLayout框架    </p>
+<p> KeepLayout    AutoLayout框架 貌似比较好用    </p>
+<p> MLPAccessoryBadge    一些自定义badge~    </p>
+<p> JSBadgeView    数字角标 Badge    </p>
+<p> MSCellAccessory    Cell右侧的小箭头~    </p>
+<p> ios-fontawesome    一套用字体实现的Icon    </p>
+<p> WTGlyphFontSet    另一套用字体实现的Icon    </p>
+<p> DAKeyboardControl    键盘滑动消逝，就像系统内置的短信界面    </p>
+<p> JWFolders    iOS6以下的文件夹展开效果    </p>
+<p> OCCalendar    Popover样式的日期选择器    </p>
+<p> IBAForms    Form构建。2年前的工程了..    </p>
+<p> ActionSheetPicker    一个PopOver里面是Picker    </p>
+<p>MSCollectionViewCalendarLayout    日历事件样式 iOS6以上    </p>
+<p> MosaicUI    WP7磁片风格View 自适应大小    </p>
+<p> MosaicLayout    WP7磁片风格Layout UICollectionView    </p>
+<p> iPhone-IntroductionTutorial    用于创建启动引导界面的…    </p>
+<p> US2FormValidator    一套Table表单验证提示    </p>
+<p> AURosetteView    玫瑰花瓣似的展开菜单    </p>
+<p> EAIntroView    App启动的介绍界面    </p>
+<p> InformaticToolbar    下边栏显示提示和动作    </p>
+<p>高级功能</p>
+<p> PAPasscode    类似系统的输入密码界面    </p>
+<p> KKPasscodeLock    又一个类似系统输入密码界面    </p>
+<p> PTShowcaseViewController    能显示音视频等一堆格式文件的控件    </p>
+<p> Reader    一套显示PDF的库 支持大文件、加密文件 有iBook样式的界面 性能很好    </p>
+<p> FastPdfKit    一套PDF库 性能据说很好 也有界面    </p>
+<p> Kal    一套日历控件 高仿iOS默认    </p>
+<p> objc-TimesSquare    一套日历控件 类似iOS默认 貌似清新一些    </p>
+<p> ABCalendarPicker    高仿iOS默认日历的DatePicker~    </p>
+<p> MWPhotoBrowser    一套图片浏览控件 高仿iOS默认 支持网络图片    </p>
+<p> PTImageAlbumViewController    图片浏览控件 仿iOS默认    </p>
+<p> FGallery-iPhone    图片浏览器    </p>
+<p> AGImagePickerController    选取图片 支持多选    </p>
+<p> ELCImagePickerController    一个仿系统的ImagePicker 但支持多选    </p>
+<p> PhotoViewer    一个图片浏览的控件    </p>
+<p> KTPhotoBrowser    图片浏览控件 3年没更新了    </p>
+<p> DLCImagePickerController    一个用GPUImage实现的 ImagePicker功能,支持拍照和特效    </p>
+<p> route-me    一套自定义MapView 高仿系统 但支持不同的数据源    </p>
+<p> GrowingTextView    一个高仿短信发送的输入框    </p>
+<p> PHFComposeBarView    高仿短信发送输入框    </p>
+<p> MessagesTableViewController    高仿短信界面,可定制    </p>
+<p> AcaniChat    仿短信App 挺老了    </p>
+<p> UIBubbleTableView    iOS短信的泡泡界面,可以支持图片    </p>
+<p> ODRefreshControl    一个高仿iOS6下拉刷新的控件    </p>
+<p> ssmessagesviewcontroller    和系统类似的发短信界面 挺粗糙 当然现在系统已经提供了    </p>
+<p> SVWebViewController    一个简易的浏览器功能控件    </p>
+<p> TSMiniWebBrowser    一个简易的内置浏览器    </p>
+<p> TITokenField    一个高仿Mail和短信 选择联系人的控件    </p>
+<p> DAAppsViewController    一个仿AppStore的列表界面 输入appId集合    </p>
+<p> WUEmoticonsKeyboard    输入表情的自定义键盘    </p>
+<p> CKCalendar    一个朴实的日历    </p>
+<p> LBYouTubeView    显示Youtube视频..国内无用    </p>
+<p>套装</p>
+<p> tapkulibrary    一套比较大的自定义控件库 包括不错的HUD,进度条,日历,CoverFlow等    </p>
+<p> FlatUIKit    一套完整的扁平风格的UI (Flat)    </p>
+<p> Weibo    一套仿iOS7的控件    </p>
+<p> UI7Kit    一套iOS7风格的控件,可以在iOS5、6上用    </p>
+<p> PrettyKit    一套系统UI的子类 有着平滑渐变和阴影效果    </p>
+<p> nui    一套加在UIKit上的Category,允许用类CSS代码来控制样式    </p>
+<p> QuickDialog    一套自定义控件库,用来快速建造基于Table的设置    </p>
+<p> MGBoxKit    一套UIView的扩展和子类(Table Grid..) 有不错的类CSS的功能 有些好用的代码    </p>
+<p> MGBox    MGBox的旧版 应该去看v2    </p>
+<p> iOS-boilerplate    一些常见功能实现的例子:HUD Table滑动,打开URL用WebView等 挺老的工程    </p>
+<p> idev-recipes    iDevRecipes博客的代码,演示了如何自定义一些控件,代码比较老..    </p>
+<p> AePubReader    一个阅读epub的    </p>
+<p>较完整的App</p>
+<p> Brushes    绘画的App,超棒,Appstore上架应用    </p>
+<p> Inkpad    一个完整的矢量绘图App，很棒，已上架    </p>
+<p> modizer    !!!超强大的App 可以读取和演奏各种mod音乐 midi合成 解压 下载 自带庞大音乐库~ 已上架    </p>
+<p> kxmovie    一个ffmpeg的播放器 ～～～ 需要先构建ffmpeg    </p>
+<p> ioctocat    一个Github客户端    </p>
+<p> cheddar-ios    一个日程管理的App 应该比较知名    </p>
+<p> AppSales-Mobile    基于iTunes Connect来查看App销售状况    </p>
+<p> canabalt-ios    一个跑步的小游戏～    </p>
+<p> baker    一套HTML5构建的ebook库 貌似挺强大    </p>
+<p> iPhoneTracker    一个挺老的App 2年前    </p>
+<p> Off-the-Record-iOS    一个实时聊天的功能 支持一些XMPP协议    </p>
+<p> kokuban    一个iPad小画板 3年前    </p>
+<p> glpaint    从Appled的GLPaint改的    </p>
+<p> OpenGLMilkyWay    银河～～ 很棒 有教材    </p>
+<p> iphone-app    OSChina 开源中国 ..竟然挪到git.oschina.net去了。    </p>
+<p> BeeFancy    一个仿Fancy的客户端 基于BeeFranework    </p>
+<p> ruby-china-for-ios    RubyChina官方客户端    </p>
+<p> ruby-china-ios    和上面一样?    </p>
+<p> wh-app-ios    白宫官方App    </p>
+<p> CastleHassle    一个Cocos2D的物理小游戏 貌似内容挺丰富～    </p>
+<p> DocSets-for-iOS    iOS显示DocSets 可以下载iOS官方Doc~    </p>
+<p> newsyc    一个newsyc.me的客户端 (iPhone hacker News)    </p>
+<p> News-YC—iPhone    hackerNews的客户端    </p>
+<p> Upcoming    一个设计很棒的日程安排    </p>
+<p> Anypic    一个像Instagram那样的图片分享社区App    </p>
+<p> ClassicMap    旧版iOS地图    </p>
+<p> ntlniph    Twitter客户端 古老的工程了    </p>
+<p> lastfm-iphone    Last.fm官方客户端    </p>
+<p> ThatInbox    Ink出的邮件客户端    </p>
+<p> ThatCloud    Ink出的云端文件管理    </p>
+<p> ThatPDF    Ink出的PDF编辑    </p>
+<p> ThatPhoto    Ink出的图片编辑    </p>
+<p>开发/调试工具</p>
+<p> xctool    iOS工程构建和测试工具,用于替代系统的xcodebuild (CI)    </p>
+<p> PonyDebugger    一套Debugger工具,可以在电脑浏览器上远程调试iOS程序～查看试图层次、网络等    </p>
+<p> NSLogger    一套Log工具,可以在电脑上通过client实时查看NSLog,甚至是图片和二进制文件 支持Android    </p>
+<p> KIF    一套用Private API做的调试库,可以以用户的方式测试(touch in xxx)    </p>
+<p> gh-unit    一套ObjC的测试框架    </p>
+<p> DCIntrospect    一套iOS调试工具,在iOS界面里显示信息    </p>
+<p> CocoaLumberjack    一套类似Log4j的东西,可提供企业级的Log~~~~    </p>
+<p> Frank    自动化测试工具？    </p>
+<p> superdb    一个Debuger工具 用命令行调试。。    </p>
+<p> iOS-Hierarchy-Viewer    一个调试iOS界面的工具 通过浏览器访问~~ 值得瞅瞅～～    </p>
+<p> hierarchydetective    一个3D显示iOS视图层级的调试工具    </p>
+<p> CATransform3D-Test    调试CATransform3D矩阵的工具～    </p>
+<p> LLDB-QuickLook    在调试时用命令行调用QuickLook来显示图片、UIView等    </p>
+<p> iConsole    在App内显示调试信息、执行调试命令    </p>
+<p> Nocilla    一个模拟HTTP响应的调试库    </p>
+<p> dyci-main    一个可以在调试时动态添加代码的工具 需要改动Xcode    </p>
+<p> GestureLab    调试和把玩GestureRecognizor的    </p>
+<p> cedar    BDD风格单元测试    </p>
+<p> iOS-UI-Assets    iOS5.1中,系统控件和App的图片资源Dump 嗯..iOS7后就没用了    </p>
+<p> iOS-Artwork-Extractor    导出iOS系统App及控件的图片资源 只支持到iOS5    </p>
+<p>旧代码 &amp; 奇怪的东西</p>
+<p> DB5    通过plist构建界面的小东西    </p>
+<p> HockeyKit    一套iOS的 Ad-Hoc升级框架.包含PHP服务端    </p>
+<p> Briefs    一套类似原型制作工具    </p>
+<p> OpenTLD    视频跟踪检测 貌似挺高深    </p>
+<p> SimFinger    一些Fake系统图标的App 还有一些设备外框的图片、触摸点图片可以用    </p>
+<p> scifihifi-iphone    已经弃用的旧代码 新工程去看github页面    </p>
+<p> iphonearkit    4年前的代码 增强现实 (AR)    </p>
+<p> TouchDB-iOS    一个嵌入式的CouchDB实现    </p>
+<p> iOS-Runtime-Headers    从运行时Dump出来的公有/私有 Framework头 通过这个可以进行不同版本的对比    </p>
+<p> objectiveresource    RoR相关的东西    </p>
+<p> GRMustache    Mustache模板?    </p>
+<p> titanium_modules    Titanium 的常用模块    </p>
+<p> fontdiao    类似FontAwesome的东西,包含了一些国内网站logo    </p>
+<p>代码库大包包</p>
+<p> iphone-3.0-cookbook-    随书代码    </p>
+<p> iOS-5-Cookbook    随书代码～    </p>
+<p> iOS-6-Cookbook    </p>
+<p> iOS-6-Advanced-Cookbook    </p>
+<p> iOS7-day-by-day    iOS7-day-by-day 博客的代码    </p>
+<p> iOS7-Sampler    iOS7的一些新功能演示~    </p>
+<p> MyProjects    一些http:/ /mysparks.info上面的代码    </p>
+<p> Xcode-Snippets    一些Xcode代码片段   </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-史上最全第三方4" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/11/24/史上最全第三方4/" class="article-date">
+  	<time datetime="2015-11-24T03:59:01.000Z" itemprop="datePublished">2015-11-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/11/24/史上最全第三方4/">史上最全的第三方 （四）</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>控件</p>
+<p>HUD</p>
+<p> MBProgressHUD    一个HUD 用得很广泛 无阴影 全屏模态    </p>
+<p> MBProgressHUD    和MBHUD一样 但有更新 添加了BLock iOS6    </p>
+<p> ATMHud    很棒的HUD 有阴影和动画~    </p>
+<p> SVProgressHUD    一个HUD 样式类似MB_HUD 有一些进度等    </p>
+<p> HTProgressHUD    又一个HUD    </p>
+<p> ETActivityIndicatorView    Windows Phone 7风格风火轮    </p>
+<p>Slider</p>
+<p> JMSlider    一个很小清新的Slider 用CA画的    </p>
+<p> iOS-Custom-Controls    按住可以出Pop的UISlider    </p>
+<p> MTZTiltReflectionSlider    一个模仿iOS6 Music的Slider    </p>
+<p> ASRangeSlider    一个两段式的Slider    </p>
+<p> DCFineTuneSlider    可以拖动外部 和显示左右箭头的Slider    </p>
+<p> ARAnnotatedSlider    KVO教学 一个在Slider上面显示小Poper的～    </p>
+<p> LARSBar    显示声音dB的Slider    </p>
+<p> EDStarRating    打星评级 Slider控件    </p>
+<p> OBSlider    模拟iPhone音乐进度的表现    </p>
+<p> TLTiltSlider    仿iOS6 音量Slider,有金属光泽动画    </p>
+<p> RETrimControl    类似iOS6录像裁减的控制条    </p>
+<p>Progress</p>
+<p> KOAProgressBar    自定义ProgressBar    </p>
+<p> DDProgressView    平面风格的Progress进度条    </p>
+<p> WNProgressView    一些有趣风格的ProgressView    </p>
+<p> YLProgressBar    一些不错样式的ProgessBar    </p>
+<p> DACircularProgress    圆环形进度条    </p>
+<p> MRProgress    圆环进度条,iOS7风格,iOS7 Only    </p>
+<p> MDRadialProgress    圆环进度条,多种风格 iOS6+    </p>
+<p>侧滑</p>
+<p> ViewDeck    左右侧滑控件    </p>
+<p> MSDynamicsDrawerViewController  iOS7 动态弹性和景深的侧滑～    </p>
+<p> ECSlidingViewController    一个很简单的侧滑控件    </p>
+<p> JASidePanels    一套不错样式的侧滑控件    </p>
+<p> PSStackedView    一套侧滑且带Stack的控件,类似Twitter iPad    </p>
+<p> PKRevealController    一个侧滑控件    </p>
+<p> JTRevealSidebarDemo    一个类似FB侧滑的Demo    </p>
+<p> PPRevealSideViewController    又一个类似FB的侧滑控件    </p>
+<p> CLCascade    类似Twitter iPad版的侧滑控件    </p>
+<p> SlideViewController    侧滑菜单 类似FB的界面    </p>
+<p> MMDrawerController    一个侧滑控件    </p>
+<p> MFSideMenu    Facebook风格侧滑    </p>
+<p> SWRevealViewController    Facebook风格侧滑    </p>
+<p> DDMenuController    又是一个Facebook风格侧滑    </p>
+<p> REFrostedViewController    一个iOS7风格的毛玻璃侧滑菜单    </p>
+<p> RNFrostedSidebar    一个由侧面划出的半透明菜单(小圆片),不错的交互效果   </p>
+<p>Popover</p>
+<p> PopoverView    CA实现的Popover 可用于iPhone,样式清新    </p>
+<p> WYPopoverController    高可定制Popover 样式不错，很棒    </p>
+<p> CMPopTipView    把PopView带入的iPhone    </p>
+<p> FPPopover    一个PopOver 支持iPhone    </p>
+<p> WEPopover    一个仿Popover API库 支持iPhone    </p>
+<p> UAModalPanel    一个类似PopView控件 可以比较多的自定义 Demo样式较乱    </p>
+<p> ColorPopover    一个用WEPopover写的单色选择    </p>
+<p> MultiRowCalloutAnnotationView    在Map里面弹出带表格的Pop    </p>
+<p> QBPopupMenu    类似iOS文字上的Pop 可以自定义~    </p>
+<p> kxmenu    一个PopView,动作还可以    </p>
+<p> RNGridMenu    一个Pop菜单，有背景模糊，效果不错～    </p>
+<p> GIKPopoverBackgroundView    为PopOver提供无缝背景 很棒    </p>
+<p> AwesomeMenu    Path的扇形弹出按钮效果(CA)    </p>
+<p> QuadCurveMenu    上面AwesomeMenu的fork 类似Path的菜单    </p>
+<p> MGTileMenu    弹出按钮菜单 在四周成方形 效果不错    </p>
+<p> ADPopupView    在UIVIew上弹出自己画的界面 挺丑 但可以看看实现    </p>
+<p> KLExpandingSelect    四叶草风格弹出菜单~    </p>
+<p> StackMenu    Mac的Stack弹出菜单    </p>
+<p>下拉刷新</p>
+<p> MSPullToRefreshController    一个不错的上下拉刷新的控件 里面是彩虹    </p>
+<p> EGOTableViewPullRefresh    下拉刷新,很早的一个控件了2年没更新了    </p>
+<p> PullToRefresh    下拉刷新    </p>
+<p> SVPullToRefresh    下拉刷新 扩展了UIScrollView 很方便简单    </p>
+<p> HybridRefreshGestureRecognizer    一个类似似TweetBot的下拉刷新样式    </p>
+<p> sspulltorefresh    下拉刷新    </p>
+<p>状态栏</p>
+<p> JDStatusBarNotification    状态栏控件,支持iOS6、7    </p>
+<p> MTStatusBarOverlay    状态栏的控件,但很久没更新了    </p>
+<p> KGStatusBar    状态栏控件,提醒    </p>
+<p>GridView</p>
+<p> AQGridView    类似TableView但有横向分类,就像Android Launcher    </p>
+<p> GMGridView    又一个GridView 很不错,自带横纵排序编辑等功能    </p>
+<p> KKGridView    又一个GridView 已经Deperacted 直接用系统的就好    </p>
+<p> A3GridTableView    又一个GridView 貌似支持类似图标样的上栏    </p>
+<p> LIExposeController    一个类似GridView的东西    </p>
+<p>Alert</p>
+<p> BlockAlertsAnd-ActionSheets    一个Block支持的Alert控件 支持自定义 不错~    </p>
+<p> PXAlertView    一个用来替代系统的Alert,高可定制,有iOS7风格    </p>
+<p> MBAlertView    一个简洁的AlertView,和HUD    </p>
+<p> MJPopupViewController    用不同左右动画弹出AlertView    </p>
+<p> MZFormSheetController    一个不错的弹出Alert Controller    </p>
+<p> WCAlertView    一些不错的自定义AlertView    </p>
+<p> GRAlertView    用CA画的带颜色的AlertView    </p>
+<p> SBTableAlert    一个AlertView 可以带表格 可以用苹果风格    </p>
+<p> URBAlertView    自定义AlertView 还有各种动画    </p>
+<p> SIAlertView    一个样子不错的自定义AlertView    </p>
+<p> MBMenuController    一个自定义AlertSheetVC    </p>
+<p> JLActionSheet    另一个自定义AlertSheet    </p>
+<p> ASDepthModal    实现简单的3维景深的模态视图 提供背景模糊    </p>
+<p> RNBlurModalView    将后方视图模糊    </p>
+<p> LMAlertView    iOS7 可自定义内容的AlertView    </p>
+<p> SDCAlertView    iOS7 可自定义内容的AlertView    </p>
+<p>Segment</p>
+<p> SVSegmentedControl    一个分段选择控件 类似Mac10.7测试版中的UI 很棒~    </p>
+<p> URBSegmentedControl    一个灵活的分段控件 可以上下    </p>
+<p> MCSegmentedControl    一个系统分段的子类 可以自定义颜色    </p>
+<p> AKSegmentedControl    完全自定义的分段控件 风格不错    </p>
+<p> HMSegmentedControl    Chrome风格的Tabbar分段    </p>
+<p> SDSegmentedControl    一个离散并且凹陷效果的分段    </p>
+<p> PPiFlatSegmentedControl    扁平风格的Segment (包含iOS7样式)    </p>
+<p>Switch</p>
+<p> DCRoundSwitch    仿UISwicher 可以自定义 很棒    </p>
+<p> TTSwitch    一个可以完全自定义的UISwich～～    </p>
+<p> KLSwitch    iOS7风格的Switch 高仿    </p>
+<p> MBSwitch    iOS7风格的Switch 效果多    </p>
+<p> SevenSwitch    iOS7风格的Switch 效果很多～    </p>
+<p>Button</p>
+<p> CoolButtons    用CA画的带Glow的button 仿照系统    </p>
+<p> MAConfirmButton    一个类似AppStore下载的按钮 可以动画颜色大小等    </p>
+<p> FTWButton    一个UIControl实例的Button 可以看到如何自定义控件 有不错的动画效果    </p>
+<p> gradientbuttons    一个带有不同风格的Button~ 用CA绘制    </p>
+<p> DCActionButtonsController    一个PopOver的里面带各种画出的按钮    </p>
+<p> BPBarButtonItem    一个BarItem的不错的on the fly 生成    </p>
+<p> BButton    一种自定义Button 样式类似Twitter的Bootstrap 用CA画的    </p>
+<p> OBShapedButton    用CA绘制的特殊形状button,可以检测path touch    </p>
+<p> UIGlossyButton    一些用CA画的带高光的奇怪Button…    </p>
+<p>Scroll/Table</p>
+<p> LRSlidingTableViewCell    一个简单的左右滑动Cell 类似Twitter    </p>
+<p> TISwipeableTableView    UITable的左右滑动 类似Twitter    </p>
+<p> TDBadgedCell    在TableCell右侧添加badge 有不同风格    </p>
+<p> UITableViewZoomController    类似Google+的 滑动Table缩放显示内部图片    </p>
+<p> UITableViewTricks    TableView的扇形样式    </p>
+<p> iPhoneMK    几个简单的自己实现的View和Cell,提供某些常见功能    </p>
+<p> EasyTableView    一个支持左右的TableView 不错～    </p>
+<p> ZKRevealingTableViewCell    一个简单的可以左右滑动的TableCell    </p>
+<p> ADLivelyTableView    非常棒的TableCell显示动画～～～    </p>
+<p> MHLazyTableImages    一个简单的Table加载网络图片 从Apple的例子中改的    </p>
+<p> MHPagingScrollView    一个可以Page的ScrollView 但可以看到左右的预览 类似WP7    </p>
+<p> KLScrollSelect    一个竖屏滚动的选择瀑布流    </p>
+<p> RNRippleTableView    Cell梳子抖动~ 挺有创意    </p>
+<p> RETableViewManager    数据驱动的Table 由数据画出Table内容    </p>
+<p> ios-SDNestedTable    二级菜单的Table    </p>
+<p> SWTableViewCell    类似iOS7邮件中的Cell,左右滑动出现多个功能键    </p>
+<p> TSUIKit    复杂数据表格、tab展示的UI控件，适合复杂数据展示    </p>
+<p>Notification</p>
+<p> EKNotifView    很简单的下方Notif实现    </p>
+<p> MKInfoPanelDemo    一个从上方滑下的Notif控件 类似TwieetBot    </p>
+<p> TSMessages    在导航栏显示一个下拉Notif 效果不错    </p>
+<p> YRDropdownView    类似Tweetbot警告的下伸控件    </p>
+<p> NoticeView    类似Tweetbot的下伸控件    </p>
+<p> AJNotificationView    效果很不错的上部Notif提示    </p>
+<p>Label/Text</p>
+<p> MarqueeLabel    UILabel跑马灯效果    </p>
+<p> ICTextView    文本查找,支持正则,关键词高亮    </p>
+<p> CoreTextHyperlinkView    用CoreText画的 可以带Link的Text    </p>
+<p> EGOTextView    UITextField替代品 支持富文本编辑    </p>
+<p> iOS-Rich-Text-Editor    富文本编辑    </p>
+<p> MTAnimatedLabel    类似滑动解锁的闪动Label    </p>
+<p> TextGlowDemo    一个给Label发出Glow光亮的Demo    </p>
+<p> FXLabel    很多不错的Label特效    </p>
+<p> AUIAnimatedText    一个UILabel子类 可以简单动画 颜色大小字体    </p>
+<p> RTLabel    简单的富文本Label 可以用Html样式    </p>
+<p> TTTAttributedLabel    一个Label控件 支持富文本属性    </p>
+<p> MDHTMLLabel    一个富文本Label控件,可以支持链接和点击事件    </p>
+<p> DTCoreText    CoreText的包装,可以输入HTML～～    </p>
+<p> OHAttributedLabel    支持NSAttributedString的UILabel控件    </p>
+<p> ARLabel    自动字体大小    </p>
+<p> LEffectLabel    渐变动画颜色的Label,类似滑动解锁    </p>
+<p> BBCyclingLabel    在Label发生改变时,有动画效果    </p>
+<p> HTAutocompleteTextField    TextField带自动补全    </p>
+<p> JVFloatLabeledTextField    带有能浮动的占位符的 文本框    </p>
+<p> CMHTMLView    用HTML展示富文本,但能有Native类似的体验    </p>
+<p>界面切换/导航</p>
+<p> APExtendedPageController    类似Chrome左右滑动切换视图的控件    </p>
+<p> MBSpacialViewController    2D上下左右导航的奇怪视图    </p>
+<p> MSMatrixController    又一个 2D上下左右导航的奇怪视图..    </p>
+<p> MHTabBarController    一个类似Android的上方Tabbar    </p>
+<p> FSVerticalTabBarController    在左侧的Tabbar    </p>
+<p> AKTabBarController    自定义Tabbar 样式类似AppStore    </p>
+<p> MGSplitViewController    类似系统的UISplitVC 但有更多功能    </p>
+<p> PSTCollectionView    类似系统的UIColloectionView 为了支持iOS4.3    </p>
+<p> JMTabView    一个TabView 用CA画的,类似 Mac系统的单选控件    </p>
+<p>MWFSlideNavigationViewController    一个能左右上下滑动的简单导航栏    </p>
+<p> UIScrollSlidingPages    一个和Chrome类似的左右滑动Pager    </p>
+<p> FlipBoardNavigationController    类似网易客户端/Flipboard手机 左右滑动的Nav    </p>
+<p> BCTabBarController    Twitter类似的Tabbar 2年前的工程    </p>
+<p> CKSideBarController    类似Twitter iPad的左侧Tabbar    </p>
+<p> DVSlideViewController    类似Safari的滑动切换    </p>
+<p> HGPageScrollView    类似Safari浏览的分页控件、    </p>
+<p> HSImageSidebarView    一个类似Keynote的侧边栏    </p>
+<p> RNSwipeViewController    滑动界面显示另一个界面 类似下拉状态栏查看天气    </p>
+<p> RESideMenu    iOS7风格侧滑    </p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
+  
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 CharmingQin
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: true,
+		isPost: false,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: true
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
-  });
-  c.click(function(){
-    a.addClass('fadeOut').css('display', 'none');
-    o.css('display', 'block').addClass('fadeIn');
-    m.addClass('moveMain');
-  });
-  o.click(function(){
-    o.css('display', 'none').removeClass('beforeFadeIn');
-    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
-    m.removeClass('moveMain');
-  });
-  $(window).scroll(function(){
-    o.css("top",Math.max(80,260-$(this).scrollTop()));
-  });
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
 });
 </script>
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 
 
-
-
-
-
-  </body>
- </html>
+  </div>
+</body>
+</html>

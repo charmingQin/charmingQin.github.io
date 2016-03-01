@@ -3,36 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>哈希表(HashTable)攻略(1) | 秦晓强的博客</title>
+  <title>LeetCode第一题:twoSum问题 | 秦晓强的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一:什么是哈希表(HashTable)
-   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.
-二:哈希表的构建思路
-   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:
-int arr[3] = {0,1,2};
-数组每个元素的下标是0,1,2(也就是key值);对应的值是0,1,2(也就是value值);这个时候我们可以认为数组
-下标和数">
+  <meta name="description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
+  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
+Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="哈希表(HashTable)攻略(1)">
-<meta property="og:url" content="http://yoursite.com/2015/12/05/哈希表(散列表)1/index.html">
+<meta property="og:title" content="LeetCode第一题:twoSum问题">
+<meta property="og:url" content="http://yoursite.com/2016/03/01/LeetCode1/index.html">
 <meta property="og:site_name" content="秦晓强的博客">
-<meta property="og:description" content="一:什么是哈希表(HashTable)
-   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.
-二:哈希表的构建思路
-   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:
-int arr[3] = {0,1,2};
-数组每个元素的下标是0,1,2(也就是key值);对应的值是0,1,2(也就是value值);这个时候我们可以认为数组
-下标和数">
-<meta property="og:updated_time" content="2015-12-05T07:00:21.000Z">
+<meta property="og:description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
+  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
+Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
+<meta property="og:updated_time" content="2016-03-01T07:49:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="哈希表(HashTable)攻略(1)">
-<meta name="twitter:description" content="一:什么是哈希表(HashTable)
-   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.
-二:哈希表的构建思路
-   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:
-int arr[3] = {0,1,2};
-数组每个元素的下标是0,1,2(也就是key值);对应的值是0,1,2(也就是value值);这个时候我们可以认为数组
-下标和数">
+<meta name="twitter:title" content="LeetCode第一题:twoSum问题">
+<meta name="twitter:description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
+  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
+Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
   
     <link rel="alternative" href="/atom.xml" title="秦晓强的博客" type="application/atom+xml">
   
@@ -201,11 +189,11 @@ int arr[3] = {0,1,2};
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-哈希表(散列表)1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LeetCode1" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/12/05/哈希表(散列表)1/" class="article-date">
-  	<time datetime="2015-12-05T07:00:21.000Z" itemprop="datePublished">2015-12-05</time>
+      <a href="/2016/03/01/LeetCode1/" class="article-date">
+  	<time datetime="2016-03-01T07:49:34.000Z" itemprop="datePublished">2016-03-01</time>
 </a>
     </div>
   
@@ -218,7 +206,7 @@ int arr[3] = {0,1,2};
         
   
     <h1 class="article-title" itemprop="name">
-      哈希表(HashTable)攻略(1)
+      LeetCode第一题:twoSum问题
     </h1>
   
 
@@ -228,7 +216,7 @@ int arr[3] = {0,1,2};
         
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+	<a class="article-category-link" href="/categories/［算法］/">［算法］</a>
 	</div>
 
 
@@ -238,67 +226,36 @@ int arr[3] = {0,1,2};
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一:什么是哈希表(HashTable)</p>
-<p>   哈希表,也叫散列表,是一种以键值对(key-value)存储数据的数据结构.</p>
-<p>二:哈希表的构建思路</p>
-<p>   有过语言基础的读者都知道数组这种数据类型,比如我用C语言定义一个整型数组:</p>
-<pre><code><span class="keyword">int</span> arr[<span class="number">3</span>] = {<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>};
-</code></pre><p>数组每个元素的下标是0,1,2(也就是key值);对应的值是0,1,2(也就是value值);这个时候我们可以认为数组</p>
-<p>下标和数组元素的值,有对应关系,也就是说,数组就是一种特殊的,简单的哈希表.</p>
-<p>但是此时,key值是整数,value是有序的,如果key值是字符串,value是无序的,那我们就要使用哈希表这种数据</p>
-<p>结构了.  </p>
-<a id="more"></a>   
-<p>三:一道经典哈希表面试题</p>
-<p>   我们可以先通过一道面试题对哈希表有一个初步的认识.</p>
-<pre><code>如果从一个足够长的字符串中，找出第一个唯一的字符，应该如何查找？如输入abaccdeff,则输出<span class="tag">b</span>.(注：这是<span class="number">2006</span>年google的一道笔试题.) 
-</code></pre><p>   分析:由于字符串是字符(char)构成的，而char类型总共只有总共只有256种可能，我们可以创建一个长度为</p>
-<p>   256的数组，每个字符根据对应的ASCII码值作为数组的下标，数组里面存着字符出现的次数，这样我们就</p>
-<p>   创建了一个大小为256，以ASCII码为值的哈希表。</p>
-<pre><code><span class="comment">// 创建一个参数为输入的字符串，返回值为第一个唯一字符的方法。</span>
- <span class="function"><span class="keyword">char</span> <span class="title">FindTheUniqueChar</span><span class="params">(<span class="keyword">char</span>* String)</span>
-</span>{
-<span class="comment">// 如果输入错误，直接返回</span>
-    <span class="keyword">if</span>(!String){
-    <span class="built_in">printf</span>(<span class="string">"您的输入有误，请重新输入！"</span>);
-    <span class="keyword">return</span> <span class="number">0</span>;
-    }
+        <p>  去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.</p>
+<p>  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)</p>
+<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
+<p>You may assume that each input would have exactly one solution.   </p>
+<p>  Example:</p>
+<pre><code>Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,
 
-<span class="comment">// 初始化一个哈希表，大小为256</span>
-   <span class="keyword">const</span> <span class="keyword">int</span> tableSize = <span class="number">256</span>;
-   <span class="keyword">unsigned</span> <span class="keyword">int</span> hashTable[tableSize];
-   <span class="keyword">for</span>(<span class="keyword">unsigned</span> <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; tableSize; i++){
+Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,
 
-<span class="comment">// 获得字符串中每一个字符出现的次数</span>
-     <span class="keyword">char</span>* hashTableKey = String;
-     <span class="keyword">while</span>(*(hashTableKey) != <span class="string">'\0'</span>)
-     hashTable[*(hashTableKey++)] ++; <span class="comment">//以字符的数值大小为哈希数组的下标</span>
-
-<span class="comment">// 找到字符串中只出现一次的字符</span>
-     hashTableKey = String;
-     <span class="keyword">while</span>(*hashTableKey != <span class="string">'\0'</span>)
-     {
-        <span class="keyword">if</span>(hashTable[*hashTableKey] == <span class="number">1</span>)
-          <span class="keyword">return</span> *hashTableKey;
-
-        hashTableKey++;
+<span class="keyword">return</span> [<span class="number">0</span>, <span class="number">1</span>].  
+</code></pre><p> 翻译过来,给定一个整型数组, 返回两个下标, 这两个下标对应的数组值相加能够得到taget.</p>
+<p>  先用最简单,最暴力的方法,直接遍历相加,等于taget就获取到index值.</p>
+<pre><code> <span class="comment">/**
+ * Note: The returned array must be malloced, assume caller calls free().
+*/</span>
+<span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>{
+ <span class="keyword">int</span> *tempArr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="keyword">sizeof</span> (<span class="keyword">int</span>));
+  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numsSize-<span class="number">1</span>; i++) {
+      <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;numsSize; j++){
+          <span class="keyword">if</span>(nums[i] + nums[j] == target){
+              tempArr[<span class="number">0</span>] = i;
+              tempArr[<span class="number">1</span>] = j;
+          <span class="keyword">return</span> tempArr;
+       }
      }
    }
-
-<span class="keyword">return</span> <span class="number">0</span>;
-
-}   
-</code></pre><p>由此可以看出,如果没有内存限制，我们将key作为数组的索引，那么所有的查找时间复杂度为O(1)，</p>
-<p>即一次读取就能找出唯一的字符，所以哈希表的查找效率确实可见一斑。</p>
-<p>四:通过上面的面试题,我们分析一下哈希表的实现步骤.</p>
-<p>   既然哈希表是通过key-value形式存储的数据,我们就可以通过key,获取到对应的value,我们刚才就是将字符的</p>
-<p>   ASCII码值作为key,value里面是放的是字符出现的次数,也就是说先确定出容器的索引,然后对应的存储</p>
-<p>   需要的value.所以哈希表的实现步骤大致总结为以下两步:</p>
-<p>   1 分析我们要得到的结果,使用一个映射方法,获取到我们要使用的key,这个函数叫做哈希函数.前人(应该是一帮数学家</p>
-<p>   或者密码学家)帮我们总结了一些哈希函数的构造方法.</p>
-<p>   2 实际的数据模型可能不会key-value一一对应,有可能一个key对应多个value,这种情况叫哈希碰撞(冲突),我们要尽量</p>
-<p>   避免冲突.</p>
-<p>   接下来,我们就研究以下哈希函数和解决冲突的方法,<a href="http://www.charmingqin.com/2015/12/05/哈希表(散列表)2/" target="_blank" rel="external">传送门</a>. </p>
-
+  <span class="built_in">free</span>(tempArr);
+  <span class="keyword">return</span> <span class="literal">NULL</span>;
+}       
+</code></pre>
       
     </div>
     
@@ -307,18 +264,9 @@ int arr[3] = {0,1,2};
     
 <nav id="article-nav">
   
-    <a href="/2015/12/07/哈希表(散列表)2/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          哈希表(HashTable)攻略(2)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/03/Xcode注释标识符/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Xcode注释标识符</div>
+    <a href="/2015/12/22/二叉树2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">二叉树(2)</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -347,7 +295,7 @@ int arr[3] = {0,1,2};
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="哈希表(散列表)1" data-title="哈希表(HashTable)攻略(1)" data-url="http://yoursite.com/2015/12/05/哈希表(散列表)1/"></div>
+	<div class="ds-thread" data-thread-key="LeetCode1" data-title="LeetCode第一题:twoSum问题" data-url="http://yoursite.com/2016/03/01/LeetCode1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

@@ -1,0 +1,351 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>哈希表(HashTable)攻略(2) | 秦晓强的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="CharmingQin">
+    
+    <meta name="description" content="接上一篇博客~
+   一 哈希函数的构造方法
+   哈希哈数主要有这么几种构造方法,直接定址法、数字分析法、平方取中法、除留取余法、 折叠法等……(这里我们先主要说一下直接定址法和除留取余法).
+   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.
+   直接定址法:
+   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;
+
+   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="秦晓强的博客" title="秦晓强的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="秦晓强的博客">秦晓强的博客</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/12/07/哈希表(散列表)2/" title="哈希表(HashTable)攻略(2)" itemprop="url">哈希表(HashTable)攻略(2)</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="CharmingQin">CharmingQin</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-12-07T09:04:20.000Z" itemprop="datePublished">2015-12-07</time>
+    更新日期:<time datetime="2015-12-07T09:04:20.000Z" itemprop="dateModified">2015-12-07</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+		</div>
+		
+		<p>接上一篇博客~</p>
+<p>   一 哈希函数的构造方法</p>
+<p>   哈希哈数主要有这么几种构造方法,直接定址法、数字分析法、平方取中法、除留取余法、 折叠法等……(这里我们先主要说一下直接定址法和除留取余法).</p>
+<p>   哈希函数的构造原则:1 计算简单,这样不会降低查找的效率. 2 哈希地址均匀分布,保证存储空间的充分利用.</p>
+<p>   直接定址法:</p>
+<p>   如果我们要对0-100岁的人口数字进行统计,那么我们年龄这个关键字就可以用年龄的数字作为哈希地址,即 f(key) = key;</p>
+<p><img src="http://ww1.sinaimg.cn/large/6ae34799gw1eyosklxuqij20c8052mxa.jpg"></p>
+<p>   这个时候, 我们可以得出这么个哈希函数:f(0) = 0, f(1) = 1, …… ,f(20) = 20,这就是直接定址法.</p>
+   <a id="more"></a>
+<p>   如果我们现在要统计的是80后出生年份的人口数, 那么我们对出生年份这个关键字可以用年份减去1980来作为地址. 此时f (key) = key-1980.<br>   假如今年是2000年，那么1980年出生的人就是20岁了, 此时 f(2000) = 2000 - 1980, 可以找得到地址20, 地址20里保存了数据”人数1500万”.   </p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyosl34zv0j20dr0503yo.jpg"></p>
+<p>   也就是说, 我们可以取关键字的某个线性函数值为哈希地址, 即: f(key) = a * key + b, 这样的哈希函数优点就是简单, 均匀, 也不会产生冲突, 但问题是这需要事先知道关键字的分布情况, 适合査找表较小且连续的情况.</p>
+<p>   除留取余法:</p>
+<p>   除留取余法是最常用的哈希函数构造方法. 对于哈希表长为m的哈希函数公式为:f(key) = key mod p (p ≤ m). 事实上, 这个方法不仅可以对关键字直接取</p>
+<p>模, 也可在通过折叠法, 平方取中法之后再取模(mod).</p>
+<p>   除留取余法关键就在于选择合适的p, p如果选得不好，就可能会容易产生哈希碰撞(同义词)。</p>
+<p>   假设有一张表，它有9条记录，现在我们要针对它设计一个哈希表。如果采用除留余数法，那么可以先尝试将哈希函数设计为f(key) = key mod 9的方法。比如</p>
+<p>29 mod 9 = 2，所以它存储在下标为2的位置。</p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eyoslftiohj20hx02igln.jpg"></p>
+<p>   如果还是有9条记录，关键字如下:      </p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eyoslu4pkvj20j8023gln.jpg"></p>
+<p>   那这样 18、27、36、63等mod 9 都等于0, 这样取余数并不好, 碰撞比较多, 我们可以选择mod 7 来进行除留取余法. 所以对于除留取余法这个哈希函数,</p>
+<p>   f( key ) = key mod p ( p ≤ m ), p取值越接近m越好, 且最好是一个质数.</p>
+<p>   二: 解决哈希碰撞问题</p>
+<p>   从前面设计哈希函数的方法可以看出, 难免会出现哈希碰撞的问题, 我们主要有以下几种方法去处理: 开放地址法、再哈希法、链地址法、建立公共溢出区法等, 在这里我们主要研究开放地址法和链地址法.</p>
+<p>   开放地址法: </p>
+<p>   开放定址法就是一旦发生了碰撞, 就去寻找下一个空的哈希地址, 只要哈希表足够大, 空的哈希地址总能找到, 并将记录存入.<br>公式为:f(key) = (f(key)+d) MOD m (d=1,2,3,……,m-1)<br>比如说, 我们的关键字集合为{12,67,56,16,25,37,22,29,15,47,48,34},表长为12. 我们用哈希函数f(key) = key mod l2.<br>   当计算前S个数{12,67,56,16,25}时, 都是没有冲突的哈希地址, 直接存入：</p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eypy9u6s7dj20je02j74c.jpg">   </p>
+<p>   当key ＝ 37 时, f(37) = 1, 就与25所在位置产生碰撞, 于是我们带入公式: f(key) = (f(key)+d) MOD m (d=1,2,3,……,m-1), f(37) = (f(37)+1) mod 12 = 2, 这时候, 我们就把37存在2的位置. </p>
+<p>接下来22,29,15,47都没有冲突, 正常的存入, 到了 key=48, f(48) = 0, 与12所在的0位置碰撞, 带入公式f(48) = (f(48)+1) mod 12 = 1, 此时又与25所在的位置碰撞. 一直到 f(48) = (f(48)+6) mod 12 = 6时, 才能存入哈希表.</p>
+<p><img src="http://ww2.sinaimg.cn/large/6ae34799gw1eypycwb501j20jc02qq31.jpg"></p>
+<p>   链地址法: </p>
+<p>   将所有关键字为同义词的记录存储在一个单链表中，我们称这种表为同义词子表，在哈希表中只存储所有同义词子表的头指针。</p>
+<p>   对于关键字集合{12,67,56,16,25,37, 22,29,15,47,48,34}，我们用前面同样的12为除数，进行除留余数法：</p>
+<p><img src="http://ww3.sinaimg.cn/large/6ae34799gw1eypygrwpp9j20kh05n74m.jpg"></p>
+<p>   链地址法(拉链法)解决碰撞的做法是: 将所有关键字为同义词的结点链接在同一个单链表中. 若选定的散列表长度为m, 则可将散列表定义为一个由m个头指针组成的指针数组T[0..m-1].</p>
+<p>   凡是散列地址为i的结点, 均插入到以T[i]为头指针的单链表中. T中各分量的初值均应为空指针. 在拉链法中, 装填因子α可以大于 1, 但一般均取α≤1. </p>
+<p>   接下来我们就用C语言, 使用除留取余法, 和链地址法实现一个哈希表, <a href="http://www.charmingqin.com/2015/12/06/哈希表(散列表)3/#more" target="_blank" rel="external">传送门</a>. </p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2015/12/07/哈希表(散列表)2/" data-title="哈希表(HashTable)攻略(2) | 秦晓强的博客" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/12/07/哈希表(散列表)3/" title="哈希表(HashTable)攻略(3)">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  哈希表(HashTable)攻略(3)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/12/05/哈希表(散列表)1/"  title="哈希表(HashTable)攻略(1)">
+ <strong>NEXT:</strong><br/> 
+ <span>哈希表(HashTable)攻略(1)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分類</p>
+		<ul>
+		
+			<li><a href="/categories/第三方类库/" title="第三方类库">第三方类库<sup>6</sup></a></li>
+		
+			<li><a href="/categories/［Xcode］/" title="［Xcode］">［Xcode］<sup>1</sup></a></li>
+		
+			<li><a href="/categories/［数据结构］/" title="［数据结构］">［数据结构］<sup>5</sup></a></li>
+		
+			<li><a href="/categories/［算法］/" title="［算法］">［算法］<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="CharmingQin">CharmingQin</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>

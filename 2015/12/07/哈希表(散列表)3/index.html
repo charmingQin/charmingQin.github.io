@@ -1,0 +1,503 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>哈希表(HashTable)攻略(3) | 秦晓强的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="CharmingQin">
+    
+    <meta name="description" content="接上一篇博客~
+  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.
+  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDictionary就是哈希函数实现的).
+  首先，引入相关函数库：
+#include &amp;lt;stdio.h&amp;gt;  // 标准输入输出函数
+
+#include &amp;lt;stdlib.h&amp;gt; // stdlib.h里面定义了五种类型、一些宏和通用工具函数。 
+类型例如size_t、wchar_t、div_t、ldiv_t和lldiv_t； 
+宏例如EXIT_FAILURE、EXIT_SUCCESS、RAND_MAX和MB_CUR_MAX等等；
+常用的函数如malloc()、calloc()、realloc()、free()、system()、等等。
+
+#include &amp;lt;string.h&amp;gt; // 字符串处理">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="秦晓强的博客" title="秦晓强的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="秦晓强的博客">秦晓强的博客</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/12/07/哈希表(散列表)3/" title="哈希表(HashTable)攻略(3)" itemprop="url">哈希表(HashTable)攻略(3)</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="CharmingQin">CharmingQin</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-12-07T09:20:19.000Z" itemprop="datePublished">2015-12-07</time>
+    更新日期:<time datetime="2015-12-07T09:20:19.000Z" itemprop="dateModified">2015-12-07</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+		</div>
+		
+		<p>接上一篇博客~</p>
+<p>  要实现哈希表,一般要实现以下几个方法:初始化方法,释放方法,确定哈希函数,哈希表元素的插入和修改,哈希表元素的删除,哈希表元素的查找.</p>
+<p>  我们使用哈希表实现存储key是字符串, value也是字符串的情况, 实现类似OC中的字典的功能(OC中的NSDictionary就是哈希函数实现的).</p>
+<p>  首先，引入相关函数库：</p>
+<pre><code><span class="id">#include</span> &lt;stdio.h&gt;  <span class="comment">// 标准输入输出函数</span>
+
+<span class="id">#include</span> &lt;stdlib.h&gt; <span class="comment">// stdlib.h里面定义了五种类型、一些宏和通用工具函数。 </span>
+类型例如size_t、wchar_t、div_t、ldiv_t和lldiv_t； 
+宏例如EXIT_FAILURE、EXIT_SUCCESS、RAND_MAX和MB_CUR_MAX等等；
+常用的函数如<span class="function"><span class="title">malloc</span><span class="params">()</span></span>、<span class="function"><span class="title">calloc</span><span class="params">()</span></span>、<span class="function"><span class="title">realloc</span><span class="params">()</span></span>、<span class="function"><span class="title">free</span><span class="params">()</span></span>、<span class="function"><span class="title">system</span><span class="params">()</span></span>、等等。
+
+<span class="id">#include</span> &lt;string.h&gt; <span class="comment">// 字符串处理</span>
+</code></pre>   <a id="more"></a>
+<p>  1 初始化方法</p>
+<pre><code><span class="keyword">typedef</span> <span class="keyword">struct</span> hashElement
+
+{
+   <span class="keyword">char</span>* key;
+
+   <span class="keyword">char</span> * value;
+
+   <span class="keyword">struct</span> hashElement * next; <span class="comment">// 使用链地址法解决碰撞</span>
+
+}element;
+
+<span class="keyword">typedef</span> <span class="keyword">struct</span> hashTable{
+
+element bucket[<span class="number">16</span>]; <span class="comment">// 16</span>
+
+} table;
+</code></pre><p>  2 初始化方法</p>
+<pre><code>  <span class="function"><span class="keyword">void</span> <span class="title">initHashTable</span> <span class="params">(table *t)</span>
+</span>{
+   <span class="keyword">if</span> (t == <span class="literal">NULL</span>)    
+   <span class="keyword">return</span>;<span class="comment">// 如果为空，直接return</span>
+
+  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i ++) {
+    t-&gt;bucket[i].key = <span class="literal">NULL</span>;
+    t-&gt;bucket[i].value = <span class="literal">NULL</span>;
+    t-&gt;bucket[i].next = <span class="literal">NULL</span>;<span class="comment">// 不为空，就直接置空</span>
+  }
+
+} 
+</code></pre><p>  3 释放方法</p>
+<pre><code>void freeHashTable (table *t){
+
+element * e,*ep;
+if (t == <span class="constant">NULL)</span> 
+   <span class="keyword">return</span>;
+<span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; <span class="number">16</span>; i ++) {
+    e = &amp;(t-&gt;bucket[i]);
+    <span class="keyword">while</span> (e -&gt; <span class="keyword">next</span> != <span class="constant">NULL)</span> {
+        ep = e -&gt; <span class="keyword">next</span>;
+        e -&gt; <span class="keyword">next</span> = ep -&gt;<span class="keyword">next</span>;
+        free(ep -&gt; key);
+        free(ep -&gt; value);
+        free(ep -&gt; <span class="keyword">next</span>);
+       }
+  }
+}
+</code></pre><p>   4 哈希函数</p>
+<pre><code>    <span class="function"><span class="keyword">int</span> <span class="title">keyToIndex</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> * key)</span></span>{  
+        <span class="keyword">if</span> (key == <span class="literal">NULL</span>) 
+    <span class="keyword">return</span> -<span class="number">1</span>;
+<span class="comment">// 获取长度</span>
+    <span class="keyword">unsigned</span> <span class="keyword">long</span> length = <span class="built_in">strlen</span>(key); 
+    <span class="keyword">int</span> index =  key[<span class="number">0</span>];
+    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; length; i ++) {
+         index *= <span class="number">110355245</span> + key[i];<span class="comment">// 确保唯一的特殊数字 }</span>
+         index &gt;&gt;= <span class="number">27</span>;  
+         index &amp;= <span class="number">15</span>;  
+     <span class="keyword">return</span> index;
+    }
+
+
+      <span class="comment">//在堆上分配足以保存str的内存</span>
+      <span class="comment">//并拷贝str内容到新分配位置</span>
+     <span class="function"><span class="keyword">char</span> * <span class="title">strDup</span> <span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> * str)</span></span>{
+        <span class="keyword">int</span> length;
+        <span class="keyword">char</span> * ret;
+        <span class="keyword">if</span> (str == <span class="literal">NULL</span>)
+        <span class="keyword">return</span> <span class="literal">NULL</span>;
+        ret =  (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(length + <span class="number">1</span>);
+         <span class="keyword">if</span> (ret != <span class="literal">NULL</span>) {
+       <span class="built_in">memcpy</span>(ret, str, length);
+       ret[length] = <span class="string">'\0'</span>;
+       }
+          <span class="keyword">return</span> ret;
+    }
+</code></pre><p> 5 插入和修改方法</p>
+<pre><code> <span class="function"><span class="keyword">int</span> <span class="title">insertElement</span> <span class="params">(table * t, <span class="keyword">const</span> <span class="keyword">char</span> * key, <span class="keyword">const</span> <span class="keyword">char</span>* value)</span></span>{
+   <span class="keyword">int</span> index;
+   <span class="keyword">unsigned</span> <span class="keyword">long</span> vlength1, vlength2;
+   element * e, * ep;
+   <span class="keyword">if</span> (t == <span class="literal">NULL</span> || key == <span class="literal">NULL</span> || value == <span class="literal">NULL</span>){
+   <span class="keyword">return</span> -<span class="number">1</span>;
+   index = keyToIndex(key);
+ <span class="comment">// 第一个</span>
+   <span class="keyword">if</span> (t -&gt;bucket[index].key == <span class="literal">NULL</span>) {
+       t -&gt; bucket[index].key = strDup(key);
+     t -&gt; bucket[index].value = strDup(value);
+<span class="comment">// 不为空 往后插入元素</span>
+  } <span class="keyword">else</span>
+
+     {e = ep = &amp;(t-&gt;bucket[index]);
+      <span class="keyword">while</span> (e != <span class="literal">NULL</span>) { <span class="comment">//先从已有的找</span>
+      <span class="keyword">if</span> (<span class="built_in">strcmp</span>(e-&gt;key , key) == <span class="number">0</span>) {/找到key所在，替换值
+      vlength1 = <span class="built_in">strlen</span>(value); <span class="comment">// 传进来的value</span>
+      vlength2 = <span class="built_in">strlen</span>(e-&gt;value);
+      <span class="keyword">if</span> (vlength1 &gt; vlength2) {
+      <span class="built_in">free</span>(e-&gt;value);
+      e-&gt;value = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(vlength1 + <span class="number">1</span>);
+      }
+      <span class="built_in">memcpy</span>(e-&gt;value , value , vlength1 + <span class="number">1</span>);
+       <span class="keyword">return</span> index;   <span class="comment">//插入完成了</span>
+   }
+      ep = e;
+      e = e-&gt;next; }
+    <span class="comment">//没有在当前桶中找到//创建条目加入</span>
+      e = (element*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span> (element));
+      e-&gt;key = strDup(key); e-&gt;value = strDup(value);
+      e-&gt;next = <span class="literal">NULL</span>;ep-&gt;next = e;}  
+      <span class="keyword">return</span> index;
+
+  }
+</code></pre><p>  6 删除元素的方法</p>
+<pre><code>  element* removeElement(table* t , <span class="keyword">char</span>* key)
+{
+     <span class="keyword">int</span> index;
+     element* e,*ep;   <span class="comment">//查找的时候，把ep作为返回值</span>
+     <span class="keyword">if</span> (t == <span class="keyword">NULL</span> || key == <span class="keyword">NULL</span>) {
+     <span class="keyword">return</span> <span class="keyword">NULL</span>;
+     }
+    index = keyToIndex(key);
+    e = &amp;(t-&gt;bucket[index]);
+    <span class="keyword">while</span> (e != <span class="keyword">NULL</span>) {
+     <span class="keyword">if</span> (<span class="number">0</span> == strcmp(key , e-&gt;key)) {
+     <span class="comment">//如果是桶的第一个</span>
+        <span class="keyword">if</span> (e == &amp;(t-&gt;bucket[index])) {
+         <span class="comment">//如果这个桶有两个或以上元素</span>
+         <span class="comment">//交换第一个和第二个，然后移除第二个</span>
+         ep = e-&gt;next;
+         <span class="keyword">if</span> (ep != <span class="keyword">NULL</span>) {
+             element tmp = *e; <span class="comment">//做浅拷贝交换</span>
+             *e = *ep;<span class="comment">//相当于链表的头节点已经移除</span>
+             *ep = tmp;  <span class="comment">//这就是移除下来的链表头节点</span>
+             ep-&gt;next = <span class="keyword">NULL</span>;
+         }<span class="keyword">else</span> {<span class="comment">//这个桶只有第一个元素</span>
+             ep = (element*)malloc(sizeof(element));
+             *ep = *e;
+             e-&gt;key = e-&gt;value = <span class="keyword">NULL</span>;
+             e-&gt;next = <span class="keyword">NULL</span>;
+         }
+     }
+         <span class="keyword">else</span> {
+         <span class="comment">//如果不是桶的第一个元素//找到它的前一个</span>
+         ep = &amp;(t-&gt;bucket[index]);
+         <span class="keyword">while</span> (ep-&gt;next != e)ep = ep-&gt;next;
+         <span class="comment">//将e从中拿出来</span>
+         ep-&gt;next = e-&gt;next;
+         e-&gt;next = <span class="keyword">NULL</span>;
+         ep = e;
+       }
+        <span class="keyword">return</span> ep;
+      }
+     e = e-&gt;next;
+  }
+  <span class="keyword">return</span> <span class="keyword">NULL</span>;
+}
+</code></pre><p>   7 打印一下哈希表</p>
+<pre><code>  <span class="function"><span class="keyword">void</span> <span class="title">printTable</span><span class="params">(table* t)</span>
+</span>{
+  <span class="keyword">int</span> i;
+  element* e;
+  <span class="keyword">if</span> (t == <span class="literal">NULL</span>)<span class="keyword">return</span>;
+  <span class="keyword">for</span> (i = <span class="number">0</span>; i&lt;<span class="number">16</span>; ++i) {
+  <span class="built_in">printf</span>(<span class="string">"\nbucket[%d]:\n"</span> , i);
+  e = &amp;(t-&gt;bucket[i]);
+  <span class="keyword">while</span> (e-&gt;key != <span class="literal">NULL</span>) {
+  <span class="built_in">printf</span>(<span class="string">"\t%s\t=\t%s\n"</span> , e-&gt;key , e-&gt;value);
+  <span class="keyword">if</span> (e-&gt;next == <span class="literal">NULL</span>)<span class="keyword">break</span>;
+  e = e-&gt;next;
+      }
+     }
+}
+</code></pre><p> 最后,我们在main函数中测试一下插入,删除,查找,打印等等方法即可.     </p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/［数据结构］/">［数据结构］</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2015/12/07/哈希表(散列表)3/" data-title="哈希表(HashTable)攻略(3) | 秦晓强的博客" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/12/22/二叉树1/" title="二叉树(1)">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  二叉树(1)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2015/12/07/哈希表(散列表)2/"  title="哈希表(HashTable)攻略(2)">
+ <strong>NEXT:</strong><br/> 
+ <span>哈希表(HashTable)攻略(2)
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分類</p>
+		<ul>
+		
+			<li><a href="/categories/第三方类库/" title="第三方类库">第三方类库<sup>6</sup></a></li>
+		
+			<li><a href="/categories/［Xcode］/" title="［Xcode］">［Xcode］<sup>1</sup></a></li>
+		
+			<li><a href="/categories/［数据结构］/" title="［数据结构］">［数据结构］<sup>5</sup></a></li>
+		
+			<li><a href="/categories/［算法］/" title="［算法］">［算法］<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="CharmingQin">CharmingQin</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>

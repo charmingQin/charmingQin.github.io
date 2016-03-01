@@ -1,0 +1,323 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>史上最全的第三方 （一） | 秦晓强的博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="CharmingQin">
+    
+    <meta name="description" content="这是我的第一篇Hexo博客，以前的好多博客网站布局很难看，广告众多，还是自己搭建比较好，所以选择了hexo，另外笔者也会在简书里更新博客，方便大家查阅。  之前某位博主整理的第三方，比较全面，转载到我的Hexo博客里，作为一个测试。  以后我会定期更新我的博客，主要是iOS开发的知识点，希望大家喜欢">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="秦晓强的博客" title="秦晓强的博客"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="秦晓强的博客">秦晓强的博客</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/11/24/史上最全第三方/" title="史上最全的第三方 （一）" itemprop="url">史上最全的第三方 （一）</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="CharmingQin">CharmingQin</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2015-11-24T03:35:27.000Z" itemprop="datePublished">2015-11-24</time>
+    更新日期:<time datetime="2015-11-24T03:35:27.000Z" itemprop="dateModified">2015-11-24</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+		</div>
+		
+		<p>  这是我的第一篇Hexo博客，以前的好多博客网站布局很难看，广告众多，还是自己搭建比较好，所以选择了hexo，另外笔者也会在简书里更新博客，方便大家查阅。<br>  之前某位博主整理的第三方，比较全面，转载到我的Hexo博客里，作为一个测试。<br>  以后我会定期更新我的博客，主要是iOS开发的知识点，希望大家喜欢，我是charmingQin，just a quiet coding man。</p>
+<p>===========================分割线=========================</p>
+<p>   下面就是一些比较流行的第三方类库：</p>
+<p>HTTP<br>    相比较之下,AFNetworking是目前最优秀的一个了：轻量、易用、使用者多、开发者有在积极维护。在AFN出现之前，这个角色是由ASIHTTPRequest扮演的，只是到现在年久失修了。关于AFN和ASI的对比，这里有一篇不错的文章<a href="http://www.infoq.com/cn/articles/afn_vs_asi" target="_blank" rel="external">http://www.infoq.com/cn/articles/afn_vs_asi</a> 。<br>    除此之外，MKNetworkKit和RestKit也有一定的使用者。</p>
+<p>Socket<br>    CocoaAsyncSocket无疑是目前封装得最完善的Socket库了：支持异步TCP/UDP，支持GCD，Objective-C接口封装。。目前没有发现可以与之相比的同类产品。。</p>
+<p>JSON<br>    JSONKit算是第三方中最优秀的一个了：性能很高，文件少。在JSONKit之前，SBJson非常非常流行，但是SBJson性能够差，只是由于历史原因仍然存在在某些工程里面。如果工程只需要支持iOS5以上的系统，那就可以放弃那些第三方Json库了，直接用系统提供的NSJSONSerialization，性能比第三方的好，又是官方API。</p>
+<p>XMPP<br>    现在做个实时聊天，XMPP协议算是很成熟的方案了。XMPPFramework一个很不错的选择，可以直接和OpenFire服务器打交道。项目不大人手不多的话，可以看看这个。</p>
+<p>基础工具类<br>    SSToolkit算是一个不错的工具包，提供各种比如编码、加密、字符串处理等等东西，还提供了一些不错的自定义控件，并且文档非常齐全。</p>
+<p>框架<br>   过去有很多人再用three20，这个东西太大太重，文档又少，到头来连Facebook都停止维护了。作为替代品nimbus现在流行了开来，关键在于它文档齐全。国内有个MVC框架叫BeeFramework，号称是顶级框架并且功能超过nimbus，有兴趣的可以看一下。 ReactiveCocoa把响应式编程这种上流的东西带了过来，值得试一试。。</p>
+<p>数据存储<br>   还是挺多人(比如我)喜欢直接跟SQLite打交道的，这方面fmdb封装的很不错。如果用CoreData来做存储的，可以用一下MagicalRecord。</p>
+<p>图像处理<br>   GPUImage无疑是这方面的集大成者了。用OpenGL ES2.0来实时处理图片和视频流，性能和功能都是顶尖的。</p>
+<p>开发和调试工具<br>   PonyDebugger看上去是一个不错的调试工具，可以在电脑浏览器上远程调试iOS程序、查看试图层次、网络等等。CocoaLumberjack是个Log工具，号称是可以提供企业级Log，使用者也挺多。</p>
+<p>为了了解一下目前第三方库的普及程度，下面列举一些知名App对第三方库的依赖。</p>
+<p>网易新闻<br>AppleReachability<br>ASIHTTPRequest<br>EGOTableViewPullRefresh<br>GTMNSString+HTML<br>MGTemplateEngine<br>MPOAuth<br>RegexKitLite<br>SDWebImage<br>SSZipArchive<br>wax</p>
+<p>Garageband<br>MurmurHash<br>libpng<br>zlib<br>SBJson (json-framework)</p>
+<p>iWork三套件<br>MOKit<br>Boost C++ Library<br>protobuf<br>OpenGL Mathematics<br>SQLite<br>cephes math library</p>
+<p>Pinterest<br>AFNetworking<br>AFHttpClientLogger<br>Facebook SDK<br>iRate<br>MAKVONotificationCenter<br>SDWebImage<br>SFHFKeychainUtils<br>SSPullToRefresh<br>SVProgressHUD<br>TTTAttributedLabel<br>TTTLocalizedPluralString<br>UIAlertView-Blocks</p>
+<p>多看阅读<br>fmdb<br>ASIHTTPRequest<br>FreeType<br>JSONKit<br>Objective-Zip<br>Skia (Google)<br>MBProgressHUD</p>
+<p>淘宝<br>MAZeroingWeakRef<br>MBProgressHUD<br>ABContactHelper<br>ASIHTTPRequest<br>CocoaLumberjack<br>EGOTableViewPullRefresh<br>fmdb<br>GTMBase64<br>JSONKit<br>SBJson (json-framework)<br>RTLabel<br>SDWebImage<br>SVPullToRefresh<br>three20<br>ziparchive</p>
+<p>微信<br>cocos2d<br>EGOTableViewPullRefresh<br>Facebook iOS SDK<br>JSONKit<br>SBJson<br>ziparchive</p>
+<p>QQ<br>ASIHTTPRequest<br>FMDB<br>CocoaAsyncSocket<br>JSONKit<br>MBProgressHUD<br>OpenUDID<br>SBJson<br>SVPullToRefresh</p>
+<p>百度地图<br>AFNetworking<br>GTMBase64<br>JSONKit<br>MBProgressHUD<br>RNCachingURLProtocol<br>SDWebImage</p>
+<p>微博<br>ABContactHelper<br>AFNetworking<br>ASIHTTPRequest<br>DACircularProgressView<br>DDProgressView<br>DTFoundation<br>fmdb<br>JSONKit<br>SBJson<br>MBProgressHUD<br>MTStatusBarOverlay<br>OpenUDID<br>SFHFKeychainUtils</p>
+<p>人人<br>cocoaasyncsocket<br>ZipArchive<br>MBProgressHUD<br>JSONKit<br>GTMBase64<br>MKNetworkKit<br>HPGrowingTextView<br>zxing</p>
+<p>可以看到，这些大型的App的依赖都很混乱，所以稍微解释一下。这些大公司都有一个iOS团队来协同开发，团队成员的水平也参差不齐。有时由于历史原因，例如某个App的某个组件依赖了ASIHttpRequest，但之后的新人改用了AFNetworking，就造成上面这种比较混乱的库依赖关系。这就造成难以维护、代码冗余等问题了。所以，引入一个第三方库一定要慎重考虑，如果可能，尽量自己开发和实现相应的功能，第三方库尽量只作为参考。 小团队或者个人开发者可以不必过多考虑，开发速度优先。</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/第三方类库/">第三方类库</a>
+</div>
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2015/11/24/史上最全第三方/" data-title="史上最全的第三方 （一） | 秦晓强的博客" data-tsina="null" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/2015/11/24/史上最全第三方2/" title="史上最全的第三方 （二）">
+  <strong>PREVIOUS:</strong><br/>
+  <span>
+  史上最全的第三方 （二）</span>
+</a>
+</div>
+
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+  
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分類</p>
+		<ul>
+		
+			<li><a href="/categories/第三方类库/" title="第三方类库">第三方类库<sup>6</sup></a></li>
+		
+			<li><a href="/categories/［Xcode］/" title="［Xcode］">［Xcode］<sup>1</sup></a></li>
+		
+			<li><a href="/categories/［数据结构］/" title="［数据结构］">［数据结构］<sup>5</sup></a></li>
+		
+			<li><a href="/categories/［算法］/" title="［算法］">［算法］<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  
+
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="CharmingQin">CharmingQin</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina');
+  var html = [
+  '<a href="#" class="overlay" id="qrcode"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
+  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+  $('.article-share-qrcode').click(function(){
+    var imgSrc = $('#qrcode-pic').attr('data-src');
+    $('#qrcode-pic').attr('src', imgSrc);
+    $('#qrcode-pic').load(function(){
+        $('.qrcode strong').text(' ');
+    });
+  });
+});     
+</script>
+
+
+
+
+
+
+  </body>
+</html>

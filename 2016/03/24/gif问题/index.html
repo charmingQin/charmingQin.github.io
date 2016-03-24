@@ -4,24 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>LeetCode第一题:twoSum问题 | 秦晓强的博客</title>
+  <title>一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题 | 秦晓强的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
-  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
-Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
+  <meta name="description" content="前段时间有个朋友问我app想实现这样一个功能,读取iPhone本地相册中,从网络上下载的gif图片,或者从别的
+  app中保存下来的gif图片.
+  大家都知道iPhone本地相册不支持播放gif的,它只显示第一帧的静态图片,但是从网络上保存下载的图片的
+  data,依然也被保存到相册中了, 所以我们需要把data读取并转化成image即可.
+  iOS8之后,photokit框架替代了之前的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode第一题:twoSum问题">
-<meta property="og:url" content="http://yoursite.com/2016/03/01/LeetCode1/index.html">
+<meta property="og:title" content="一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题">
+<meta property="og:url" content="http://yoursite.com/2016/03/24/gif问题/index.html">
 <meta property="og:site_name" content="秦晓强的博客">
-<meta property="og:description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
-  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
-Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
-<meta property="og:updated_time" content="2016-03-01T07:49:34.000Z">
+<meta property="og:description" content="前段时间有个朋友问我app想实现这样一个功能,读取iPhone本地相册中,从网络上下载的gif图片,或者从别的
+  app中保存下来的gif图片.
+  大家都知道iPhone本地相册不支持播放gif的,它只显示第一帧的静态图片,但是从网络上保存下载的图片的
+  data,依然也被保存到相册中了, 所以我们需要把data读取并转化成image即可.
+  iOS8之后,photokit框架替代了之前的">
+<meta property="og:updated_time" content="2016-03-24T02:33:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode第一题:twoSum问题">
-<meta name="twitter:description" content="去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.
-  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)
-Given an array of integers, return indices of the two numbers such that they add up to a specific ta">
+<meta name="twitter:title" content="一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题">
+<meta name="twitter:description" content="前段时间有个朋友问我app想实现这样一个功能,读取iPhone本地相册中,从网络上下载的gif图片,或者从别的
+  app中保存下来的gif图片.
+  大家都知道iPhone本地相册不支持播放gif的,它只显示第一帧的静态图片,但是从网络上保存下载的图片的
+  data,依然也被保存到相册中了, 所以我们需要把data读取并转化成image即可.
+  iOS8之后,photokit框架替代了之前的">
   
     <link rel="alternative" href="/atom.xml" title="秦晓强的博客" type="application/atom+xml">
   
@@ -195,11 +201,11 @@ Given an array of integers, return indices of the two numbers such that they add
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-LeetCode1" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-gif问题" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/01/LeetCode1/" class="article-date">
-  	<time datetime="2016-03-01T07:49:34.000Z" itemprop="datePublished">2016-03-01</time>
+      <a href="/2016/03/24/gif问题/" class="article-date">
+  	<time datetime="2016-03-24T02:33:14.000Z" itemprop="datePublished">2016-03-24</time>
 </a>
     </div>
   
@@ -212,7 +218,7 @@ Given an array of integers, return indices of the two numbers such that they add
         
   
     <h1 class="article-title" itemprop="name">
-      LeetCode第一题:twoSum问题
+      一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题
     </h1>
   
 
@@ -222,7 +228,7 @@ Given an array of integers, return indices of the two numbers such that they add
         
         
 	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/［算法］/">［算法］</a>
+	<a class="article-category-link" href="/categories/［iOS］/">［iOS］</a>
 	</div>
 
 
@@ -232,36 +238,60 @@ Given an array of integers, return indices of the two numbers such that they add
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>  去大公司面试的同学经常会被问到算法的题目,而在leetcode上刷题也成了很好的习惯,笔者也开始尽量一天解决一道算法题.</p>
-<p>  现在就开始leetcode的第一题twoSum问题.(笔者用C语言解决)</p>
-<p>Given an array of integers, return indices of the two numbers such that they add up to a specific target.</p>
-<p>You may assume that each input would have exactly one solution.   </p>
-<p>  Example:</p>
-<pre><code>Given nums = [<span class="number">2</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>], target = <span class="number">9</span>,
+        <p>   前段时间有个朋友问我app想实现这样一个功能,读取iPhone本地相册中,从网络上下载的gif图片,或者从别的</p>
+<p>  app中保存下来的gif图片.</p>
+<p>  大家都知道iPhone本地相册不支持播放gif的,它只显示第一帧的静态图片,但是从网络上保存下载的图片的</p>
+<p>  data,依然也被保存到相册中了, 所以我们需要把data读取并转化成image即可.</p>
+<p>  iOS8之后,photokit框架替代了之前的AlAssetLibrary库,供开发者使用.</p>
+<p>  假设我最新保存了一张gif到本地相册,如何让我的app中的imageView显示gif呢?</p>
+<pre><code>// 选中照片的代理方法 
+-(<span class="type">void</span>)imagePickerController:(<span class="type">UIImagePickerController</span> *)picker didFinishPickingMediaWithInfo:(<span class="type">NSDictionary</span>&lt;<span class="type">NSString</span> *,id&gt; *)info{
+<span class="type">PHAsset</span> *asset = <span class="keyword">nil</span>; // 照片信息
+<span class="type">PHFetchOptions</span> *fetchOptions = [<span class="type">PHFetchOptions</span> new]; // 获取信息的相关选择
+fetchOptions.sortDescriptors = @[[[<span class="type">NSSortDescriptor</span> alloc] initWithKey:@<span class="string">"creationDate"</span> ascending:<span class="type">YES</span>]]; // 使用照片的创建时间,升序,作为排序依据.
 
-Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>] = <span class="number">2</span> + <span class="number">7</span> = <span class="number">9</span>,
 
-<span class="keyword">return</span> [<span class="number">0</span>, <span class="number">1</span>].  
-</code></pre><p> 翻译过来,给定一个整型数组, 返回两个下标, 这两个下标对应的数组值相加能够得到taget.</p>
-<p>  先用最简单,最暴力的方法,直接遍历相加,等于taget就获取到index值.</p>
-<pre><code> <span class="comment">/**
- * Note: The returned array must be malloced, assume caller calls free().
-*/</span>
-<span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target)</span> </span>{
- <span class="keyword">int</span> *tempArr = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="number">2</span> * <span class="keyword">sizeof</span> (<span class="keyword">int</span>));
-  <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;numsSize-<span class="number">1</span>; i++) {
-      <span class="keyword">for</span>(<span class="keyword">int</span> j=i+<span class="number">1</span>; j&lt;numsSize; j++){
-          <span class="keyword">if</span>(nums[i] + nums[j] == target){
-              tempArr[<span class="number">0</span>] = i;
-              tempArr[<span class="number">1</span>] = j;
-          <span class="keyword">return</span> tempArr;
-       }
-     }
-   }
-  <span class="built_in">free</span>(tempArr);
-  <span class="keyword">return</span> <span class="literal">NULL</span>;
-}       
-</code></pre>
+<span class="type">PHFetchResult</span> *<span class="literal">result</span> = [<span class="type">PHAsset</span> fetchAssetsWithMediaType:<span class="type">PHAssetMediaTypeImage</span> options:fetchOptions]; // 获取结果类型为image类型
+
+<span class="keyword">if</span> (<span class="literal">result</span> != <span class="keyword">nil</span> &amp;&amp; <span class="literal">result</span>.count &gt; <span class="number">0</span>) {
+    asset = [<span class="literal">result</span> lastObject]; // 获取最新一张照片
+}
+
+<span class="keyword">if</span> (asset) {
+    <span class="type">PHImageRequestOptions</span> *op = [<span class="type">PHImageRequestOptions</span> new];
+ //   op.synchronous = <span class="type">YES</span>;
+
+    [[<span class="type">PHImageManager</span> defaultManager] requestImageDataForAsset:asset options:op resultHandler:^(<span class="type">NSData</span> * _Nullable imageData, <span class="type">NSString</span> * _Nullable dataUTI, <span class="type">UIImageOrientation</span> orientation, <span class="type">NSDictionary</span> * _Nullable info) {
+
+        dispatch_async(dispatch_get_global_queue(<span class="type">DISPATCH_QUEUE_PRIORITY_DEFAULT</span>, <span class="number">0</span>), ^{
+            <span class="type">NSLog</span>(@<span class="string">"%@"</span>,info);
+            <span class="type">NSURL</span> *url = info[@<span class="string">"PHImageFileURLKey"</span>];
+
+            <span class="type">NSURLSessionDataTask</span> *dt = [[<span class="type">NSURLSession</span> sharedSession] dataTaskWithURL: url   completionHandler:^(<span class="type">NSData</span> * _Nullable data, <span class="type">NSURLResponse</span> * _Nullable response, <span class="type">NSError</span> * _Nullable error) {
+
+                <span class="type">NSLog</span>(@<span class="string">"%@"</span>,error);
+ dispatch_async(dispatch_get_main_queue(), ^{
+
+                self.myImage.image = [<span class="type">UIImage</span> imageWithData:data];
+
+                });
+
+            }];
+
+            [dt resume];
+
+        });
+
+
+    }];
+
+}
+
+[self dismissViewControllerAnimated:<span class="type">YES</span> completion:<span class="keyword">nil</span>];
+
+}
+</code></pre><p>  就这样,我们就把最新保存下来的gif给获取到了.</p>
+
       
     </div>
     
@@ -270,18 +300,9 @@ Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>
     
 <nav id="article-nav">
   
-    <a href="/2016/03/24/gif问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/12/22/二叉树2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">二叉树(2)</div>
+    <a href="/2016/03/01/LeetCode1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">LeetCode第一题:twoSum问题</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -297,7 +318,7 @@ Because nums[<span class="number">0</span>] + nums[<span class="number">1</span>
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="LeetCode1" data-title="LeetCode第一题:twoSum问题" data-url="http://yoursite.com/2016/03/01/LeetCode1/"></div>
+	<div class="ds-thread" data-thread-key="gif问题" data-title="一个关于iPhone本地相册保存的gif,在自己app种读取gif的问题" data-url="http://yoursite.com/2016/03/24/gif问题/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
